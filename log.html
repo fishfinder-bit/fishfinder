@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fishing Log - FishFinder</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h2>🎣 FishFinder</h2>
+
+        <nav>
+
+            <a href="index.html">หน้าหลัก</a>
+
+            <a href="fish.html">คู่มือ</a>
+
+            <a href="log.html">บันทึกการตกปลา</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="log-page">
+
+        <h1>
+            🎣 บันทึกการตกปลา
+        </h1>
+
+
+        <!-- เพิ่มข้อมูล -->
+        <div class="log-form">
+
+            <input
+                type="text"
+                id="fishName"
+                placeholder="ชื่อปลา"
+            >
+
+
+            <select id="fishType">
+
+                <option value="">
+                    เลือกประเภทปลา
+                </option>
+
+                <option value="ทะเล">
+                    🌊 ปลาทะเล
+                </option>
+
+                <option value="น้ำจืด">
+                    🐟 ปลาน้ำจืด
+                </option>
+
+            </select>
+
+
+            <input
+                type="text"
+                id="location"
+                placeholder="สถานที่ตกปลา"
+            >
+
+
+            <input
+                type="date"
+                id="fishingDate"
+            >
+
+
+            <button id="saveLog">
+                บันทึก
+            </button>
+
+        </div>
+
+
+        <!-- ฟอร์มแก้ไข -->
+        <div
+            class="edit-form"
+            id="editForm"
+        >
+
+            <h2>
+                ✏️ แก้ไขข้อมูล
+            </h2>
+
+
+            <input
+                type="text"
+                id="editFishName"
+                placeholder="ชื่อปลา"
+            >
+
+
+            <select id="editFishType">
+
+                <option value="">
+                    เลือกประเภทปลา
+                </option>
+
+                <option value="ทะเล">
+                    🌊 ปลาทะเล
+                </option>
+
+                <option value="น้ำจืด">
+                    🐟 ปลาน้ำจืด
+                </option>
+
+            </select>
+
+
+            <input
+                type="text"
+                id="editLocation"
+                placeholder="สถานที่ตกปลา"
+            >
+
+
+            <input
+                type="date"
+                id="editFishingDate"
+            >
+
+
+            <div class="edit-buttons">
+
+                <button id="updateLog">
+                    💾 บันทึกการแก้ไข
+                </button>
+
+                <button id="cancelEdit">
+                    ❌ ยกเลิก
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <h3>🎣</h3>
+
+                <p id="totalFish">
+                    0
+                </p>
+
+                <span>
+                    ตกปลาทั้งหมด
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>🌊</h3>
+
+                <p id="seaFish">
+                    0
+                </p>
+
+                <span>
+                    ปลาทะเล
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>🐟</h3>
+
+                <p id="freshwaterFish">
+                    0
+                </p>
+
+                <span>
+                    ปลาน้ำจืด
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <h2>
+            ประวัติการตกปลา
+        </h2>
+
+
+        <div id="logList"></div>
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - FishFinder</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h2>🎣 FishFinder</h2>
+
+        <nav>
+
+            <a href="index.html">หน้าหลัก</a>
+
+            <a href="fish.html">คู่มือ</a>
+
+            <a href="log.html">บันทึกการตกปลา</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Dashboard -->
+    <main class="dashboard">
+
+        <h1>
+            📊 Dashboard
+        </h1>
+
+        <p>
+            สรุปข้อมูลการตกปลาของคุณ
+        </p>
+
+
+        <!-- Statistics -->
+        <div class="dashboard-stats">
+
+
+            <div class="stat-card">
+
+                <h3>🎣</h3>
+
+                <p id="dashboardTotal">
+                    0
+                </p>
+
+                <span>
+                    ตกปลาทั้งหมด
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>🌊</h3>
+
+                <p id="dashboardSea">
+                    0
+                </p>
+
+                <span>
+                    ปลาทะเล
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>🐟</h3>
+
+                <p id="dashboardFreshwater">
+                    0
+                </p>
+
+                <span>
+                    ปลาน้ำจืด
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Chart -->
+        <div class="chart-box">
+
+            <h2>
+                📈 สถิติประเภทปลา
+            </h2>
+
+
+            <div class="bar-chart">
+
+
+                <div class="bar-item">
+
+                    <div class="bar-label">
+                        🌊 ปลาทะเล
+                    </div>
+
+                    <div class="bar-background">
+
+                        <div
+                            class="bar sea-bar"
+                            id="seaBar"
+                        ></div>
+
+                    </div>
+
+                    <span id="seaBarText">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar-label">
+                        🐟 ปลาน้ำจืด
+                    </div>
+
+                    <div class="bar-background">
+
+                        <div
+                            class="bar freshwater-bar"
+                            id="freshwaterBar"
+                        ></div>
+
+                    </div>
+
+                    <span id="freshwaterBarText">
+                        0
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- Favorite Fish -->
+        <div class="favorite-box">
+
+            <h2>
+                🏆 ปลาที่ตกบ่อยที่สุด
+            </h2>
+
+            <div
+                id="favoriteFish"
+                class="favorite-fish"
+            >
+                ยังไม่มีข้อมูล
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

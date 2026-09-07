@@ -1,0 +1,1220 @@
+/* ========================================
+   Reset
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #eef7f0;
+
+    color: #111;
+
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background-color: white;
+
+}
+
+
+header h2 {
+
+    margin: 0;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: black;
+
+}
+
+
+nav a:hover {
+
+    color: green;
+
+}
+
+
+/* ========================================
+   Main
+======================================== */
+
+main {
+
+    min-height: 70vh;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+}
+
+
+main h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 10px;
+
+}
+
+
+main > p {
+
+    font-size: 18px;
+
+}
+
+
+/* ========================================
+   Home
+======================================== */
+
+.home {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 75vh;
+
+}
+
+
+/* ========================================
+   Button
+======================================== */
+
+button {
+
+    background-color: green;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+button:hover {
+
+    background-color: darkgreen;
+
+}
+
+
+/* ========================================
+   Search
+======================================== */
+
+.search-box {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+.search-box input {
+
+    width: 300px;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+}
+
+
+/* ========================================
+   Fish Filter
+======================================== */
+
+.filter-box {
+
+    margin: 20px 0 30px;
+
+}
+
+
+.filter-box select {
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    background-color: white;
+
+}
+
+
+/* ========================================
+   Fish List
+======================================== */
+
+.fish-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+}
+
+
+/* ========================================
+   Fish Card
+======================================== */
+
+.fish-card {
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.fish-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.fish-card img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+}
+
+
+.fish-card h2 {
+
+    margin-top: 15px;
+
+}
+
+
+.fish-card p {
+
+    font-size: 16px;
+
+}
+
+
+/* ========================================
+   No Result
+======================================== */
+
+#noResult {
+
+    display: none;
+
+    color: red;
+
+    font-size: 20px;
+
+}
+
+
+/* ========================================
+   Fish Modal
+======================================== */
+
+.fish-modal {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color:
+        rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+}
+
+
+.fish-modal-content {
+
+    position: relative;
+
+    background-color: white;
+
+    width: 90%;
+
+    max-width: 500px;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    animation:
+        modalShow 0.2s ease;
+
+}
+
+
+.fish-modal-content img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+}
+
+
+.fish-modal-content h2 {
+
+    font-size: 30px;
+
+}
+
+
+.fish-modal-content p {
+
+    text-align: left;
+
+    font-size: 17px;
+
+}
+
+
+.modal-close {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    width: 40px;
+
+    height: 40px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background-color: #d32f2f;
+
+}
+
+
+.modal-close:hover {
+
+    background-color: #b71c1c;
+
+}
+
+
+.modal-close-button {
+
+    margin-top: 15px;
+
+    background-color: #555;
+
+}
+
+
+.modal-close-button:hover {
+
+    background-color: #333;
+
+}
+
+
+@keyframes modalShow {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* ========================================
+   Log Form
+======================================== */
+
+.log-page {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.log-form {
+
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    margin: 20px auto 30px;
+
+}
+
+
+.log-form input,
+.log-form select {
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    background-color: white;
+
+}
+
+
+/* ========================================
+   Edit Form
+======================================== */
+
+.edit-form {
+
+    display: none;
+
+    background-color: white;
+
+    width: 90%;
+
+    max-width: 750px;
+
+    padding: 25px;
+
+    margin: 10px auto 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.edit-form h2 {
+
+    margin-top: 0;
+
+}
+
+
+.edit-form input,
+.edit-form select {
+
+    padding: 12px;
+
+    margin: 5px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    background-color: white;
+
+}
+
+
+.edit-buttons {
+
+    margin-top: 10px;
+
+}
+
+
+.edit-buttons button {
+
+    margin: 5px;
+
+}
+
+
+#cancelEdit {
+
+    background-color: #777;
+
+}
+
+
+#cancelEdit:hover {
+
+    background-color: #555;
+
+}
+
+
+/* ========================================
+   Statistics
+======================================== */
+
+.stats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin: 20px auto 40px;
+
+}
+
+
+.stat-card {
+
+    background-color: white;
+
+    width: 200px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.stat-card h3 {
+
+    font-size: 30px;
+
+    margin: 0;
+
+}
+
+
+.stat-card p {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    margin: 10px 0;
+
+}
+
+
+.stat-card span {
+
+    font-size: 15px;
+
+}
+
+
+/* ========================================
+   Log Item
+======================================== */
+
+#logList {
+
+    width: 100%;
+
+}
+
+
+.log-item {
+
+    background-color: white;
+
+    width: 300px;
+
+    padding: 20px;
+
+    margin: 15px auto;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.log-item h3 {
+
+    margin-top: 0;
+
+    font-size: 22px;
+
+}
+
+
+.log-item p {
+
+    font-size: 16px;
+
+    text-align: left;
+
+}
+
+
+/* ========================================
+   Edit Button
+======================================== */
+
+.edit-btn {
+
+    background-color: orange;
+
+    padding: 10px 18px;
+
+    margin-right: 5px;
+
+}
+
+
+.edit-btn:hover {
+
+    background-color: darkorange;
+
+}
+
+
+/* ========================================
+   Delete Button
+======================================== */
+
+.delete-btn {
+
+    background-color: #d32f2f;
+
+    padding: 10px 18px;
+
+}
+
+
+.delete-btn:hover {
+
+    background-color: #b71c1c;
+
+}
+
+
+/* ========================================
+   Dashboard
+======================================== */
+
+.dashboard {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.dashboard-stats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 20px auto 40px;
+
+}
+
+
+/* ========================================
+   Chart
+======================================== */
+
+.chart-box {
+
+    display: block;
+
+    width: 90%;
+
+    max-width: 800px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 30px;
+
+}
+
+
+.chart-box h2 {
+
+    margin-top: 0;
+
+}
+
+
+.bar-chart {
+
+    width: 100%;
+
+}
+
+
+.bar-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+}
+
+
+.bar-label {
+
+    width: 120px;
+
+    text-align: left;
+
+    font-weight: bold;
+
+}
+
+
+.bar-background {
+
+    flex: 1;
+
+    height: 30px;
+
+    background-color: #e5e5e5;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+.bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    border-radius: 15px;
+
+    transition: width 0.5s;
+
+}
+
+
+.sea-bar {
+
+    background-color: #2196f3;
+
+}
+
+
+.freshwater-bar {
+
+    background-color: #4caf50;
+
+}
+
+
+.bar-item > span {
+
+    width: 30px;
+
+    font-weight: bold;
+
+}
+
+
+/* ========================================
+   Favorite Fish
+======================================== */
+
+.favorite-box {
+
+    display: block;
+
+    width: 90%;
+
+    max-width: 800px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.favorite-box h2 {
+
+    margin-top: 0;
+
+}
+
+
+.favorite-fish {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    padding: 20px;
+
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 800px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+
+    }
+
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    main h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .fish-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .fish-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .search-box {
+
+        flex-direction: column;
+
+    }
+
+
+    .search-box input {
+
+        width: 250px;
+
+    }
+
+
+    .bar-item {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .bar-label {
+
+        width: 100%;
+
+    }
+
+}
+/* ========================================
+   Modal Buttons
+======================================== */
+
+.modal-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.save-fish-button {
+
+    background-color: green;
+
+}
+
+
+.save-fish-button:hover {
+
+    background-color: darkgreen;
+
+}
+
+
+.modal-close-button {
+
+    margin-top: 0;
+
+}
+/* ========================================
+   Responsive สำหรับมือถือ
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* หน้าหลัก */
+    .home {
+        padding: 60px 20px;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+
+
+    /* ช่องค้นหา */
+    .search-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    /* รายการปลา */
+    .fish-list {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+
+    /* การ์ดปลา */
+    .fish-card {
+        width: 100%;
+    }
+
+
+    /* Filter */
+    .filter-box {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .filter-box select {
+        width: 100%;
+    }
+
+
+    /* Modal */
+    .fish-modal-content {
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    .fish-modal-content img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* ปุ่มใน Modal */
+    .modal-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-buttons button {
+        width: 100%;
+    }
+
+
+    /* ฟอร์มบันทึก */
+    .log-form {
+        width: auto;
+        margin: 15px;
+    }
+
+    .log-form input,
+    .log-form select,
+    .log-form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* สถิติ */
+    .stats {
+        grid-template-columns: 1fr;
+        margin: 15px;
+    }
+
+
+    /* รายการประวัติ */
+    #logList {
+        margin: 15px;
+    }
+
+    .log-item {
+        padding: 15px;
+    }
+
+
+    /* ฟอร์มแก้ไข */
+    .edit-form {
+        margin: 15px;
+    }
+
+    .edit-form input,
+    .edit-form select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .edit-buttons {
+        flex-direction: column;
+    }
+
+    .edit-buttons button {
+        width: 100%;
+    }
+
+
+    /* Dashboard */
+    .dashboard {
+        padding: 15px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
