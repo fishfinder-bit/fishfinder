@@ -23,6 +23,8 @@
 <h1>🐟 คู่มือปลา</h1>
 <!-- Filter -->
 <div class="filter-box">
+<label for="fishSearchInput">🔎 ค้นหาปลา</label>
+<input id="fishSearchInput" type="text" placeholder="พิมพ์ชื่อปลา ประเภท หรือเหยื่อ..."/>
 <label for="fishType">
                 ประเภทปลา:
             </label>
@@ -895,76 +897,15 @@
     display: block;
 }
 </style>
-<script>
-/* Reliable modal: always uses the exact image visible on the clicked card. */
-(function () {
-    const modal = document.getElementById('fishModal');
-    const modalImage = document.getElementById('modalImage');
-    const cards = document.querySelectorAll('.fish-card');
-    if (!modal || !modalImage) return;
-
-    cards.forEach(function (card) {
-        card.addEventListener('click', function () {
-            const cardImage = card.querySelector('.fish-photo');
-            if (!cardImage) return;
-
-            const src = cardImage.currentSrc || cardImage.src;
-            modalImage.src = src;
-            modalImage.alt = cardImage.alt || card.dataset.name || '';
-            modalImage.style.display = 'block';
-        });
-    });
-
-    [document.getElementById('modalClose'), document.getElementById('modalCloseButton')]
-        .filter(Boolean)
-        .forEach(function (button) {
-            button.addEventListener('click', function () {
-                modalImage.removeAttribute('src');
-            });
-        });
-})();
-</script>
-
 <style>
 .fish-photo { background: #eaf6ff; object-fit: cover; }
 .fish-image-note { margin: -8px 0 10px; font-size: 11px; opacity: .72; text-align: center; }
 </style>
-<script>
-(function () {
-  const modalImage = document.getElementById('modalImage');
-  if (!modalImage) return;
-  document.querySelectorAll('.fish-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const img = card.querySelector('.fish-photo');
-      if (!img) return;
-      modalImage.src = img.currentSrc || img.src;
-      modalImage.alt = img.alt || card.dataset.name || '';
-      modalImage.style.display = 'block';
-    });
-  });
-})();
-</script>
-
 <style>
 /* Stable image sizing */
 .fish-photo { display:block; width:100%; height:220px; object-fit:cover; border-radius:14px; background:#eef6fb; }
 .fish-image-source { font-size:10px; opacity:.65; margin-top:-4px; margin-bottom:8px; text-align:center; }
 </style>
-<script>
-// Modal uses exactly the image currently shown on the selected card.
-(() => {
-  const modalImage = document.getElementById('modalImage');
-  const cards = document.querySelectorAll('.fish-card');
-  if (!modalImage) return;
-  cards.forEach(card => card.addEventListener('click', () => {
-    const img = card.querySelector('.fish-photo');
-    if (!img) return;
-    modalImage.src = img.currentSrc || img.src;
-    modalImage.alt = img.alt || card.dataset.name || '';
-    modalImage.style.display = 'block';
-  }));
-  modalImage.addEventListener('error', () => { modalImage.style.display='none'; });
-})();
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
