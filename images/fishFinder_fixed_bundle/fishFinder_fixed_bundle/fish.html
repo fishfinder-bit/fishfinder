@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fish Guide - FishFinder</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h2>🎣 FishFinder</h2>
+
+        <nav>
+
+            <a href="index.html">หน้าหลัก</a>
+
+            <a href="fish.html">คู่มือ</a>
+
+            <a href="log.html">บันทึกการตกปลา</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main -->
+    <main>
+
+        <h1>🐟 คู่มือปลา</h1>
+
+
+        <!-- Filter -->
+        <div class="filter-box">
+
+            <label for="fishType">
+                ประเภทปลา:
+            </label>
+
+            <select id="fishType">
+
+                <option value="all">
+                    ทั้งหมด
+                </option>
+
+                <option value="น้ำจืด">
+                    🐟 ปลาน้ำจืด
+                </option>
+
+                <option value="ทะเล">
+                    🌊 ปลาทะเล
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <p id="noResult">
+            ไม่พบข้อมูลปลา
+        </p>
+
+
+        <!-- Fish List -->
+        <section
+            id="fishList"
+            class="fish-list"
+        >
+
+            <!-- 1. ปลาช่อน -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาช่อน" data-bait="กบยาง / เหยื่อปลอม" data-photo-search="Channa striata"
+                data-time="เช้า - เย็น">
+                <img src="images/snakehead.jpg" alt="ปลาช่อน" class="fish-photo">
+                <h2>ปลาช่อน</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: กบยาง / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 2. ปลานิล -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลานิล" data-bait="ขนมปัง / รำ" data-photo-search="Oreochromis niloticus"
+                data-time="เช้า - เย็น">
+                <img src="images/tilapia.jpg" alt="ปลานิล" class="fish-photo">
+                <h2>ปลานิล</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 3. ปลาดุก -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาดุก" data-bait="ไส้เดือน / เหยื่อสด" data-photo-search="Clarias batrachus"
+                data-time="เย็น - กลางคืน">
+                <img src="images/catfish.jpg" alt="ปลาดุก" class="fish-photo">
+                <h2>ปลาดุก</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 4. ปลากะพงขาว -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากะพงขาว" data-bait="กุ้ง / เหยื่อปลอม" data-photo-search="Lates calcarifer"
+                data-time="เช้า - เย็น">
+                <img src="images/seabass.jpg" alt="ปลากะพงขาว" class="fish-photo">
+                <h2>ปลากะพงขาว</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 5. ปลากะมงพร้าว -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากะมงพร้าว" data-bait="Popper / Jig" data-photo-search="Caranx ignobilis"
+                data-time="เช้า - เย็น">
+                <img src="images/giant-trevally.jpg" alt="ปลากะมงพร้าว" class="fish-photo">
+                <h2>ปลากะมงพร้าว</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Popper / Jig</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 6. ปลาทราย -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาทราย" data-bait="กุ้ง / หนอน" data-photo-search="Sillaginidae fish"
+                data-time="ช่วงเย็น">
+                <img src="images/whiting.jpg" alt="ปลาทราย" class="fish-photo">
+                <h2>ปลาทราย</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / หนอน</p>
+                <p>ช่วงเวลาที่เหมาะ: ช่วงเย็น</p>
+            </div>
+
+            <!-- 7. ปลาชะโด -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาชะโด" data-bait="กบยาง / เหยื่อผิวน้ำ" data-photo-search="Channa micropeltes"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาชะโด" class="fish-photo">
+                <h2>ปลาชะโด</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: กบยาง / เหยื่อผิวน้ำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 8. ปลากระสูบขีด -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากระสูบขีด" data-bait="เหยื่อปลอมขนาดเล็ก" data-photo-search="Hampala macrolepidota"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระสูบขีด" class="fish-photo">
+                <h2>ปลากระสูบขีด</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอมขนาดเล็ก</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 9. ปลากระสูบจุด -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากระสูบจุด" data-bait="เหยื่อปลอมขนาดเล็ก" data-photo-search="Hampala dispar"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระสูบจุด" class="fish-photo">
+                <h2>ปลากระสูบจุด</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอมขนาดเล็ก</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 10. ปลากดคัง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากดคัง" data-bait="เหยื่อสด / ปลาเล็ก" data-photo-search="Hemibagrus wyckioides"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากดคัง" class="fish-photo">
+                <h2>ปลากดคัง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด / ปลาเล็ก</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 11. ปลากดเหลือง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากดเหลือง" data-bait="ไส้เดือน / เหยื่อสด" data-photo-search="Hemibagrus filamentus"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากดเหลือง" class="fish-photo">
+                <h2>ปลากดเหลือง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 12. ปลากดแก้ว -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากดแก้ว" data-bait="เหยื่อสด" data-photo-search="Hemibagrus nemurus"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากดแก้ว" class="fish-photo">
+                <h2>ปลากดแก้ว</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 13. ปลากดนา -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากดนา" data-bait="ไส้เดือน / เหยื่อสด" data-photo-search="Clarias macrocephalus"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากดนา" class="fish-photo">
+                <h2>ปลากดนา</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 14. ปลาทับทิม -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาทับทิม" data-bait="ขนมปัง / รำ" data-photo-search="Oreochromis hybrid tilapia"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาทับทิม" class="fish-photo">
+                <h2>ปลาทับทิม</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 15. ปลาหมอไทย -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาหมอไทย" data-bait="ไส้เดือน / เหยื่อสด" data-photo-search="Anabas testudineus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาหมอไทย" class="fish-photo">
+                <h2>ปลาหมอไทย</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 16. ปลาหมอเทศ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาหมอเทศ" data-bait="ขนมปัง / เหยื่อธรรมชาติ" data-photo-search="Oreochromis mossambicus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาหมอเทศ" class="fish-photo">
+                <h2>ปลาหมอเทศ</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อธรรมชาติ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 17. ปลาตะเพียนขาว -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาตะเพียนขาว" data-bait="ขนมปัง / รำ" data-photo-search="Barbonymus gonionotus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาตะเพียนขาว" class="fish-photo">
+                <h2>ปลาตะเพียนขาว</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 18. ปลาตะเพียนทอง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาตะเพียนทอง" data-bait="ขนมปัง / รำ" data-photo-search="Barbonymus schwanenfeldii"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาตะเพียนทอง" class="fish-photo">
+                <h2>ปลาตะเพียนทอง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 19. ปลากระแห -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากระแห" data-bait="ขนมปัง / รำ" data-photo-search="Barbonymus schwanenfeldii"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระแห" class="fish-photo">
+                <h2>ปลากระแห</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 20. ปลากระมัง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากระมัง" data-bait="ขนมปัง / รำ" data-photo-search="Puntioplites proctozysron"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระมัง" class="fish-photo">
+                <h2>ปลากระมัง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 21. ปลายี่สก -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลายี่สก" data-bait="ขนมปัง / รำ" data-photo-search="Probarbus jullieni"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลายี่สก" class="fish-photo">
+                <h2>ปลายี่สก</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 22. ปลากะโห้ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากะโห้" data-bait="ขนมปัง / รำ" data-photo-search="Catlocarpio siamensis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากะโห้" class="fish-photo">
+                <h2>ปลากะโห้</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 23. ปลากาดำ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากาดำ" data-bait="รำ / ขนมปัง" data-photo-search="Labeo chrysophekadion"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากาดำ" class="fish-photo">
+                <h2>ปลากาดำ</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: รำ / ขนมปัง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 24. ปลากาแดง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากาแดง" data-bait="รำ / ขนมปัง" data-photo-search="Labeo bicolor"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากาแดง" class="fish-photo">
+                <h2>ปลากาแดง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: รำ / ขนมปัง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 25. ปลาสร้อยขาว -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาสร้อยขาว" data-bait="ขนมปัง / เหยื่อธรรมชาติ" data-photo-search="Henicorhynchus siamensis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสร้อยขาว" class="fish-photo">
+                <h2>ปลาสร้อยขาว</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อธรรมชาติ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 26. ปลาสวาย -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาสวาย" data-bait="ขนมปัง / รำ" data-photo-search="Pangasianodon hypophthalmus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสวาย" class="fish-photo">
+                <h2>ปลาสวาย</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 27. ปลาบึก -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาบึก" data-bait="ขนมปัง / เหยื่อเม็ด" data-photo-search="Pangasianodon gigas"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาบึก" class="fish-photo">
+                <h2>ปลาบึก</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 28. ปลาจีน -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาจีน" data-bait="ขนมปัง / รำ" data-photo-search="Ctenopharyngodon idella"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาจีน" class="fish-photo">
+                <h2>ปลาจีน</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 29. ปลานวลจันทร์เทศ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลานวลจันทร์เทศ" data-bait="ขนมปัง / รำ" data-photo-search="Cirrhinus mrigala"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลานวลจันทร์เทศ" class="fish-photo">
+                <h2>ปลานวลจันทร์เทศ</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 30. ปลากราย -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากราย" data-bait="ปลาเล็ก / เหยื่อปลอม" data-photo-search="Chitala ornata"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากราย" class="fish-photo">
+                <h2>ปลากราย</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลาเล็ก / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 31. ปลาตองกราย -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาตองกราย" data-bait="ปลาเล็ก / เหยื่อสด" data-photo-search="Chitala ornata"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาตองกราย" class="fish-photo">
+                <h2>ปลาตองกราย</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลาเล็ก / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 32. ปลาชะโอน -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาชะโอน" data-bait="ไส้เดือน / ปลาเล็ก" data-photo-search="Ompok bimaculatus"
+                data-time="กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาชะโอน" class="fish-photo">
+                <h2>ปลาชะโอน</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน / ปลาเล็ก</p>
+                <p>ช่วงเวลาที่เหมาะ: กลางคืน</p>
+            </div>
+
+            <!-- 33. ปลาค้าว -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาค้าว" data-bait="ปลาเหยื่อ / เหยื่อสด" data-photo-search="Wallago attu"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาค้าว" class="fish-photo">
+                <h2>ปลาค้าว</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลาเหยื่อ / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 34. ปลาค้าวแดง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาค้าวแดง" data-bait="ปลาเหยื่อ" data-photo-search="Hemibagrus wyckioides"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาค้าวแดง" class="fish-photo">
+                <h2>ปลาค้าวแดง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลาเหยื่อ</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 35. ปลาเค้า -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาเค้า" data-bait="ปลาเหยื่อ / กุ้ง" data-photo-search="Hemibagrus wyckioides"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาเค้า" class="fish-photo">
+                <h2>ปลาเค้า</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลาเหยื่อ / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 36. ปลาสังกะวาด -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาสังกะวาด" data-bait="เหยื่อธรรมชาติ" data-photo-search="Paralaubuca riveroi"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสังกะวาด" class="fish-photo">
+                <h2>ปลาสังกะวาด</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อธรรมชาติ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 37. ปลาแขยง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาแขยง" data-bait="ไส้เดือน / เหยื่อสด" data-photo-search="Mystus multiradiatus"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาแขยง" class="fish-photo">
+                <h2>ปลาแขยง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 38. ปลาหมอช้างเหยียบ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาหมอช้างเหยียบ" data-bait="ไส้เดือน" data-photo-search="Pristolepis fasciata"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาหมอช้างเหยียบ" class="fish-photo">
+                <h2>ปลาหมอช้างเหยียบ</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 39. ปลากระทิง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากระทิง" data-bait="ไส้เดือน / ปลาเล็ก" data-photo-search="Mastacembelus armatus"
+                data-time="กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระทิง" class="fish-photo">
+                <h2>ปลากระทิง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน / ปลาเล็ก</p>
+                <p>ช่วงเวลาที่เหมาะ: กลางคืน</p>
+            </div>
+
+            <!-- 40. ปลาไหล -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาไหล" data-bait="ไส้เดือน / เหยื่อสด" data-photo-search="Monopterus albus"
+                data-time="กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาไหล" class="fish-photo">
+                <h2>ปลาไหล</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: กลางคืน</p>
+            </div>
+
+            <!-- 41. ปลากระสูบขาว -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากระสูบขาว" data-bait="เหยื่อปลอม" data-photo-search="Hampala macrolepidota"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระสูบขาว" class="fish-photo">
+                <h2>ปลากระสูบขาว</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 42. ปลากระสูบควาย -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากระสูบควาย" data-bait="เหยื่อปลอม" data-photo-search="Hampala dispar"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระสูบควาย" class="fish-photo">
+                <h2>ปลากระสูบควาย</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 43. ปลาอราไพม่า -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาอราไพม่า" data-bait="เหยื่อสด / เหยื่อบ่อ" data-photo-search="Arapaima gigas"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาอราไพม่า" class="fish-photo">
+                <h2>ปลาอราไพม่า</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด / เหยื่อบ่อ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 44. ปลาหางแดงอะเมซอน -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาหางแดงอะเมซอน" data-bait="ปลา / กุ้ง" data-photo-search="Phractocephalus hemioliopterus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาหางแดงอะเมซอน" class="fish-photo">
+                <h2>ปลาหางแดงอะเมซอน</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 45. ปลาพาคู -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาพาคู" data-bait="ผลไม้ / ขนมปัง" data-photo-search="Piaractus brachypomus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาพาคู" class="fish-photo">
+                <h2>ปลาพาคู</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ผลไม้ / ขนมปัง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 46. ปลาอัลลิเกเตอร์การ์ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาอัลลิเกเตอร์การ์" data-bait="เหยื่อสด" data-photo-search="Atractosteus spatula"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาอัลลิเกเตอร์การ์" class="fish-photo">
+                <h2>ปลาอัลลิเกเตอร์การ์</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 47. ปลานกยูง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลานกยูง" data-bait="เหยื่อปลอม" data-photo-search="Cichla ocellaris"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลานกยูง" class="fish-photo">
+                <h2>ปลานกยูง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 48. ปลาคาร์พ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาคาร์พ" data-bait="ขนมปัง / เหยื่อเม็ด" data-photo-search="Cyprinus carpio"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาคาร์พ" class="fish-photo">
+                <h2>ปลาคาร์พ</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 49. ปลาคาร์พยักษ์ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาคาร์พยักษ์" data-bait="เหยื่อเม็ด / ข้าวโพด" data-photo-search="Cyprinus carpio"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาคาร์พยักษ์" class="fish-photo">
+                <h2>ปลาคาร์พยักษ์</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อเม็ด / ข้าวโพด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 50. ปลาคาร์พจีน -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาคาร์พจีน" data-bait="ข้าวโพด / รำ" data-photo-search="Hypophthalmichthys molitrix"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาคาร์พจีน" class="fish-photo">
+                <h2>ปลาคาร์พจีน</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ข้าวโพด / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 51. ปลารูฮู -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลารูฮู" data-bait="ขนมปัง / รำ" data-photo-search="Labeo rohita"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลารูฮู" class="fish-photo">
+                <h2>ปลารูฮู</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 52. ปลาตะเพียนยักษ์ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาตะเพียนยักษ์" data-bait="เหยื่อเม็ด / รำ" data-photo-search="Catlocarpio siamensis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาตะเพียนยักษ์" class="fish-photo">
+                <h2>ปลาตะเพียนยักษ์</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อเม็ด / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 53. ปลากดหางแดง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากดหางแดง" data-bait="ปลา / กุ้ง" data-photo-search="Phractocephalus hemioliopterus"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากดหางแดง" class="fish-photo">
+                <h2>ปลากดหางแดง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 54. ปลาซูรูบิม -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาซูรูบิม" data-bait="ปลา / เหยื่อสด" data-photo-search="Pseudoplatystoma corruscans"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาซูรูบิม" class="fish-photo">
+                <h2>ปลาซูรูบิม</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลา / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 55. ปลาไทกรินัส -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาไทกรินัส" data-bait="ปลา / กุ้ง" data-photo-search="Pseudoplatystoma tigrinum"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาไทกรินัส" class="fish-photo">
+                <h2>ปลาไทกรินัส</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 56. ปลามัสคีโนง -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลามัสคีโนง" data-bait="เหยื่อปลอม" data-photo-search="Esox masquinongy"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลามัสคีโนง" class="fish-photo">
+                <h2>ปลามัสคีโนง</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 57. ปลาช่อนอเมซอน -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาช่อนอเมซอน" data-bait="เหยื่อสด" data-photo-search="Arapaima gigas"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาช่อนอเมซอน" class="fish-photo">
+                <h2>ปลาช่อนอเมซอน</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 58. ปลากระโห้ยักษ์ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากระโห้ยักษ์" data-bait="ขนมปัง / เหยื่อเม็ด" data-photo-search="Catlocarpio siamensis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระโห้ยักษ์" class="fish-photo">
+                <h2>ปลากระโห้ยักษ์</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 59. ปลาสวายเผือก -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาสวายเผือก" data-bait="ขนมปัง / รำ" data-photo-search="Pangasianodon hypophthalmus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสวายเผือก" class="fish-photo">
+                <h2>ปลาสวายเผือก</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 60. ปลาบึกเผือก -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาบึกเผือก" data-bait="เหยื่อเม็ด / ขนมปัง" data-photo-search="Pangasianodon gigas"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาบึกเผือก" class="fish-photo">
+                <h2>ปลาบึกเผือก</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อเม็ด / ขนมปัง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 61. ปลากะโห้เผือก -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากะโห้เผือก" data-bait="เหยื่อเม็ด" data-photo-search="Catlocarpio siamensis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากะโห้เผือก" class="fish-photo">
+                <h2>ปลากะโห้เผือก</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อเม็ด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 62. ปลาคาร์พแฟนซี -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาคาร์พแฟนซี" data-bait="ขนมปัง / เหยื่อเม็ด" data-photo-search="Cyprinus carpio"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาคาร์พแฟนซี" class="fish-photo">
+                <h2>ปลาคาร์พแฟนซี</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 63. ปลากดส้ม -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลากดส้ม" data-bait="ปลา / กุ้ง" data-photo-search="Hemibagrus wyckioides"
+                data-time="เย็น - กลางคืน">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากดส้ม" class="fish-photo">
+                <h2>ปลากดส้ม</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
+            </div>
+
+            <!-- 64. ปลาสวายแม่น้ำ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาสวายแม่น้ำ" data-bait="ขนมปัง / รำ" data-photo-search="Pangasianodon hypophthalmus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสวายแม่น้ำ" class="fish-photo">
+                <h2>ปลาสวายแม่น้ำ</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 65. ปลาบึกแม่น้ำ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาบึกแม่น้ำ" data-bait="เหยื่อธรรมชาติ" data-photo-search="Pangasianodon gigas"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาบึกแม่น้ำ" class="fish-photo">
+                <h2>ปลาบึกแม่น้ำ</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อธรรมชาติ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 66. ปลาตะเพียนยักษ์สยาม -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาตะเพียนยักษ์สยาม" data-bait="เหยื่อเม็ด" data-photo-search="Catlocarpio siamensis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาตะเพียนยักษ์สยาม" class="fish-photo">
+                <h2>ปลาตะเพียนยักษ์สยาม</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อเม็ด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 67. ปลาหมอเทศยักษ์ -->
+            <div class="fish-card" data-type="น้ำจืด" data-name="ปลาหมอเทศยักษ์" data-bait="ขนมปัง / เหยื่อเม็ด" data-photo-search="Oreochromis mossambicus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาหมอเทศยักษ์" class="fish-photo">
+                <h2>ปลาหมอเทศยักษ์</h2>
+                <p>ประเภท: ปลาน้ำจืด</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 68. ปลากะพงแดง -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากะพงแดง" data-bait="กุ้ง / เหยื่อสด" data-photo-search="Lutjanus argentimaculatus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากะพงแดง" class="fish-photo">
+                <h2>ปลากะพงแดง</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 69. ปลาสาก -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาสาก" data-bait="เหยื่อปลอม / ปลา" data-photo-search="Sphyraena barracuda"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสาก" class="fish-photo">
+                <h2>ปลาสาก</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม / ปลา</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 70. ปลาอินทรี -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาอินทรี" data-bait="เหยื่อปลอม / ปลา" data-photo-search="Scomberomorus commerson"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาอินทรี" class="fish-photo">
+                <h2>ปลาอินทรี</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม / ปลา</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 71. ปลาอินทรีบั้ง -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาอินทรีบั้ง" data-bait="เหยื่อปลอม" data-photo-search="Scomberomorus commerson"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาอินทรีบั้ง" class="fish-photo">
+                <h2>ปลาอินทรีบั้ง</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 72. ปลาสละ -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาสละ" data-bait="เหยื่อสด / เหยื่อปลอม" data-photo-search="Tenualosa toli"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสละ" class="fish-photo">
+                <h2>ปลาสละ</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 73. ปลาสีกุน -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาสีกุน" data-bait="เหยื่อปลอม / กุ้ง" data-photo-search="Carangoides"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสีกุน" class="fish-photo">
+                <h2>ปลาสีกุน</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 74. ปลาทู -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาทู" data-bait="เหยื่อเล็ก / Sabiki" data-photo-search="Rastrelliger kanagurta"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาทู" class="fish-photo">
+                <h2>ปลาทู</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อเล็ก / Sabiki</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 75. ปลาโฉมงาม -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาโฉมงาม" data-bait="กุ้ง / เหยื่อสด" data-photo-search="Lutjanus sebae"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาโฉมงาม" class="fish-photo">
+                <h2>ปลาโฉมงาม</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 76. ปลากุเลา -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากุเลา" data-bait="กุ้ง / เหยื่อปลอม" data-photo-search="Eleutheronema tetradactylum"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากุเลา" class="fish-photo">
+                <h2>ปลากุเลา</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 77. ปลากระมง -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากระมง" data-bait="Jig / เหยื่อปลอม" data-photo-search="Caranx sexfasciatus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระมง" class="fish-photo">
+                <h2>ปลากระมง</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 78. ปลากระมงขาว -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากระมงขาว" data-bait="Jig / เหยื่อสด" data-photo-search="Caranx ignobilis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระมงขาว" class="fish-photo">
+                <h2>ปลากระมงขาว</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Jig / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 79. ปลาโอ -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาโอ" data-bait="Jig / เหยื่อปลอม" data-photo-search="Euthynnus affinis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาโอ" class="fish-photo">
+                <h2>ปลาโอ</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 80. ปลาทูน่าครีบเหลือง -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาทูน่าครีบเหลือง" data-bait="Jig / เหยื่อสด" data-photo-search="Thunnus albacares"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาทูน่าครีบเหลือง" class="fish-photo">
+                <h2>ปลาทูน่าครีบเหลือง</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Jig / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 81. ปลาโอแถบ -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาโอแถบ" data-bait="Jig / เหยื่อปลอม" data-photo-search="Katsuwonus pelamis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาโอแถบ" class="fish-photo">
+                <h2>ปลาโอแถบ</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 82. ปลาอินทรีทะเล -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาอินทรีทะเล" data-bait="เหยื่อปลอม" data-photo-search="Scomberomorus commerson"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาอินทรีทะเล" class="fish-photo">
+                <h2>ปลาอินทรีทะเล</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 83. ปลาบาราคูด้า -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาบาราคูด้า" data-bait="Jig / เหยื่อปลอม" data-photo-search="Sphyraena barracuda"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาบาราคูด้า" class="fish-photo">
+                <h2>ปลาบาราคูด้า</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 84. ปลาเก๋า -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาเก๋า" data-bait="ปลา / กุ้ง" data-photo-search="Epinephelus coioides"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาเก๋า" class="fish-photo">
+                <h2>ปลาเก๋า</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 85. ปลากะรัง -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากะรัง" data-bait="ปลา / กุ้ง" data-photo-search="Epinephelus coioides"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากะรัง" class="fish-photo">
+                <h2>ปลากะรัง</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 86. ปลาเก๋าหมอทะเล -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาเก๋าหมอทะเล" data-bait="ปลา / กุ้ง" data-photo-search="Epinephelus lanceolatus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาเก๋าหมอทะเล" class="fish-photo">
+                <h2>ปลาเก๋าหมอทะเล</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 87. ปลาหมอทะเล -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาหมอทะเล" data-bait="กุ้ง / ปลา" data-photo-search="Epinephelus lanceolatus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาหมอทะเล" class="fish-photo">
+                <h2>ปลาหมอทะเล</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / ปลา</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 88. ปลาสร้อยนกเขา -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาสร้อยนกเขา" data-bait="กุ้ง / เหยื่อสด" data-photo-search="Scolopsis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาสร้อยนกเขา" class="fish-photo">
+                <h2>ปลาสร้อยนกเขา</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 89. ปลาจาระเม็ด -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาจาระเม็ด" data-bait="กุ้ง / เหยื่อธรรมชาติ" data-photo-search="Pampus argenteus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาจาระเม็ด" class="fish-photo">
+                <h2>ปลาจาระเม็ด</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อธรรมชาติ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 90. ปลากระบอก -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากระบอก" data-bait="ขนมปัง / เหยื่อธรรมชาติ" data-photo-search="Mugil cephalus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระบอก" class="fish-photo">
+                <h2>ปลากระบอก</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อธรรมชาติ</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 91. ปลาเห็ดโคน -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาเห็ดโคน" data-bait="กุ้ง / หนอน" data-photo-search="Sillago sihama"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาเห็ดโคน" class="fish-photo">
+                <h2>ปลาเห็ดโคน</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / หนอน</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 92. ปลากะพงลาย -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากะพงลาย" data-bait="ปลา / กุ้ง" data-photo-search="Lutjanus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากะพงลาย" class="fish-photo">
+                <h2>ปลากะพงลาย</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 93. ปลาใบเรือ -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาใบเรือ" data-bait="เหยื่อปลอม / เหยื่อสด" data-photo-search="Istiophorus platypterus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาใบเรือ" class="fish-photo">
+                <h2>ปลาใบเรือ</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม / เหยื่อสด</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 94. ปลากระโทงร่ม -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากระโทงร่ม" data-bait="เหยื่อสด / Trolling" data-photo-search="Istiophorus platypterus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระโทงร่ม" class="fish-photo">
+                <h2>ปลากระโทงร่ม</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด / Trolling</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 95. ปลาเซลฟิช -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาเซลฟิช" data-bait="เหยื่อสด / Trolling" data-photo-search="Istiophorus platypterus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาเซลฟิช" class="fish-photo">
+                <h2>ปลาเซลฟิช</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด / Trolling</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 96. ปลามาร์ลิน -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลามาร์ลิน" data-bait="เหยื่อสด / Trolling" data-photo-search="Makaira nigricans"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลามาร์ลิน" class="fish-photo">
+                <h2>ปลามาร์ลิน</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อสด / Trolling</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 97. ปลาอินทรีจุด -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาอินทรีจุด" data-bait="เหยื่อปลอม / ปลา" data-photo-search="Scomberomorus guttatus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาอินทรีจุด" class="fish-photo">
+                <h2>ปลาอินทรีจุด</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: เหยื่อปลอม / ปลา</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 98. ปลากะพงลายจุด -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากะพงลายจุด" data-bait="กุ้ง / เหยื่อปลอม" data-photo-search="Lutjanus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากะพงลายจุด" class="fish-photo">
+                <h2>ปลากะพงลายจุด</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 99. ปลากระมงพร้าววัยอ่อน -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลากระมงพร้าววัยอ่อน" data-bait="Jig / เหยื่อปลอม" data-photo-search="Caranx ignobilis"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลากระมงพร้าววัยอ่อน" class="fish-photo">
+                <h2>ปลากระมงพร้าววัยอ่อน</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+            <!-- 100. ปลาทูน่าตาโต -->
+            <div class="fish-card" data-type="ทะเล" data-name="ปลาทูน่าตาโต" data-bait="Jig / Trolling" data-photo-search="Thunnus obesus"
+                data-time="เช้า - เย็น">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="ปลาทูน่าตาโต" class="fish-photo">
+                <h2>ปลาทูน่าตาโต</h2>
+                <p>ประเภท: ปลาทะเล</p>
+                <p>เหยื่อที่แนะนำ: Jig / Trolling</p>
+                <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Fish Modal -->
+    <div
+        class="fish-modal"
+        id="fishModal"
+    >
+
+        <div class="fish-modal-content">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+            >
+                ✕
+            </button>
+
+
+            <img
+                id="modalImage"
+                src=""
+                alt=""
+            >
+
+
+            <h2 id="modalName">
+                ชื่อปลา
+            </h2>
+
+
+            <p id="modalType">
+                🌊 ประเภท:
+            </p>
+
+
+            <p id="modalBait">
+                🎣 เหยื่อ:
+            </p>
+
+
+            <p id="modalTime">
+                ⏰ ช่วงเวลา:
+            </p>
+
+
+            <div class="modal-buttons">
+
+             <button
+               class="save-fish-button"
+               id="saveFishButton"
+             >
+               🎣 บันทึกปลาตัวนี้
+             </button>
+
+             <button
+               class="modal-close-button"
+               id="modalCloseButton"
+             >
+               ปิด
+             </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+<!-- Auto photo loader disabled: use local verified photos or safe inline placeholder. -->
+
+<script src="js/main.js"></script>
+
+<style>
+/* Fix: do not leave a large empty image area inside the modal when a card image
+   is still loading, unavailable, or only a 1x1 placeholder. */
+#modalImage[hidden] {
+    display: none !important;
+}
+#modalImage {
+    max-width: 100%;
+    object-fit: cover;
+}
+</style>
+
+<script>
+/* FishFinder modal image fix
+   - Uses the image that is actually shown on the clicked card.
+   - Waits for an image that loads a moment later.
+   - Hides the modal image completely when only a 1x1 placeholder exists.
+*/
+(function () {
+    const modal = document.getElementById('fishModal');
+    const modalImage = document.getElementById('modalImage');
+    const cards = document.querySelectorAll('.fish-card');
+    if (!modal || !modalImage || !cards.length) return;
+
+    let activeCard = null;
+
+    function isUsableImage(img) {
+        if (!img) return false;
+        const src = img.currentSrc || img.getAttribute('src') || '';
+        if (!src) return false;
+        if (src.startsWith('data:image/gif')) return false;
+        if (img.naturalWidth && img.naturalWidth <= 1) return false;
+        return true;
+    }
+
+    function syncModalImage(card) {
+        if (!card) return;
+        const cardImg = card.querySelector('.fish-photo');
+        if (!cardImg) {
+            modalImage.hidden = true;
+            modalImage.removeAttribute('src');
+            return;
+        }
+
+        if (isUsableImage(cardImg)) {
+            const src = cardImg.currentSrc || cardImg.src;
+            if (src) {
+                modalImage.src = src;
+                modalImage.alt = cardImg.alt || card.dataset.name || '';
+                modalImage.hidden = false;
+            }
+        } else {
+            modalImage.hidden = true;
+            modalImage.removeAttribute('src');
+            modalImage.alt = '';
+        }
+    }
+
+    cards.forEach(function (card) {
+        const cardImg = card.querySelector('.fish-photo');
+        if (cardImg) {
+            cardImg.addEventListener('load', function () {
+                if (activeCard === card) syncModalImage(card);
+            });
+            cardImg.addEventListener('error', function () {
+                if (activeCard === card) syncModalImage(card);
+            });
+        }
+
+        card.addEventListener('click', function () {
+            activeCard = card;
+            setTimeout(function () {
+                if (activeCard === card) syncModalImage(card);
+            }, 0);
+
+            // Loader may replace the card image shortly after the click.
+            setTimeout(function () {
+                if (activeCard === card) syncModalImage(card);
+            }, 300);
+        });
+    });
+
+    modalImage.addEventListener('error', function () {
+        modalImage.hidden = true;
+        modalImage.removeAttribute('src');
+    });
+
+    // When the modal closes, clear its image so the next open never shows an old fish.
+    const closeButtons = [
+        document.getElementById('modalClose'),
+        document.getElementById('modalCloseButton')
+    ].filter(Boolean);
+
+    closeButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            activeCard = null;
+            modalImage.hidden = true;
+            modalImage.removeAttribute('src');
+        });
+    });
+})();
+</script>
+
+
+<script>
+/* FishFinder FINAL image fallback + modal fix
+   - Every fish card always has a visible image.
+   - Existing real/local images are preserved.
+   - If an online species photo cannot be found, a clean local SVG fallback is used.
+   - Modal always copies the image currently shown on the clicked card.
+*/
+(function () {
+    const FALLBACK_PREFIX = 'data:image/svg+xml';
+    const cards = Array.from(document.querySelectorAll('.fish-card'));
+    const modal = document.getElementById('fishModal');
+    const modalImage = document.getElementById('modalImage');
+
+    function esc(value) {
+        return String(value || '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
+
+    function fallbackFor(name, type) {
+        const title = esc(name || 'ปลา');
+        const subtitle = esc(type === 'ทะเล' ? 'ปลาทะเล' : 'ปลาน้ำจืด');
+        const svg = `
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" rx="36" fill="url(#g)"/>
+  <circle cx="760" cy="90" r="52" fill="#ffffff" opacity=".18"/>
+  <circle cx="120" cy="500" r="82" fill="#ffffff" opacity=".08"/>
+  <g transform="translate(450 285)">
+    <ellipse cx="0" cy="0" rx="205" ry="105" fill="#fff" opacity=".95"/>
+    <polygon points="-190,0 -300,-95 -275,0 -300,95" fill="#fff" opacity=".95"/>
+    <polygon points="-10,-95 80,-180 130,-55" fill="#e0f2fe" opacity=".95"/>
+    <polygon points="-10,95 80,180 130,55" fill="#e0f2fe" opacity=".95"/>
+    <circle cx="125" cy="-25" r="15" fill="#0f172a"/>
+    <circle cx="130" cy="-30" r="5" fill="#fff"/>
+    <path d="M55 15 Q105 60 160 15" stroke="#2563eb" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M-90 -15 Q0 -75 90 -15" stroke="#38bdf8" stroke-width="12" fill="none" opacity=".8"/>
+  </g>
+  <text x="450" y="500" text-anchor="middle" fill="#fff" font-family="Arial, Tahoma, sans-serif" font-size="42" font-weight="700">${title}</text>
+  <text x="450" y="545" text-anchor="middle" fill="#dbeafe" font-family="Arial, Tahoma, sans-serif" font-size="24">${subtitle}</text>
+</svg>`;
+        return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    }
+
+    function isPlaceholder(src) {
+        return !src || src.startsWith('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///') || src === '';
+    }
+
+    function setFallback(img, card) {
+        if (!img || !card) return;
+        const name = card.dataset.name || card.querySelector('h2')?.textContent || 'ปลา';
+        const type = card.dataset.type || '';
+        img.src = fallbackFor(name, type);
+        img.dataset.fallback = '1';
+        img.hidden = false;
+        img.style.visibility = 'visible';
+        img.style.display = 'block';
+    }
+
+    // Give every placeholder a guaranteed visible fallback immediately.
+    cards.forEach(function (card) {
+        const img = card.querySelector('.fish-photo');
+        if (!img) return;
+        const src = img.getAttribute('src') || '';
+        if (isPlaceholder(src)) setFallback(img, card);
+
+        img.addEventListener('load', function () {
+            img.hidden = false;
+            img.style.display = 'block';
+            img.style.visibility = 'visible';
+        });
+
+        img.addEventListener('error', function () {
+            if (img.dataset.fallback !== '1') setFallback(img, card);
+        });
+    });
+
+    // The earlier online loader may hide an image when no exact match exists.
+    // Keep our fallback visible in that case.
+    cards.forEach(function (card) {
+        const img = card.querySelector('.fish-photo');
+        if (!img) return;
+        const observer = new MutationObserver(function () {
+            const src = img.getAttribute('src') || '';
+            if (img.dataset.fallback === '1' && isPlaceholder(src)) {
+                setFallback(img, card);
+            }
+            if (img.dataset.fallback === '1') {
+                img.hidden = false;
+                img.style.visibility = 'visible';
+                img.style.display = 'block';
+            }
+        });
+        observer.observe(img, { attributes: true, attributeFilter: ['src', 'style', 'hidden'] });
+    });
+
+    // When an actual online/local photo replaces the fallback, allow it to show normally.
+    cards.forEach(function (card) {
+        const img = card.querySelector('.fish-photo');
+        if (!img) return;
+        const observer = new MutationObserver(function () {
+            const src = img.getAttribute('src') || '';
+            if (src && !src.startsWith(FALLBACK_PREFIX) && !src.startsWith('data:image/gif')) {
+                delete img.dataset.fallback;
+                img.hidden = false;
+                img.style.visibility = 'visible';
+                img.style.display = 'block';
+            }
+        });
+        observer.observe(img, { attributes: true, attributeFilter: ['src'] });
+    });
+
+    if (!modal || !modalImage) return;
+
+    let activeCard = null;
+
+    function syncModal(card) {
+        if (!card) return;
+        const img = card.querySelector('.fish-photo');
+        if (!img) return;
+
+        let src = img.currentSrc || img.getAttribute('src') || '';
+        if (isPlaceholder(src)) {
+            setFallback(img, card);
+            src = img.currentSrc || img.getAttribute('src') || '';
+        }
+
+        modalImage.src = src;
+        modalImage.alt = img.alt || card.dataset.name || '';
+        modalImage.hidden = false;
+        modalImage.style.display = 'block';
+        modalImage.style.visibility = 'visible';
+    }
+
+    cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            activeCard = card;
+            syncModal(card);
+            setTimeout(function () { if (activeCard === card) syncModal(card); }, 80);
+            setTimeout(function () { if (activeCard === card) syncModal(card); }, 500);
+        });
+    });
+
+    modalImage.addEventListener('error', function () {
+        if (activeCard) {
+            const img = activeCard.querySelector('.fish-photo');
+            if (img) {
+                setFallback(img, activeCard);
+                syncModal(activeCard);
+            }
+        }
+    });
+
+    [document.getElementById('modalClose'), document.getElementById('modalCloseButton')]
+        .filter(Boolean)
+        .forEach(function (button) {
+            button.addEventListener('click', function () {
+                activeCard = null;
+            });
+        });
+})();
+</script>
+
+</body>
+
+</html>
