@@ -29,6 +29,10 @@
             <a href="log.html">บันทึกการตกปลา</a>
 
             <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">เกี่ยวกับ</a>
+            <button id="themeToggle" class="theme-toggle">
+                🌙
+            </button>
 
         </nav>
 
@@ -38,33 +42,170 @@
     <!-- Main -->
     <main class="home">
 
-        <h1>
-            ค้นหาปลาที่คุณอยากตก
-        </h1>
+        <div class="hero-content">
 
-        <p>
-            ข้อมูลและเครื่องมือสำหรับคนรักการตกปลา
-        </p>
+            <div class="hero-icon">
+                🎣
+            </div>
+
+            <h1>
+                FishFinder
+            </h1>
+
+            <h2>
+                ค้นหาปลาที่คุณอยากตก
+            </h2>
+
+            <p>
+                คู่มือปลา เหยื่อ ช่วงเวลาที่เหมาะสม
+                และระบบบันทึกประวัติการตกปลา
+            </p>
 
 
-        <!-- Search -->
-        <div class="search-box">
+            <!-- Search -->
+            <div class="search-box">
 
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="ค้นหาชื่อปลา..."
-            >
+                <input type="text" id="searchInput" placeholder="ค้นหาชื่อปลา...">
 
-            <button id="searchButton">
-                ค้นหา
-            </button>
+                <button id="searchButton">
+                    🔎 ค้นหา
+                </button>
 
+            </div>
+            <div class="hero-buttons">
+
+                <a href="fish.html" class="hero-button primary">
+                    🐟 ดูคู่มือปลา
+                </a>
+
+                <a href="log.html" class="hero-button secondary">
+                    🎣 เริ่มบันทึกการตกปลา
+                </a>
+
+            </div>
         </div>
+
+
+        <!-- Features -->
+        <section class="home-features">
+
+            <div class="home-feature">
+                <a href="fish.html" class="home-feature">
+
+                    <div>
+                        🐟
+                    </div>
+
+                    <h3>
+                        คู่มือปลา
+                    </h3>
+
+                    <p>
+                        ค้นหาข้อมูลปลา
+                        เหยื่อ และช่วงเวลาที่เหมาะสม
+                    </p>
+
+                </a>
+
+            </div>
+
+
+            <div class="home-feature">
+
+                <a href="log.html" class="home-feature">
+
+                    <div>
+                        🎣
+                    </div>
+
+                    <h3>
+                        บันทึกการตกปลา
+                    </h3>
+
+                    <p>
+                        เก็บชื่อปลา
+                        สถานที่ น้ำหนัก ความยาว
+                        และหมายเหตุ
+                    </p>
+
+                </a>
+            </div>
+
+
+            <div class="home-feature">
+
+                <a href="dashboard.html" class="home-feature">
+
+                    <div>
+                        📊
+                    </div>
+
+                    <h3>
+                        Dashboard
+                    </h3>
+
+                    <p>
+                        ดูสถิติการตกปลา
+                        และปลาที่คุณตกได้บ่อยที่สุด
+                    </p>
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Technology -->
+        <section class="home-tech">
+
+            <span>
+                HTML
+            </span>
+
+            <span>
+                CSS
+            </span>
+
+            <span>
+                JavaScript
+            </span>
+
+            <span>
+                LocalStorage
+            </span>
+
+        </section>
 
     </main>
 
+    <footer class="site-footer">
 
+        <div class="footer-content">
+
+            <h3>🎣 FishFinder</h3>
+
+            <p>
+                เว็บไซต์คู่มือและบันทึกการตกปลา
+                สำหรับคนที่รักการตกปลา
+            </p>
+
+            <div class="footer-links">
+                <a href="index.html">หน้าหลัก</a>
+                <a href="fish.html">คู่มือปลา</a>
+                <a href="log.html">บันทึกการตกปลา</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="about.html">เกี่ยวกับ</a>
+            </div>
+
+            <p class="footer-copy">
+                © 2026 FishFinder
+            </p>
+
+        </div>
+
+    </footer>
     <script src="js/main.js"></script>
 
 </body>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>About - FishFinder</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        .about-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .about-hero {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .about-hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .about-hero p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .about-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.08);
+        }
+
+        .about-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .feature-card {
+            padding: 20px;
+            background: #f5f8fa;
+            border-radius: 15px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-item {
+            padding: 10px 15px;
+            background: #eef4f8;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .about-credit {
+            text-align: center;
+            margin-top: 35px;
+            font-size: 15px;
+        }
+
+
+        /* Dark Mode */
+
+        body.dark-mode .about-section {
+            background: #1e1e1e;
+            color: white;
+        }
+
+        body.dark-mode
+        .feature-card {
+            background: #292929;
+        }
+
+        body.dark-mode
+        .tech-item {
+            background: #292929;
+            color: white;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            .about-page {
+                padding: 40px 15px;
+            }
+
+            .about-hero h1 {
+                font-size: 32px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h2>
+            🎣 FishFinder
+        </h2>
+
+        <nav>
+
+            <a href="index.html">
+                หน้าหลัก
+            </a>
+
+            <a href="fish.html">
+                คู่มือ
+            </a>
+
+            <a href="log.html">
+                บันทึกการตกปลา
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="about.html">
+                เกี่ยวกับ
+            </a>
+
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+            >
+                🌙
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- About -->
+
+    <main class="about-page">
+
+
+        <section class="about-hero">
+
+            <h1>
+                🎣 FishFinder
+            </h1>
+
+            <p>
+                เว็บไซต์สำหรับคนที่ชอบตกปลา
+                <br>
+                ช่วยค้นหาข้อมูลปลา
+                บันทึกประวัติการตกปลา
+                และดูสถิติของตัวเอง
+            </p>
+
+        </section>
+
+
+        <!-- Project -->
+
+        <section class="about-section">
+
+            <h2>
+                📌 เกี่ยวกับโปรเจกต์
+            </h2>
+
+            <p>
+                FishFinder เป็นโปรเจกต์เว็บไซต์
+                ที่สร้างขึ้นเพื่อฝึกพัฒนาเว็บ
+                ด้วย HTML, CSS และ JavaScript
+            </p>
+
+            <p>
+                ภายในเว็บไซต์สามารถค้นหาปลา
+                ดูข้อมูลเหยื่อและช่วงเวลาที่เหมาะสม
+                รวมถึงบันทึกข้อมูลการตกปลา
+                เพื่อนำไปสร้างสถิติใน Dashboard
+            </p>
+
+        </section>
+
+
+        <!-- Features -->
+
+        <section class="about-section">
+
+            <h2>
+                🚀 ฟีเจอร์
+            </h2>
+
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        🐟 คู่มือปลา
+                    </h3>
+
+                    <p>
+                        ดูข้อมูลปลา
+                        ประเภท เหยื่อ
+                        และช่วงเวลาที่เหมาะสม
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        🔎 ระบบค้นหา
+                    </h3>
+
+                    <p>
+                        ค้นหาจากชื่อปลา
+                        ประเภท และเหยื่อ
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        🎣 Fishing Log
+                    </h3>
+
+                    <p>
+                        บันทึกชื่อปลา
+                        สถานที่ วันที่
+                        น้ำหนัก ความยาว
+                        และหมายเหตุ
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        📊 Dashboard
+                    </h3>
+
+                    <p>
+                        ดูจำนวนปลา
+                        น้ำหนักรวม
+                        ปลาที่หนักที่สุด
+                        และปลาที่ยาวที่สุด
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        🌙 Dark Mode
+                    </h3>
+
+                    <p>
+                        เปลี่ยนธีมเว็บไซต์
+                        และจดจำการตั้งค่า
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        📱 Responsive
+                    </h3>
+
+                    <p>
+                        รองรับการแสดงผล
+                        บนอุปกรณ์ขนาดต่าง ๆ
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Technology -->
+
+        <section class="about-section">
+
+            <h2>
+                💻 เทคโนโลยีที่ใช้
+            </h2>
+
+
+            <div class="tech-list">
+
+                <span class="tech-item">
+                    HTML
+                </span>
+
+                <span class="tech-item">
+                    CSS
+                </span>
+
+                <span class="tech-item">
+                    JavaScript
+                </span>
+
+                <span class="tech-item">
+                    LocalStorage
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Learning -->
+
+        <section class="about-section">
+
+            <h2>
+                🎯 สิ่งที่ได้ฝึกจากโปรเจกต์
+            </h2>
+
+            <p>
+                โปรเจกต์นี้ช่วยฝึกการสร้างหน้าเว็บ
+                การจัด Layout ด้วย CSS
+                การใช้ JavaScript จัดการ DOM
+                การสร้าง Event
+                การจัดการ Array และ Object
+                และการเก็บข้อมูลด้วย LocalStorage
+            </p>
+
+        </section>
+
+
+        <p class="about-credit">
+            🎣 FishFinder Project
+        </p>
+
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

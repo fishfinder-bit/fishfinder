@@ -97,7 +97,7 @@ main h1 {
 }
 
 
-main > p {
+main>p {
 
     font-size: 18px;
 
@@ -880,7 +880,7 @@ button:hover {
 }
 
 
-.bar-item > span {
+.bar-item>span {
 
     width: 30px;
 
@@ -1010,7 +1010,49 @@ button:hover {
 
     }
 
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-button {
+        width: min(100%, 300px);
+        box-sizing: border-box;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .fish-page {
+        padding: 35px 15px;
+    }
+
+    .fish-hero h1 {
+        font-size: 34px;
+    }
+
+    .fish-hero-icon {
+        font-size: 50px;
+    }
+
+    .filter-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-box label {
+        margin-top: 5px;
+    }
+
+    .filter-box input,
+    .filter-box select {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
+
 /* ========================================
    Modal Buttons
 ======================================== */
@@ -1049,6 +1091,7 @@ button:hover {
     margin-top: 0;
 
 }
+
 /* ========================================
    Responsive สำหรับมือถือ
    ======================================== */
@@ -1217,4 +1260,2692 @@ button:hover {
         grid-template-columns: 1fr;
     }
 
+    .fish-list {
+        grid-template-columns: 1fr;
+    }
+
+    .fish-card .fish-photo {
+        height: 230px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1000px) {
+        .fish-list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 768px) {
+        .fish-list {
+            grid-template-columns: 1fr;
+        }
+
+        .fish-card img {
+            height: 230px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1000px) {
+            .fish-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .fish-card::after {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .fish-list.list-view .fish-card {
+            grid-template-columns: 1fr;
+        }
+
+        .fish-list.list-view .fish-card img {
+            width: 100%;
+            height: 220px;
+        }
+    }
+}
+
+/* ========================================
+   FishFinder - ปรับแต่งการ์ดปลา
+   ======================================== */
+
+.fish-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease,
+        box-shadow 0.25s ease;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้ */
+.fish-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+/* รูปปลา */
+.fish-card .fish-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* ซูมรูปเล็กน้อยตอน Hover */
+.fish-card:hover .fish-photo {
+    transform: scale(1.03);
+}
+
+/* ชื่อปลา */
+.fish-card h2 {
+    font-size: 24px;
+    margin: 8px 0 14px;
+    font-weight: 700;
+}
+
+/* ข้อมูลปลา */
+.fish-card p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* ให้ข้อมูลบรรทัดแรกเด่น */
+.fish-card p:first-of-type {
+    font-weight: 600;
+}
+
+/* ========================================
+   ช่องค้นหา
+   ======================================== */
+
+#fishSearchInput {
+    width: 280px;
+    padding: 12px 16px;
+    border: 2px solid #dbe7ef;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#fishSearchInput:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.12);
+}
+
+/* Dropdown */
+#fishType {
+    padding: 12px 16px;
+    border: 2px solid #dbe7ef;
+    border-radius: 12px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+}
+
+#fishType:focus {
+    border-color: #2196f3;
+}
+
+/* ========================================
+   Filter Box
+   ======================================== */
+
+.filter-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px auto;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    #fishSearchInput {
+        width: 100%;
+    }
+
+    #fishType {
+        width: 100%;
+    }
+
+    .filter-box {
+        padding: 0 20px;
+    }
+
+    .fish-card {
+        padding: 14px;
+    }
+
+    .fish-card .fish-photo {
+        height: 200px;
+    }
+
+    .fish-card h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* ========================================
+   FishFinder - Modal รายละเอียดปลา
+   ======================================== */
+
+.fish-modal-content {
+    width: min(520px, 92%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: modalShow 0.25s ease;
+}
+
+@keyframes modalShow {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* รูปใน Modal */
+#modalImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+/* ชื่อปลา */
+#modalName {
+    font-size: 30px;
+    margin: 10px 0 18px;
+}
+
+/* รายละเอียด */
+#modalType,
+#modalBait,
+#modalTime {
+    font-size: 17px;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+/* ปุ่มปิด X */
+.modal-close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #ef4444;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: rotate(90deg);
+}
+
+/* กลุ่มปุ่ม */
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ปุ่มบันทึก */
+.save-fish-button {
+    background: #16a34a;
+    color: white;
+}
+
+.save-fish-button:hover {
+    filter: brightness(0.92);
+}
+
+/* ปุ่มปิด */
+.modal-close-button {
+    background: #555;
+    color: white;
+}
+
+.modal-close-button:hover {
+    background: #333;
+}
+
+/* มือถือ */
+@media (max-width: 768px) {
+
+    .fish-modal-content {
+        width: 92%;
+        padding: 18px;
+    }
+
+    #modalImage {
+        height: 220px;
+    }
+
+    #modalName {
+        font-size: 24px;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+
+}
+
+/* ========================================
+   Dashboard - การ์ดสถิติ
+   ======================================== */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.dashboard-stats .stat-card {
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.dashboard-stats .stat-card p {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 12px 0;
+    word-break: break-word;
+}
+
+/* การ์ดแถวที่สอง */
+.dashboard-stats+.dashboard-stats {
+    margin-top: 20px;
+}
+
+/* มือถือ */
+@media (max-width: 768px) {
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ========================================
+   Top 5 Fish
+   ======================================== */
+
+.top-fish-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.top-fish-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top-fish-item {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 18px;
+    margin: 10px 0;
+
+    background: #f5f8fa;
+    border-radius: 14px;
+}
+
+.top-fish-rank {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.top-fish-name {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.top-fish-count {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .top-fish-box {
+        padding: 18px;
+    }
+
+    .top-fish-item {
+        grid-template-columns: 40px 1fr auto;
+        padding: 12px;
+    }
+
+    .top-fish-name {
+        font-size: 15px;
+    }
+
+}
+
+/* ========================================
+   Dark Mode Button
+   ======================================== */
+
+.theme-toggle {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   Dark Mode
+   ======================================== */
+
+body.dark-mode {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+
+/* Header */
+
+body.dark-mode header {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode header a {
+    color: #ffffff;
+}
+
+
+/* กล่องและการ์ด */
+
+body.dark-mode .fish-card,
+body.dark-mode .stat-card,
+body.dark-mode .chart-box,
+body.dark-mode .favorite-box,
+body.dark-mode .top-fish-box,
+body.dark-mode .log-item,
+body.dark-mode .edit-form {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+
+/* ข้อความ */
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label {
+    color: #dddddd;
+}
+
+
+/* Input / Select / Textarea */
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #2a2a2a;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+
+/* Top Fish */
+
+body.dark-mode .top-fish-item {
+    background: #292929;
+}
+
+
+/* ปุ่ม Theme */
+
+body.dark-mode .theme-toggle {
+    color: #ffffff;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   Dark Mode - ปรับส่วนที่เหลือ
+   ======================================== */
+
+/* หน้าหลัก */
+body.dark-mode .home {
+    background: #121212;
+}
+
+body.dark-mode .home h1,
+body.dark-mode .home p {
+    color: #ffffff;
+}
+
+/* กล่องค้นหา */
+body.dark-mode .search-box input {
+    background: #2a2a2a;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+/* Fish Guide */
+body.dark-mode .filter-box {
+    color: #ffffff;
+}
+
+body.dark-mode .fish-card {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .fish-card p {
+    color: #dddddd;
+}
+
+/* Modal */
+body.dark-mode .fish-modal-content {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode #modalName,
+body.dark-mode #modalType,
+body.dark-mode #modalBait,
+body.dark-mode #modalTime {
+    color: #ffffff;
+}
+
+/* Fishing Log */
+body.dark-mode .log-page {
+    background: #121212;
+}
+
+body.dark-mode .log-form,
+body.dark-mode .edit-form,
+body.dark-mode .log-item {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .log-item p,
+body.dark-mode .log-item span {
+    color: #dddddd;
+}
+
+/* Dashboard */
+body.dark-mode .dashboard {
+    background: #121212;
+}
+
+body.dark-mode .chart-box,
+body.dark-mode .favorite-box {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .chart-box h2,
+body.dark-mode .favorite-box h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .top-fish-box {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+/* กราฟ */
+body.dark-mode .bar-background {
+    background: #3a3a3a;
+}
+
+/* ปุ่ม */
+body.dark-mode button {
+    color: #ffffff;
+}
+
+body.dark-mode .fish-card {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+body.dark-mode .fish-card p {
+    color: #ddd;
+}
+
+body.dark-mode .fish-badge {
+    background: #263b2a;
+    color: #8ee59b;
+}
+
+body.dark-mode .fish-card[data-type="ทะเล"] .fish-badge {
+    background: #263746;
+    color: #90caf9;
+}
+
+body.dark-mode .fish-card {
+    background: #1e1e1e;
+    color: #fff;
+    border-color: #333;
+}
+
+body.dark-mode .fish-card p {
+    color: #ddd;
+}
+
+body.dark-mode .fish-badge {
+    background: #263b2a;
+    color: #8ee59b;
+}
+
+body.dark-mode .fish-card[data-type="ทะเล"] .fish-badge {
+    background: #263746;
+    color: #90caf9;
+}
+
+body.dark-mode .fish-count {
+    background: #263b2a;
+    color: #8ee59b;
+}
+
+body.dark-mode .fish-card p {
+    color: #ddd;
+}
+
+body.dark-mode .fish-card::after {
+    background: rgba(22, 163, 74, 0.95);
+}
+
+body.dark-mode .fish-modal-content {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode #modalName,
+body.dark-mode #modalType,
+body.dark-mode #modalBait,
+body.dark-mode #modalTime {
+    color: white;
+}
+
+body.dark-mode .view-button {
+    background: #1e1e1e;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark-mode .view-button.active {
+    background: #168534;
+    color: #fff;
+    border-color: #168534;
+}
+
+/* ========================================
+   Landing Page
+   ======================================== */
+
+.home {
+    min-height: auto;
+    padding: 70px 20px 50px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.hero-icon {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    margin: 0 0 10px;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    margin: 0 0 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+
+/* Feature Cards */
+
+.home-features {
+    max-width: 1000px;
+    margin: 55px auto 30px;
+
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.home-feature {
+    background: #ffffff;
+    padding: 28px 22px;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-feature:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+.home-feature>div {
+    font-size: 42px;
+}
+
+.home-feature h3 {
+    font-size: 22px;
+    margin: 12px 0 8px;
+}
+
+.home-feature p {
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Technology */
+
+.home-tech {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.home-tech span {
+    padding: 9px 15px;
+
+    background: #ffffff;
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+
+/* Dark Mode */
+
+body.dark-mode .home-feature,
+body.dark-mode .home-tech span {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .home-feature p {
+    color: #dddddd;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .home {
+        padding: 50px 15px 35px;
+    }
+
+    .hero-icon {
+        font-size: 55px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .home-features {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+
+}
+
+.home-feature {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.home-feature:hover {
+    color: inherit;
+}
+
+.fish-modal {
+    padding: 12px;
+}
+
+.fish-modal-content {
+    padding: 18px;
+    border-radius: 20px;
+}
+
+#modalImage {
+    height: 230px;
+}
+
+#modalName {
+    font-size: 25px;
+}
+
+#modalType,
+#modalBait,
+#modalTime {
+    font-size: 15px;
+}
+
+.modal-buttons {
+    flex-direction: column;
+}
+
+/* ========================================
+   HERO BUTTONS
+======================================== */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+.hero-button.primary {
+    background: #008000;
+    color: white;
+}
+
+.hero-button.secondary {
+    background: white;
+    color: #008000;
+    border: 2px solid #008000;
+}
+
+body.dark-mode .hero-button.secondary {
+    background: #1e1e1e;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    margin-top: 60px;
+    padding: 40px 20px 25px;
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    line-height: 1.7;
+    margin: 8px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ========================================
+   FISH GUIDE
+======================================== */
+
+.fish-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.fish-hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.fish-hero-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.fish-hero h1 {
+    font-size: 42px;
+    margin: 0 0 10px;
+}
+
+.fish-hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+    color: #555;
+}
+
+.fish-hint {
+    text-align: center;
+    margin: 18px 0 25px;
+    color: #666;
+}
+
+/* ========================================
+   FISH CARDS
+======================================== */
+
+.fish-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.fish-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.fish-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+.fish-card .fish-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.fish-card:hover .fish-photo {
+    transform: scale(1.03);
+}
+
+.fish-card h2,
+.fish-card h3 {
+    margin: 0 0 12px;
+    font-size: 23px;
+}
+
+.fish-card p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.fish-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: #e8f5e9;
+    color: #168534;
+}
+
+.fish-card[data-type="ทะเล"] .fish-badge {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.fish-info {
+    margin-top: 12px;
+}
+
+.fish-info p {
+    margin: 6px 0;
+}
+
+/* ========================================
+   FISH CARD FINAL STYLE
+======================================== */
+
+.fish-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fish-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+.fish-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.fish-card h2,
+.fish-card h3 {
+    margin: 0 0 12px;
+    font-size: 23px;
+}
+
+.fish-card p {
+    margin: 7px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.fish-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* ========================================
+   FISH BADGE
+======================================== */
+
+.fish-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    border-radius: 999px;
+    background: #e8f5e9;
+    color: #168534;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.fish-card[data-type="ทะเล"] .fish-badge {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+/* ========================================
+   FISH COUNT
+======================================== */
+
+.fish-count {
+    width: fit-content;
+    margin: 10px auto 25px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #e8f5e9;
+    color: #168534;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ========================================
+   FISH COUNT
+======================================== */
+
+.fish-count {
+    width: fit-content;
+    margin: 10px auto 25px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #e8f5e9;
+    color: #168534;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+body.dark-mode .fish-count {
+    background: #263b2a;
+    color: #8ee59b;
+}
+
+/* ========================================
+   FISH CARD INFO
+======================================== */
+
+.fish-card h2,
+.fish-card h3 {
+    margin: 12px 0;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.fish-card p {
+    margin: 7px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.fish-card p:first-of-type {
+    margin-top: 12px;
+}
+
+.fish-card p::first-letter {
+    font-size: 16px;
+}
+
+
+/* ========================================
+   FISH CARD HOVER
+======================================== */
+
+.fish-card {
+    position: relative;
+}
+
+.fish-card::after {
+    content: "คลิกเพื่อดูรายละเอียด";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    background: rgba(0, 128, 0, 0.9);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+.fish-card:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   FISH MODAL
+======================================== */
+
+.fish-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.fish-modal-content {
+    position: relative;
+    width: min(520px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalShow 0.25s ease;
+}
+
+@keyframes modalShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* รูปปลา */
+
+#modalImage {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* ชื่อปลา */
+
+#modalName {
+    margin: 0 0 18px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* ข้อมูลปลา */
+
+#modalType,
+#modalBait,
+#modalTime {
+    margin: 10px 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ปุ่ม X */
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+/* ปุ่มด้านล่าง */
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    min-height: 48px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-fish-button {
+    background: #16a34a;
+    color: white;
+}
+
+.modal-close-button {
+    background: #555;
+    color: white;
+}
+
+/* ========================================
+   VIEW SWITCHER
+======================================== */
+
+.view-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.view-button {
+    padding: 10px 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.view-button:hover {
+    transform: translateY(-2px);
+}
+
+.view-button.active {
+    background: #168534;
+    color: #fff;
+    border-color: #168534;
+}
+
+/* ========================================
+   LIST VIEW
+======================================== */
+
+.fish-list.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fish-list.list-view .fish-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.fish-list.list-view .fish-card img {
+    width: 180px;
+    height: 140px;
+    margin: 0;
+}
+
+.fish-list.list-view .fish-card h2,
+.fish-list.list-view .fish-card h3 {
+    margin-top: 0;
+}
+
+.fish-list.list-view .fish-card::after {
+    display: none;
+}
+
+/* ========================================
+   FINAL LIST VIEW
+======================================== */
+
+.fish-list.list-view .fish-card {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
+    text-align: left;
+}
+
+.fish-list.list-view .fish-card img {
+    width: 180px;
+    height: 140px;
+    margin: 0;
+    object-fit: cover;
+}
+
+.fish-list.list-view .fish-card h2,
+.fish-list.list-view .fish-card h3 {
+    margin: 0 0 12px;
+    text-align: left;
+}
+
+.fish-list.list-view .fish-card p {
+    margin: 6px 0;
+    text-align: left;
+}
+
+.fish-list.list-view .fish-badge {
+    margin-bottom: 8px;
+}
+
+/* มือถือ */
+@media (max-width: 768px) {
+
+    .fish-list.list-view .fish-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .fish-list.list-view .fish-card img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .fish-list.list-view .fish-card h2,
+    .fish-list.list-view .fish-card h3,
+    .fish-list.list-view .fish-card p {
+        text-align: center;
+    }
+}
+
+/* ========================================
+   FINAL LIST LAYOUT
+======================================== */
+
+.fish-list.list-view .fish-card {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
+    text-align: left;
+    min-height: 180px;
+}
+
+.fish-list.list-view .fish-card img {
+    width: 180px;
+    height: 140px;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.fish-list.list-view .fish-card .fish-badge {
+    margin-bottom: 8px;
+}
+
+.fish-list.list-view .fish-card h2,
+.fish-list.list-view .fish-card h3 {
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.fish-list.list-view .fish-card p {
+    margin: 6px 0;
+    text-align: left;
+}
+
+
+/* ========================================
+   LIST VIEW MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .fish-list.list-view .fish-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .fish-list.list-view .fish-card img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .fish-list.list-view .fish-card .fish-badge {
+        margin-bottom: 5px;
+    }
+
+    .fish-list.list-view .fish-card h2,
+    .fish-list.list-view .fish-card h3,
+    .fish-list.list-view .fish-card p {
+        text-align: center;
+    }
+}
+
+/* ========================================
+   FIX LIST VIEW
+======================================== */
+
+.fish-list.list-view .fish-card {
+    display: grid !important;
+    grid-template-columns: 180px minmax(0, 1fr) !important;
+    gap: 24px !important;
+    align-items: center !important;
+    text-align: left !important;
+    min-height: 180px;
+}
+
+.fish-list.list-view .fish-card img {
+    width: 180px !important;
+    height: 140px !important;
+    margin: 0 !important;
+    object-fit: cover !important;
+    border-radius: 16px;
+}
+
+.fish-list.list-view .fish-card .fish-badge {
+    margin-bottom: 8px;
+}
+
+.fish-list.list-view .fish-card h2,
+.fish-list.list-view .fish-card h3,
+.fish-list.list-view .fish-card p {
+    text-align: left !important;
+}
+
+
+/* ========================================
+   MOBILE LIST
+======================================== */
+
+@media (max-width: 768px) {
+
+    .fish-list.list-view .fish-card {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+
+    .fish-list.list-view .fish-card img {
+        width: 100% !important;
+        height: 220px !important;
+    }
+
+    .fish-list.list-view .fish-card h2,
+    .fish-list.list-view .fish-card h3,
+    .fish-list.list-view .fish-card p {
+        text-align: center !important;
+    }
+}
+
+/* ========================================
+   FINAL LIST VIEW FIX
+======================================== */
+
+.fish-list.list-view .fish-card {
+    display: grid !important;
+    grid-template-columns: 180px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto auto auto !important;
+    column-gap: 24px !important;
+    row-gap: 4px !important;
+    align-items: center !important;
+    text-align: left !important;
+    min-height: 180px;
+}
+
+
+/* รูปปลา */
+.fish-list.list-view .fish-card img {
+    grid-column: 1 !important;
+    grid-row: 1 / span 5 !important;
+
+    width: 180px !important;
+    height: 140px !important;
+    margin: 0 !important;
+
+    object-fit: cover !important;
+    border-radius: 16px !important;
+}
+
+
+/* Badge */
+.fish-list.list-view .fish-card .fish-badge {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    width: fit-content !important;
+    margin: 0 0 4px 0 !important;
+}
+
+
+/* ชื่อปลา */
+.fish-list.list-view .fish-card h2,
+.fish-list.list-view .fish-card h3 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+
+    margin: 0 0 4px 0 !important;
+    text-align: left !important;
+}
+
+
+/* ข้อมูลปลา */
+.fish-list.list-view .fish-card p {
+    grid-column: 2 !important;
+
+    margin: 2px 0 !important;
+    text-align: left !important;
+}
+
+
+/* ประเภท */
+.fish-list.list-view .fish-card p:nth-of-type(1) {
+    grid-row: 3 !important;
+}
+
+
+/* เหยื่อ */
+.fish-list.list-view .fish-card p:nth-of-type(2) {
+    grid-row: 4 !important;
+}
+
+
+/* เวลา */
+.fish-list.list-view .fish-card p:nth-of-type(3) {
+    grid-row: 5 !important;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .fish-list.list-view .fish-card {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        gap: 8px !important;
+        text-align: center !important;
+    }
+
+    .fish-list.list-view .fish-card img {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+
+        width: 100% !important;
+        height: 220px !important;
+    }
+
+    .fish-list.list-view .fish-card .fish-badge {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+
+        margin: 0 auto 4px !important;
+    }
+
+    .fish-list.list-view .fish-card h2,
+    .fish-list.list-view .fish-card h3 {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+
+        text-align: center !important;
+    }
+
+    .fish-list.list-view .fish-card p {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+
+        text-align: center !important;
+    }
+}
+
+/* ========================================
+   LOG SEARCH
+======================================== */
+
+.log-search-box {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.log-search-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
+    color: #333;
+}
+
+.log-search-box input:focus {
+    border-color: #168534;
+    box-shadow: 0 0 0 3px rgba(22, 133, 52, 0.12);
+}
+
+body.dark-mode .log-search-box input {
+    background: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark-mode .log-search-box input::placeholder {
+    color: #aaa;
+}
+
+/* ========================================
+   LOG SEARCH
+======================================== */
+
+.log-search-box {
+    width: min(700px, 92%);
+    margin: 0 auto 25px;
+}
+
+.log-search-box input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 18px;
+
+    border: 1px solid #d9d9d9;
+    border-radius: 14px;
+
+    background: #ffffff;
+    color: #333333;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.log-search-box input::placeholder {
+    color: #888888;
+}
+
+.log-search-box input:focus {
+    border-color: #168534;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 133, 52, 0.12);
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode .log-search-box input {
+    background: #2a2a2a;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .log-search-box input::placeholder {
+    color: #aaaaaa;
+}
+
+/* ========================================
+   LOG FILTER
+======================================== */
+
+.log-filter-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    margin: 0 auto 25px;
+}
+
+.log-filter-box label {
+    font-weight: 600;
+}
+
+.log-filter-box select {
+    padding: 11px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.log-filter-box select:focus {
+    border-color: #168534;
+    box-shadow:
+        0 0 0 3px rgba(22, 133, 52, 0.12);
+}
+
+
+/* Dark Mode */
+
+body.dark-mode .log-filter-box select {
+    background: #2a2a2a;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .log-filter-box label {
+    color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+
+    .log-filter-box {
+        flex-direction: column;
+    }
+
+    .log-filter-box select {
+        width: min(300px, 90%);
+    }
+}
+
+/* ========================================
+   LOG SUMMARY
+======================================== */
+
+.log-summary {
+    width: min(1000px, 92%);
+    margin: 0 auto 35px;
+
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.log-summary-card {
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 24px 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.log-summary-icon {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.log-summary-value {
+    font-size: 30px;
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.log-summary-label {
+    font-size: 15px;
+    color: #666666;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode .log-summary-card {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .log-summary-label {
+    color: #cccccc;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .log-summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+}
+
+/* ========================================
+   WEIGHT CHART
+======================================== */
+
+.weight-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.weight-chart-row {
+    display: grid;
+
+    grid-template-columns:
+        180px minmax(0, 1fr) 80px;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.weight-chart-name {
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.weight-chart-background {
+    width: 100%;
+    height: 24px;
+
+    background: #e5e7eb;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+
+.weight-chart-bar {
+    width: 0;
+    height: 100%;
+
+    background: #168534;
+
+    border-radius: 999px;
+
+    transition:
+        width 0.5s ease;
+}
+
+
+.weight-chart-value {
+    text-align: right;
+    font-weight: 700;
+}
+
+
+/* Dark Mode */
+
+body.dark-mode .weight-chart-background {
+    background: #3a3a3a;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .weight-chart-row {
+        grid-template-columns:
+            1fr;
+
+        gap: 6px;
+    }
+
+
+    .weight-chart-name {
+        white-space: normal;
+    }
+
+
+    .weight-chart-value {
+        text-align: left;
+    }
+
+}
+
+/* ========================================
+   FISH COUNT CHART
+======================================== */
+
+.fish-count-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.fish-count-chart-row {
+    display: grid;
+
+    grid-template-columns:
+        180px minmax(0, 1fr) 80px;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.fish-count-chart-name {
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.fish-count-chart-background {
+    width: 100%;
+    height: 24px;
+
+    background: #e5e7eb;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+
+.fish-count-chart-bar {
+    width: 0;
+    height: 100%;
+
+    background: #168534;
+
+    border-radius: 999px;
+
+    transition:
+        width 0.5s ease;
+}
+
+
+.fish-count-chart-value {
+    text-align: right;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode .fish-count-chart-background {
+    background: #3a3a3a;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .fish-count-chart-row {
+        grid-template-columns:
+            1fr;
+
+        gap: 6px;
+    }
+
+    .fish-count-chart-name {
+        white-space: normal;
+    }
+
+    .fish-count-chart-value {
+        text-align: left;
+    }
+}
+
+/* ========================================
+   FISHING SUMMARY
+======================================== */
+
+.fishing-summary-box {
+    text-align: center;
+}
+
+
+.fishing-summary {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    font-size: 19px;
+
+    line-height: 2;
+
+    font-weight: 500;
+}
+
+
+.fishing-summary strong {
+    font-weight: 700;
+}
+
+
+.fishing-summary-line {
+    margin: 8px 0;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode .fishing-summary {
+    color: #ffffff;
+}
+
+/* ========================================
+   TOP 5 RANKING
+======================================== */
+
+.top-fish-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.top-fish-item {
+    display: grid;
+
+    grid-template-columns:
+        55px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 20px;
+
+    background: #f5f7f6;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.top-fish-item:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.top-fish-rank {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+.top-fish-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.top-fish-count {
+    font-size: 17px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode .top-fish-item {
+    background: #292929;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .top-fish-item {
+        grid-template-columns:
+            45px minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .top-fish-count {
+        grid-column: 2;
+
+        font-size: 15px;
+    }
+
+
+    .top-fish-name {
+        font-size: 16px;
+    }
+
+}
+
+/* ========================================
+   MONTHLY SUMMARY
+======================================== */
+
+.monthly-summary-box {
+    text-align: center;
+}
+
+
+.monthly-summary {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.monthly-summary-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.monthly-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+.monthly-summary-item {
+    background: #f5f7f6;
+
+    border-radius: 16px;
+
+    padding: 20px 15px;
+}
+
+
+.monthly-summary-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+
+.monthly-summary-value {
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.monthly-summary-label {
+    color: #666;
+    font-size: 14px;
+}
+
+
+body.dark-mode .monthly-summary-item {
+    background: #292929;
+    color: #ffffff;
+}
+
+
+body.dark-mode .monthly-summary-label {
+    color: #cccccc;
+}
+
+
+@media (max-width: 768px) {
+
+    .monthly-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ========================================
+   MONTH SELECTOR
+======================================== */
+
+.month-selector {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.month-selector label {
+    font-weight: 600;
+}
+
+
+.month-selector select {
+    min-width: 220px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #d9d9d9;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+
+.month-selector select:focus {
+
+    border-color: #168534;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 133, 52, 0.12);
+}
+
+
+/* ========================================
+   MONTHLY SUMMARY
+======================================== */
+
+.monthly-summary-box {
+    text-align: center;
+}
+
+
+.monthly-summary-title {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+.monthly-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+.monthly-summary-item {
+    background: #f5f7f6;
+
+    border-radius: 16px;
+
+    padding: 20px 15px;
+}
+
+
+.monthly-summary-icon {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.monthly-summary-value {
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.monthly-summary-label {
+    font-size: 14px;
+
+    color: #666666;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode .month-selector select {
+
+    background: #2a2a2a;
+
+    color: #ffffff;
+
+    border-color: #444444;
+}
+
+
+body.dark-mode .monthly-summary-item {
+
+    background: #292929;
+
+    color: #ffffff;
+}
+
+
+body.dark-mode .monthly-summary-label {
+
+    color: #cccccc;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .month-selector {
+        flex-direction: column;
+    }
+
+
+    .month-selector select {
+        width: min(300px, 90%);
+    }
+
+
+    .monthly-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ========================================
+   LOG FORM - DARK MODE FIX
+======================================== */
+
+body.dark-mode .log-page input,
+body.dark-mode .log-page select,
+body.dark-mode .log-page textarea {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+
+/* Placeholder */
+
+body.dark-mode .log-page input::placeholder,
+body.dark-mode .log-page textarea::placeholder {
+    color: #aaaaaa !important;
+}
+
+
+/* ช่องวันที่ */
+
+body.dark-mode .log-page input[type="date"] {
+    color-scheme: dark;
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+}
+
+
+/* Dropdown */
+
+body.dark-mode .log-page select option {
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+
+/* Label */
+
+body.dark-mode .log-page label {
+    color: #ffffff !important;
+}
+
+
+/* Focus */
+
+body.dark-mode .log-page input:focus,
+body.dark-mode .log-page select:focus,
+body.dark-mode .log-page textarea:focus {
+    border-color: #168534 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 133, 52, 0.15);
+}
+
+/* ========================================
+   FISH GUIDE - DARK MODE FIX
+======================================== */
+
+/* ช่องค้นหา */
+body.dark-mode #fishSearchInput {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+
+/* Dropdown ประเภทปลา */
+body.dark-mode #fishType {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+
+/* Dropdown เรียงข้อมูล */
+body.dark-mode #fishSort {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+
+/* ตัวเลือกใน Dropdown */
+body.dark-mode #fishType option,
+body.dark-mode #fishSort option {
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+
+/* ป้ายข้อความ */
+body.dark-mode .filter-box label {
+    color: #ffffff !important;
+}
+
+
+/* Placeholder */
+body.dark-mode #fishSearchInput::placeholder {
+    color: #aaaaaa !important;
+}
+
+
+/* Focus */
+body.dark-mode #fishSearchInput:focus,
+body.dark-mode #fishType:focus,
+body.dark-mode #fishSort:focus {
+    border-color: #168534 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 133, 52, 0.15);
+}
+/* ========================================
+   Fish image - อ่านง่าย
+======================================== */
+
+.fish-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    object-position: center;
+    background: #ffffff;
+    border-radius: 14px;
+    display: block;
+}
+
+
+/* ไม่มีรูปที่ผ่านการยืนยัน */
+
+.no-verified-image {
+    display: none !important;
+}
+
+
+.no-image-message {
+    width: 100%;
+    min-height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: #f1f1f1;
+    color: #777;
+
+    border-radius: 14px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 768px) {
+
+    .fish-photo {
+        height: 190px;
+    }
+
+    .no-image-message {
+        min-height: 190px;
+    }
 }

@@ -2,216 +2,324 @@
 <html lang="th">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Fishing Log - FishFinder</title>
-
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        .log-form textarea,
+        .edit-form textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 12px;
+            border: 1px solid #d8e2e8;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+
+        .log-form input[type="number"],
+        .edit-form input[type="number"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .log-extra-fields,
+        .edit-extra-fields {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            width: 100%;
+        }
+
+        .log-extra-fields textarea,
+        .edit-extra-fields textarea {
+            grid-column: 1 / -1;
+        }
+
+        .field-label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+
+            .log-extra-fields,
+            .edit-extra-fields {
+                grid-template-columns: 1fr;
+            }
+
+            .log-extra-fields textarea,
+            .edit-extra-fields textarea {
+                grid-column: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Header -->
     <header>
-
         <h2>🎣 FishFinder</h2>
-
         <nav>
-
             <a href="index.html">หน้าหลัก</a>
-
             <a href="fish.html">คู่มือ</a>
-
             <a href="log.html">บันทึกการตกปลา</a>
-
             <a href="dashboard.html">Dashboard</a>
-
+            <a href="about.html">เกี่ยวกับ</a>
+            <button id="themeToggle" class="theme-toggle">
+                🌙
+            </button>
         </nav>
-
     </header>
 
-
-    <!-- Main -->
     <main class="log-page">
 
-        <h1>
-            🎣 บันทึกการตกปลา
-        </h1>
-
+        <h1>🎣 บันทึกการตกปลา</h1>
+        <p>เก็บประวัติการตกปลาของคุณไว้ใน FishFinder</p>
 
         <!-- เพิ่มข้อมูล -->
         <div class="log-form">
 
-            <input
-                type="text"
-                id="fishName"
-                placeholder="ชื่อปลา"
-            >
-
+            <input type="text" id="fishName" placeholder="ชื่อปลา">
 
             <select id="fishType">
-
-                <option value="">
-                    เลือกประเภทปลา
-                </option>
-
-                <option value="ทะเล">
-                    🌊 ปลาทะเล
-                </option>
-
-                <option value="น้ำจืด">
-                    🐟 ปลาน้ำจืด
-                </option>
-
+                <option value="">เลือกประเภทปลา</option>
+                <option value="ทะเล">🌊 ปลาทะเล</option>
+                <option value="น้ำจืด">🐟 ปลาน้ำจืด</option>
             </select>
 
+            <input type="text" id="location" placeholder="สถานที่ตกปลา">
 
-            <input
-                type="text"
-                id="location"
-                placeholder="สถานที่ตกปลา"
-            >
+            <input type="date" id="fishingDate">
 
+            <div class="log-extra-fields">
 
-            <input
-                type="date"
-                id="fishingDate"
-            >
+                <div>
+                    <label class="field-label" for="fishWeight">
+                        ⚖️ น้ำหนัก (กิโลกรัม)
+                    </label>
+                    <input type="number" id="fishWeight" placeholder="เช่น 2.5" min="0" step="0.01">
+                </div>
 
+                <div>
+                    <label class="field-label" for="fishLength">
+                        📏 ความยาว (เซนติเมตร)
+                    </label>
+                    <input type="number" id="fishLength" placeholder="เช่น 45" min="0" step="0.1">
+                </div>
+
+                <div>
+                    <label class="field-label" for="fishNote">
+                        📝 หมายเหตุ
+                    </label>
+                    <textarea id="fishNote" placeholder="เช่น เหยื่อที่ใช้ สภาพอากาศ หรือรายละเอียดอื่น ๆ"></textarea>
+                </div>
+
+            </div>
 
             <button id="saveLog">
-                บันทึก
+                💾 บันทึก
             </button>
 
         </div>
 
-
         <!-- ฟอร์มแก้ไข -->
-        <div
-            class="edit-form"
-            id="editForm"
-        >
+        <div class="edit-form" id="editForm">
 
-            <h2>
-                ✏️ แก้ไขข้อมูล
-            </h2>
+            <h2>✏️ แก้ไขข้อมูล</h2>
 
-
-            <input
-                type="text"
-                id="editFishName"
-                placeholder="ชื่อปลา"
-            >
-
+            <input type="text" id="editFishName" placeholder="ชื่อปลา">
 
             <select id="editFishType">
-
-                <option value="">
-                    เลือกประเภทปลา
-                </option>
-
-                <option value="ทะเล">
-                    🌊 ปลาทะเล
-                </option>
-
-                <option value="น้ำจืด">
-                    🐟 ปลาน้ำจืด
-                </option>
-
+                <option value="">เลือกประเภทปลา</option>
+                <option value="ทะเล">🌊 ปลาทะเล</option>
+                <option value="น้ำจืด">🐟 ปลาน้ำจืด</option>
             </select>
 
+            <input type="text" id="editLocation" placeholder="สถานที่ตกปลา">
 
-            <input
-                type="text"
-                id="editLocation"
-                placeholder="สถานที่ตกปลา"
-            >
+            <input type="date" id="editFishingDate">
 
+            <div class="edit-extra-fields">
 
-            <input
-                type="date"
-                id="editFishingDate"
-            >
+                <div>
+                    <label class="field-label" for="editFishWeight">
+                        ⚖️ น้ำหนัก (กิโลกรัม)
+                    </label>
+                    <input type="number" id="editFishWeight" placeholder="เช่น 2.5" min="0" step="0.01">
+                </div>
 
+                <div>
+                    <label class="field-label" for="editFishLength">
+                        📏 ความยาว (เซนติเมตร)
+                    </label>
+                    <input type="number" id="editFishLength" placeholder="เช่น 45" min="0" step="0.1">
+                </div>
 
-            <div class="edit-buttons">
-
-                <button id="updateLog">
-                    💾 บันทึกการแก้ไข
-                </button>
-
-                <button id="cancelEdit">
-                    ❌ ยกเลิก
-                </button>
+                <div>
+                    <label class="field-label" for="editFishNote">
+                        📝 หมายเหตุ
+                    </label>
+                    <textarea id="editFishNote" placeholder="แก้ไขหมายเหตุ"></textarea>
+                </div>
 
             </div>
 
-        </div>
+            <div class="edit-buttons">
+                <button id="updateLog">
+                    💾 บันทึกการแก้ไข
+                </button>
+                <button id="cancelEdit">
+                    ❌ ยกเลิก
+                </button>
+            </div>
 
+        </div>
 
         <!-- Statistics -->
         <section class="stats">
 
             <div class="stat-card">
-
                 <h3>🎣</h3>
-
-                <p id="totalFish">
-                    0
-                </p>
-
-                <span>
-                    ตกปลาทั้งหมด
-                </span>
-
+                <p id="totalFish">0</p>
+                <span>ตกปลาทั้งหมด</span>
             </div>
 
-
             <div class="stat-card">
-
                 <h3>🌊</h3>
-
-                <p id="seaFish">
-                    0
-                </p>
-
-                <span>
-                    ปลาทะเล
-                </span>
-
+                <p id="seaFish">0</p>
+                <span>ปลาทะเล</span>
             </div>
 
-
             <div class="stat-card">
-
                 <h3>🐟</h3>
-
-                <p id="freshwaterFish">
-                    0
-                </p>
-
-                <span>
-                    ปลาน้ำจืด
-                </span>
-
+                <p id="freshwaterFish">0</p>
+                <span>ปลาน้ำจืด</span>
             </div>
 
         </section>
+        <!-- ========================================
+     Log Statistics
+======================================== -->
+
+        <div class="log-summary">
+
+            <div class="log-summary-card">
+
+                <div class="log-summary-icon">
+                    🐟
+                </div>
+
+                <div class="log-summary-value" id="logTotalCount">
+                    0
+                </div>
+
+                <div class="log-summary-label">
+                    ปลาที่บันทึก
+                </div>
+
+            </div>
 
 
-        <h2>
-            ประวัติการตกปลา
-        </h2>
+            <div class="log-summary-card">
 
+                <div class="log-summary-icon">
+                    ⚖️
+                </div>
+
+                <div class="log-summary-value" id="logTotalWeight">
+                    0.00 kg
+                </div>
+
+                <div class="log-summary-label">
+                    น้ำหนักรวม
+                </div>
+
+            </div>
+
+
+            <div class="log-summary-card">
+
+                <div class="log-summary-icon">
+                    📏
+                </div>
+
+                <div class="log-summary-value" id="logLongestFish">
+                    ยังไม่มีข้อมูล
+                </div>
+
+                <div class="log-summary-label">
+                    ตัวที่ยาวที่สุด
+                </div>
+
+            </div>
+
+        </div>
+
+        <h2>ประวัติการตกปลา</h2>
+        <!-- ค้นหาประวัติ -->
+        <div class="log-search-box">
+
+            <input type="text" id="logSearchInput" placeholder="🔎 ค้นหาชื่อปลา สถานที่ หรือประเภท...">
+
+        </div>
+        <div class="log-filter-box">
+
+            <label for="logTypeFilter">
+                🌊 ประเภท
+            </label>
+
+            <select id="logTypeFilter">
+
+                <option value="all">
+                    🐟 ทั้งหมด
+                </option>
+
+                <option value="ทะเล">
+                    🌊 ทะเล
+                </option>
+
+                <option value="น้ำจืด">
+                    💧 น้ำจืด
+                </option>
+
+            </select>
+
+
+            <label for="logSort">
+                📅 เรียงตาม
+            </label>
+
+            <select id="logSort">
+
+                <option value="newest">
+                    🆕 ใหม่สุด
+                </option>
+
+                <option value="oldest">
+                    📅 เก่าสุด
+                </option>
+
+                <option value="weight">
+                    ⚖️ น้ำหนักมากสุด
+                </option>
+
+                <option value="length">
+                    📏 ตัวใหญ่สุด
+                </option>
+
+            </select>
+
+        </div>
 
         <div id="logList"></div>
 
     </main>
-
 
     <script src="js/main.js"></script>
 
