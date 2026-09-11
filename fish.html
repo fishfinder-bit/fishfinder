@@ -6,26 +6,23 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Fish Guide - FishFinder</title>
 <link href="css/style.css" rel="stylesheet"/>
+
 <style>
-/* FishFinder - clean, uncropped fish images */
-.fish-photo {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  object-position: center;
-  background: #eef6fb;
-  border-radius: 14px;
-  display: block;
+.fish-local-south {
+    margin: 6px 0 10px;
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 600;
+    opacity: .9;
 }
-#modalImage {
-  width: 100%;
-  max-height: 420px;
-  object-fit: contain;
-  object-position: center;
-  background: #eef6fb;
-  border-radius: 18px;
+.modal-local-south {
+    margin-top: 8px;
+    font-weight: 600;
+    line-height: 1.5;
 }
-</style></head>
+</style>
+
+</head>
 <body>
 <!-- Header -->
 <header>
@@ -116,7 +113,7 @@
 <section class="fish-list" id="fishList">
 <!-- 1. ปลาช่อน -->
 <div class="fish-card" data-bait="กบยาง / เหยื่อปลอม" data-difficulty="⭐⭐ ปานกลาง" data-habitat="คลอง หนอง บึง และแหล่งน้ำจืด" data-name="ปลาช่อน" data-photo-search="Channa striata" data-size="ประมาณ 30–60 ซม." data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาช่อน" class="fish-photo" src="images/snakehead.jpg"/>
+<img alt="ปลาช่อน" class="fish-photo" src="images/fish/snakehead.jpg"/>
 <h2>ปลาช่อน</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: กบยาง / เหยื่อปลอม</p>
@@ -124,7 +121,7 @@
 </div>
 <!-- 2. ปลานิล -->
 <div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลานิล" data-photo-search="Oreochromis niloticus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลานิล" class="fish-photo" src="images/tilapia.jpg"/>
+<img alt="ปลานิล" class="fish-photo" src="images/fish/tilapia.jpg"/>
 <h2>ปลานิล</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
@@ -132,7 +129,7 @@
 </div>
 <!-- 3. ปลาดุก -->
 <div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลาดุก" data-photo-search="Clarias batrachus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาดุก" class="fish-photo" src="images/catfish.jpg"/>
+<img alt="ปลาดุก" class="fish-photo" src="images/fish/catfish.jpg"/>
 <h2>ปลาดุก</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
@@ -140,23 +137,23 @@
 </div>
 <!-- 4. ปลากะพงขาว -->
 <div class="fish-card" data-bait="กุ้ง / เหยื่อปลอม" data-name="ปลากะพงขาว" data-photo-search="Lates calcarifer" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากะพงขาว" class="fish-photo" src="images/seabass.jpg"/>
+<img alt="ปลากะพงขาว" class="fish-photo" src="images/fish/seabass.jpg"/>
 <h2>ปลากะพงขาว</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อปลอม</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 5. ปลากะมงพร้าว -->
-<div class="fish-card" data-bait="Popper / Jig" data-name="ปลากะมงพร้าว" data-photo-search="Caranx ignobilis" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากะมงพร้าว" class="fish-photo" src="images/giant-trevally.jpg"/>
+<div class="fish-card" data-bait="Popper / Jig" data-name="ปลากะมงพร้าว" data-photo-search="Caranx ignobilis" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="ปลาม่องพร้าว, ปลาม่องยักษ์">
+<p class="fish-local-south">🗣️ ภาคใต้: ปลาม่องพร้าว, ปลาม่องยักษ์</p><img alt="ปลากะมงพร้าว" class="fish-photo" src="images/fish/giant-trevally.jpg"/>
 <h2>ปลากะมงพร้าว</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: Popper / Jig</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 6. ปลาทราย -->
-<div class="fish-card" data-bait="กุ้ง / หนอน" data-name="ปลาทราย" data-photo-search="Sillago sihama" data-time="ช่วงเย็น" data-type="ทะเล">
-<img alt="ปลาทราย" class="fish-photo" data-wiki-title="Sillago sihama" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sillago%20sihama%20Thailand.jpg"/>
+<div class="fish-card" data-bait="กุ้ง / หนอน" data-name="ปลาทราย" data-photo-search="Sillaginidae fish" data-time="ช่วงเย็น" data-type="ทะเล">
+<img alt="ปลาทราย" class="fish-photo" src="images/fish/whiting.jpg"/>
 <h2>ปลาทราย</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: กุ้ง / หนอน</p>
@@ -164,15 +161,15 @@
 </div>
 <!-- 7. ปลาชะโด -->
 <div class="fish-card" data-bait="กบยาง / เหยื่อผิวน้ำ" data-name="ปลาชะโด" data-photo-search="Channa micropeltes" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาชะโด" class="fish-photo" data-wiki-title="Channa micropeltes" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Channa_micropeltes_2012_G1.jpg"/>
+<img alt="ปลาชะโด" class="fish-photo" src="images/fish/giant-snakehead.jpg"/>
 <h2>ปลาชะโด</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: กบยาง / เหยื่อผิวน้ำ</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 8. ปลากระสูบขีด -->
-<div class="fish-card" data-bait="เหยื่อปลอมขนาดเล็ก" data-name="ปลากระสูบขีด" data-photo-search="Hampala macrolepidota" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากระสูบขีด" class="fish-photo" data-wiki-title="Hampala macrolepidota" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Hampala_macrolepidota.jpg"/>
+<div class="fish-card" data-bait="เหยื่อปลอมขนาดเล็ก" data-name="ปลากระสูบขีด" data-photo-search="Hampala macrolepidota" data-time="เช้า - เย็น" data-type="น้ำจืด" data-local-south="สูบ">
+<p class="fish-local-south">🗣️ ภาคใต้: สูบ</p><img alt="ปลากระสูบขีด" class="fish-photo" src="images/fish/hampala-macrolepidota.jpg"/>
 <h2>ปลากระสูบขีด</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: เหยื่อปลอมขนาดเล็ก</p>
@@ -180,7 +177,7 @@
 </div>
 <!-- 9. ปลากระสูบจุด -->
 <div class="fish-card" data-bait="เหยื่อปลอมขนาดเล็ก" data-name="ปลากระสูบจุด" data-photo-search="Hampala dispar" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากระสูบจุด" class="fish-photo" data-wiki-title="Hampala dispar" src="https://www.seriouslyfish.com/wp-content/uploads/2012/03/Hampala-dispar4.jpg"/>
+<img alt="ปลากระสูบจุด" class="fish-photo" src="images/fish/hampala-pirometopus.jpg"/>
 <h2>ปลากระสูบจุด</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: เหยื่อปลอมขนาดเล็ก</p>
@@ -188,47 +185,47 @@
 </div>
 <!-- 10. ปลากดคัง -->
 <div class="fish-card" data-bait="เหยื่อสด / ปลาเล็ก" data-name="ปลากดคัง" data-photo-search="Hemibagrus wyckioides" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลากดคัง" class="fish-photo" data-wiki-title="Hemibagrus wyckioides" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Redtail-catfish_00.jpg"/>
+<img alt="ปลากดคัง" class="fish-photo" src="images/fish/hemibagrus-wyckioides.jpg"/>
 <h2>ปลากดคัง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: เหยื่อสด / ปลาเล็ก</p>
 <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
 </div>
 <!-- 11. ปลากดเหลือง -->
-<div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลากดเหลือง" data-photo-search="Hemibagrus nemurus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลากดเหลือง" class="fish-photo" data-wiki-title="Hemibagrus nemurus" src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Bagridae_Hemibagrus_filamentus_1.jpg"/>
+<div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลากดเหลือง" data-photo-search="Hemibagrus filamentus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
+<img alt="ปลากดเหลือง" class="fish-photo" src="images/fish/hemibagrus-filamentus.jpg"/>
 <h2>ปลากดเหลือง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
 </div>
 <!-- 12. ปลากดแก้ว -->
-<div class="fish-card" data-bait="เหยื่อสด" data-name="ปลากดแก้ว" data-photo-search="Hemibagrus wyckii" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลากดแก้ว" class="fish-photo" data-wiki-title="Hemibagrus wyckii" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Hemib_nemur_171208-DSC0045_chd.JPG"/>
+<div class="fish-card" data-bait="เหยื่อสด" data-name="ปลากดแก้ว" data-photo-search="Hemibagrus nemurus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
+<img alt="ปลากดแก้ว" class="fish-photo" src="images/fish/hemibagrus-wyckioides-glass.jpg"/>
 <h2>ปลากดแก้ว</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
 </div>
 <!-- 13. ปลากดนา -->
-<div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลากดนา" data-photo-search="Hemibagrus nemurus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลากดนา" class="fish-photo" data-wiki-title="Hemibagrus nemurus" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hemib%20nemur%20171208-DSC0004%20chd.JPG"/>
+<div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลากดนา" data-photo-search="Clarias macrocephalus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
+<img alt="ปลากดนา" class="fish-photo" src="images/fish/hemibagrus-nemurus.jpg"/>
 <h2>ปลากดนา</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
 </div>
 <!-- 14. ปลาทับทิม -->
-<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลาทับทิม" data-photo-search="Oreochromis niloticus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาทับทิม" class="fish-photo" data-wiki-title="Oreochromis niloticus" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Til%C3%A1pia_ou_Sarotherodon_niloticus_2.jpg"/>
+<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลาทับทิม" data-photo-search="Oreochromis hybrid tilapia" data-time="เช้า - เย็น" data-type="น้ำจืด">
+<img alt="ปลาทับทิม" class="fish-photo" src="images/fish/red-tilapia.jpg"/>
 <h2>ปลาทับทิม</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 15. ปลาหมอไทย -->
-<div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลาหมอไทย" data-photo-search="Anabas testudineus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาหมอไทย" class="fish-photo" data-wiki-title="Anabas testudineus" src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Anabas_testudineus.png"/>
+<div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลาหมอไทย" data-photo-search="Anabas testudineus" data-time="เช้า - เย็น" data-type="น้ำจืด" data-local-south="อีแกปูยู">
+<p class="fish-local-south">🗣️ ภาคใต้: อีแกปูยู</p><img alt="ปลาหมอไทย" class="fish-photo" src="images/fish/climbing-perch.jpg"/>
 <h2>ปลาหมอไทย</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
@@ -236,7 +233,7 @@
 </div>
 <!-- 16. ปลาหมอเทศ -->
 <div class="fish-card" data-bait="ขนมปัง / เหยื่อธรรมชาติ" data-name="ปลาหมอเทศ" data-photo-search="Oreochromis mossambicus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาหมอเทศ" class="fish-photo" data-wiki-title="Oreochromis mossambicus" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Oreochromis_mossambicus.JPG"/>
+<img alt="ปลาหมอเทศ" class="fish-photo" src="images/fish/mozambique-tilapia.jpg"/>
 <h2>ปลาหมอเทศ</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อธรรมชาติ</p>
@@ -244,7 +241,7 @@
 </div>
 <!-- 17. ปลาตะเพียนขาว -->
 <div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลาตะเพียนขาว" data-photo-search="Barbonymus gonionotus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาตะเพียนขาว" class="fish-photo" data-wiki-title="Barbonymus gonionotus" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Barbon_gonion_120127-22830_tsm.JPG"/>
+<img alt="ปลาตะเพียนขาว" class="fish-photo" src="images/fish/silver-barb.jpg"/>
 <h2>ปลาตะเพียนขาว</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
@@ -252,23 +249,23 @@
 </div>
 <!-- 18. ปลาตะเพียนทอง -->
 <div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลาตะเพียนทอง" data-photo-search="Barbonymus schwanenfeldii" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาตะเพียนทอง" class="fish-photo" data-wiki-title="Barbonymus schwanenfeldii" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Barbonymus_schwanefeldii_Natural_History_Museum_University_of_Pisa.jpg"/>
+<img alt="ปลาตะเพียนทอง" class="fish-photo" src="images/fish/golden-barb.jpg"/>
 <h2>ปลาตะเพียนทอง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 19. ปลากระแห -->
-<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลากระแห" data-photo-search="Barbonymus schwanenfeldii" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากระแห" class="fish-photo" data-wiki-title="Barbonymus schwanenfeldii" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Barbonymus_schwanefeldii_Natural_History_Museum_University_of_Pisa.jpg"/>
+<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลากระแห" data-photo-search="Barbonymus schwanenfeldii" data-time="เช้า - เย็น" data-type="น้ำจืด" data-local-south="ปลากระแห ลำปำใต้">
+<p class="fish-local-south">🗣️ ภาคใต้: ปลากระแห ลำปำใต้</p><img alt="ปลากระแห" class="fish-photo" src="images/fish/small-scaled-hellbender.jpg"/>
 <h2>ปลากระแห</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 20. ปลากระมัง -->
-<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลากระมัง" data-photo-search="Puntioplites proctozystron" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากระมัง" class="fish-photo" data-wiki-title="Puntioplites proctozystron" src="https://inaturalist-open-data.s3.amazonaws.com/photos/232260645/original.jpg"/>
+<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลากระมัง" data-photo-search="Puntioplites proctozysron" data-time="เช้า - เย็น" data-type="น้ำจืด" data-local-south="แพะ">
+<p class="fish-local-south">🗣️ ภาคใต้: แพะ</p><img alt="ปลากระมัง" class="fish-photo" src="images/fish/puntioplites-proctozystron.jpg"/>
 <h2>ปลากระมัง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
@@ -276,7 +273,7 @@
 </div>
 <!-- 21. ปลายี่สก -->
 <div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลายี่สก" data-photo-search="Probarbus jullieni" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลายี่สก" class="fish-photo" data-wiki-title="Probarbus jullieni" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Probarbus_jullieni.jpg"/>
+<img alt="ปลายี่สก" class="fish-photo" src="images/fish/seven-striped-carp.jpg"/>
 <h2>ปลายี่สก</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
@@ -284,7 +281,7 @@
 </div>
 <!-- 22. ปลากะโห้ -->
 <div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลากะโห้" data-photo-search="Catlocarpio siamensis" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากะโห้" class="fish-photo" data-wiki-title="Catlocarpio siamensis" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Giant_Barb.jpg"/>
+<img alt="ปลากะโห้" class="fish-photo" src="images/fish/giant-barb.jpg"/>
 <h2>ปลากะโห้</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
@@ -292,15 +289,15 @@
 </div>
 <!-- 23. ปลากาดำ -->
 <div class="fish-card" data-bait="รำ / ขนมปัง" data-name="ปลากาดำ" data-photo-search="Labeo chrysophekadion" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากาดำ" class="fish-photo" data-wiki-title="Labeo chrysophekadion" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Labeo_chrysophekadion_Bleeker.jpg"/>
+<img alt="ปลากาดำ" class="fish-photo" src="images/fish/black-shark.jpg"/>
 <h2>ปลากาดำ</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: รำ / ขนมปัง</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 24. ปลากาแดง -->
-<div class="fish-card" data-bait="รำ / ขนมปัง" data-name="ปลากาแดง" data-photo-search="Epalzeorhynchos frenatum" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากาแดง" class="fish-photo" data-wiki-title="Epalzeorhynchos frenatum" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Labeo%20Frenatus.jpg"/>
+<div class="fish-card" data-bait="รำ / ขนมปัง" data-name="ปลากาแดง" data-photo-search="Labeo bicolor" data-time="เช้า - เย็น" data-type="น้ำจืด">
+<img alt="ปลากาแดง" class="fish-photo" src="images/fish/redtail-catfish-amazon.jpg"/>
 <h2>ปลากาแดง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: รำ / ขนมปัง</p>
@@ -308,7 +305,7 @@
 </div>
 <!-- 25. ปลาสร้อยขาว -->
 <div class="fish-card" data-bait="ขนมปัง / เหยื่อธรรมชาติ" data-name="ปลาสร้อยขาว" data-photo-search="Henicorhynchus siamensis" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาสร้อยขาว" class="fish-photo" data-wiki-title="Henicorhynchus siamensis" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%82%E0%B8%B2%E0%B8%A7.JPG"/>
+<img alt="ปลาสร้อยขาว" class="fish-photo" src="images/fish/white-sardine.jpg"/>
 <h2>ปลาสร้อยขาว</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อธรรมชาติ</p>
@@ -316,7 +313,7 @@
 </div>
 <!-- 26. ปลาสวาย -->
 <div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลาสวาย" data-photo-search="Pangasianodon hypophthalmus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาสวาย" class="fish-photo" data-wiki-title="Pangasianodon hypophthalmus" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Iridescent_shark.jpg"/>
+<img alt="ปลาสวาย" class="fish-photo" src="images/fish/iridescent-shark.jpg"/>
 <h2>ปลาสวาย</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
@@ -324,7 +321,7 @@
 </div>
 <!-- 27. ปลาบึก -->
 <div class="fish-card" data-bait="ขนมปัง / เหยื่อเม็ด" data-name="ปลาบึก" data-photo-search="Pangasianodon gigas" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาบึก" class="fish-photo" data-wiki-title="Pangasianodon gigas" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Pangasianodon_gigas_in_Gifu_World_Fresh_Water_Aquarium_-_2.jpg"/>
+<img alt="ปลาบึก" class="fish-photo" src="images/fish/mekong-giant-catfish.jpg"/>
 <h2>ปลาบึก</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
@@ -332,7 +329,7 @@
 </div>
 <!-- 28. ปลาจีน -->
 <div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลาจีน" data-photo-search="Ctenopharyngodon idella" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาจีน" class="fish-photo" data-wiki-title="Ctenopharyngodon idella" src="https://upload.wikimedia.org/wikipedia/commons/9/97/2x_amur_b%C3%ADl%C3%BD.jpg"/>
+<img alt="ปลาจีน" class="fish-photo" src="images/fish/grass-carp.jpg"/>
 <h2>ปลาจีน</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
@@ -340,7 +337,7 @@
 </div>
 <!-- 29. ปลานวลจันทร์เทศ -->
 <div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลานวลจันทร์เทศ" data-photo-search="Cirrhinus mrigala" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลานวลจันทร์เทศ" class="fish-photo" data-wiki-title="Cirrhinus mrigala" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Cirrhina_mrigala_Mintern_129.jpg"/>
+<img alt="ปลานวลจันทร์เทศ" class="fish-photo" src="images/fish/rohu.jpg"/>
 <h2>ปลานวลจันทร์เทศ</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
@@ -348,7 +345,7 @@
 </div>
 <!-- 30. ปลากราย -->
 <div class="fish-card" data-bait="ปลาเล็ก / เหยื่อปลอม" data-name="ปลากราย" data-photo-search="Chitala ornata" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลากราย" class="fish-photo" data-wiki-title="Chitala ornata" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Chitala_Ornata.jpg"/>
+<img alt="ปลากราย" class="fish-photo" src="images/fish/featherback.jpg"/>
 <h2>ปลากราย</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ปลาเล็ก / เหยื่อปลอม</p>
@@ -356,15 +353,15 @@
 </div>
 <!-- 31. ปลาตองกราย -->
 <div class="fish-card" data-bait="ปลาเล็ก / เหยื่อสด" data-name="ปลาตองกราย" data-photo-search="Chitala ornata" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาตองกราย" class="fish-photo" data-wiki-title="Chitala ornata" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Chitala_Ornata.jpg"/>
+<img alt="ปลาตองกราย" class="fish-photo" src="images/fish/bronze-featherback.jpg"/>
 <h2>ปลาตองกราย</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ปลาเล็ก / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
 </div>
 <!-- 32. ปลาชะโอน -->
-<div class="fish-card" data-bait="ไส้เดือน / ปลาเล็ก" data-name="ปลาชะโอน" data-photo-search="Ompok bimaculatus" data-time="กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาชะโอน" class="fish-photo" data-wiki-title="Ompok bimaculatus" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Butterfish_%28Pabda%29.jpg"/>
+<div class="fish-card" data-bait="ไส้เดือน / ปลาเล็ก" data-name="ปลาชะโอน" data-photo-search="Ompok bimaculatus" data-time="กลางคืน" data-type="น้ำจืด" data-local-south="ปลาโอน">
+<p class="fish-local-south">🗣️ ภาคใต้: ปลาโอน</p><img alt="ปลาชะโอน" class="fish-photo" src="images/fish/channallabes.jpg"/>
 <h2>ปลาชะโอน</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน / ปลาเล็ก</p>
@@ -372,7 +369,7 @@
 </div>
 <!-- 33. ปลาค้าว -->
 <div class="fish-card" data-bait="ปลาเหยื่อ / เหยื่อสด" data-name="ปลาค้าว" data-photo-search="Wallago attu" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาค้าว" class="fish-photo" data-wiki-title="Wallago attu" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Wallago_attu_1.jpg"/>
+<img alt="ปลาค้าว" class="fish-photo" src="images/fish/giant-bagarius.jpg"/>
 <h2>ปลาค้าว</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ปลาเหยื่อ / เหยื่อสด</p>
@@ -380,15 +377,15 @@
 </div>
 <!-- 34. ปลาค้าวแดง -->
 <div class="fish-card" data-bait="ปลาเหยื่อ" data-name="ปลาค้าวแดง" data-photo-search="Hemibagrus wyckioides" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาค้าวแดง" class="fish-photo" data-wiki-title="Hemibagrus wyckioides" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Redtail-Catfish.jpg"/>
+<img alt="ปลาค้าวแดง" class="fish-photo" src="images/fish/redtail-catfish.jpg"/>
 <h2>ปลาค้าวแดง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ปลาเหยื่อ</p>
 <p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
 </div>
 <!-- 35. ปลาเค้า -->
-<div class="fish-card" data-bait="ปลาเหยื่อ / กุ้ง" data-name="ปลาเค้า" data-photo-search="Wallago attu" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาเค้า" class="fish-photo" data-wiki-title="Wallago attu" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Wallago_attu_1.jpg"/>
+<div class="fish-card" data-bait="ปลาเหยื่อ / กุ้ง" data-name="ปลาเค้า" data-photo-search="Hemibagrus wyckioides" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
+<img alt="ปลาเค้า" class="fish-photo" src="images/fish/wallago.jpg"/>
 <h2>ปลาเค้า</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ปลาเหยื่อ / กุ้ง</p>
@@ -396,15 +393,15 @@
 </div>
 <!-- 36. ปลาสังกะวาด -->
 <div class="fish-card" data-bait="เหยื่อธรรมชาติ" data-name="ปลาสังกะวาด" data-photo-search="Paralaubuca riveroi" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาสังกะวาด" class="fish-photo" data-wiki-title="Paralaubuca riveroi" src="https://www.fishbase.se/images/species/Paralaubuca_riveroi.jpg"/>
+<img alt="ปลาสังกะวาด" class="fish-photo" src="images/fish/paralaubuca-riveroi.jpg"/>
 <h2>ปลาสังกะวาด</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: เหยื่อธรรมชาติ</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 37. ปลาแขยง -->
-<div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลาแขยง" data-photo-search="Mystus vittatus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาแขยง" class="fish-photo" data-wiki-title="Mystus vittatus" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mystus%20multiradiatus.jpg"/>
+<div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลาแขยง" data-photo-search="Mystus multiradiatus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
+<img alt="ปลาแขยง" class="fish-photo" src="images/fish/mystus-multiradiatus.jpg"/>
 <h2>ปลาแขยง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
@@ -412,7 +409,7 @@
 </div>
 <!-- 38. ปลาหมอช้างเหยียบ -->
 <div class="fish-card" data-bait="ไส้เดือน" data-name="ปลาหมอช้างเหยียบ" data-photo-search="Pristolepis fasciata" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาหมอช้างเหยียบ" class="fish-photo" data-wiki-title="Pristolepis fasciata" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Pristolepis%20fasciata.jpg"/>
+<img alt="ปลาหมอช้างเหยียบ" class="fish-photo" src="images/fish/pristolepis-fasciata.jpg"/>
 <h2>ปลาหมอช้างเหยียบ</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน</p>
@@ -420,7 +417,7 @@
 </div>
 <!-- 39. ปลากระทิง -->
 <div class="fish-card" data-bait="ไส้เดือน / ปลาเล็ก" data-name="ปลากระทิง" data-photo-search="Mastacembelus armatus" data-time="กลางคืน" data-type="น้ำจืด">
-<img alt="ปลากระทิง" class="fish-photo" data-wiki-title="Mastacembelus armatus" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Zig-zag%20eel%20%28Mastacembelus%20armatus%29.jpg"/>
+<img alt="ปลากระทิง" class="fish-photo" src="images/fish/spiny-eel.jpg"/>
 <h2>ปลากระทิง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน / ปลาเล็ก</p>
@@ -428,31 +425,17 @@
 </div>
 <!-- 40. ปลาไหล -->
 <div class="fish-card" data-bait="ไส้เดือน / เหยื่อสด" data-name="ปลาไหล" data-photo-search="Monopterus albus" data-time="กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาไหล" class="fish-photo" data-wiki-title="Monopterus albus" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Monopterus_albus_2.jpg"/>
+<img alt="ปลาไหล" class="fish-photo" src="images/fish/asian-swamp-eel.jpg"/>
 <h2>ปลาไหล</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ไส้เดือน / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: กลางคืน</p>
 </div>
 <!-- 41. ปลากระสูบขาว -->
-<div class="fish-card" data-bait="เหยื่อปลอม" data-name="ปลากระสูบขาว" data-photo-search="Hampala macrolepidota" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากระสูบขาว" class="fish-photo" data-wiki-title="Hampala macrolepidota" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Hampala_macrolepidota.jpg"/>
-<h2>ปลากระสูบขาว</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 42. ปลากระสูบควาย -->
-<div class="fish-card" data-bait="เหยื่อปลอม" data-name="ปลากระสูบควาย" data-photo-search="Hampala dispar" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากระสูบควาย" class="fish-photo" data-wiki-title="Hampala dispar" src="https://www.seriouslyfish.com/wp-content/uploads/2012/03/Hampala-dispar4.jpg"/>
-<h2>ปลากระสูบควาย</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 43. ปลาอราไพม่า -->
 <div class="fish-card" data-bait="เหยื่อสด / เหยื่อบ่อ" data-name="ปลาอราไพม่า" data-photo-search="Arapaima gigas" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาอราไพม่า" class="fish-photo" data-wiki-title="Arapaima gigas" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Arapaima_gigas_at_Beijing_aquarium.JPG"/>
+<img alt="ปลาอราไพม่า" class="fish-photo" src="images/fish/arapaima.jpg"/>
 <h2>ปลาอราไพม่า</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: เหยื่อสด / เหยื่อบ่อ</p>
@@ -460,23 +443,23 @@
 </div>
 <!-- 44. ปลาหางแดงอะเมซอน -->
 <div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลาหางแดงอะเมซอน" data-photo-search="Phractocephalus hemioliopterus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาหางแดงอะเมซอน" class="fish-photo" data-wiki-title="Phractocephalus hemioliopterus" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Phractocephalus_hemioliopterus_Natural_History_Museum_University_of_Pisa.jpg"/>
+<img alt="ปลาหางแดงอะเมซอน" class="fish-photo" src="images/fish/redtail-catfish-amazon.jpg"/>
 <h2>ปลาหางแดงอะเมซอน</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 45. ปลาพาคู -->
-<div class="fish-card" data-bait="ผลไม้ / ขนมปัง" data-name="ปลาพาคู" data-photo-search="Piaractus brachypomus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาพาคู" class="fish-photo" data-wiki-title="Piaractus brachypomus" src="https://upload.wikimedia.org/wikipedia/commons/d/df/Piaractus_brachypomus_208962529.jpg"/>
-<h2>ปลาพาคู</h2>
+<div class="fish-card" data-bait="ผลไม้ / ขนมปัง" data-name="ปลาเปคู" data-photo-search="Piaractus brachypomus" data-time="เช้า - เย็น" data-type="น้ำจืด">
+<img alt="ปลาเปคู" class="fish-photo" data-wiki-title="Piaractus brachypomus" src="images/fish/pacu.jpg"/>
+<h2>ปลาเปคู</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: ผลไม้ / ขนมปัง</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 46. ปลาอัลลิเกเตอร์การ์ -->
 <div class="fish-card" data-bait="เหยื่อสด" data-name="ปลาอัลลิเกเตอร์การ์" data-photo-search="Atractosteus spatula" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาอัลลิเกเตอร์การ์" class="fish-photo" data-wiki-title="Atractosteus spatula" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Alligator_Gar_10.JPG"/>
+<img alt="ปลาอัลลิเกเตอร์การ์" class="fish-photo" src="images/fish/alligator-gar.jpg"/>
 <h2>ปลาอัลลิเกเตอร์การ์</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: เหยื่อสด</p>
@@ -484,183 +467,43 @@
 </div>
 <!-- 47. ปลานกยูง -->
 <div class="fish-card" data-bait="เหยื่อปลอม" data-name="ปลานกยูง" data-photo-search="Cichla ocellaris" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลานกยูง" class="fish-photo" data-wiki-title="Cichla ocellaris" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Cichla_ocellaris_Dvur_zoo_1.jpg"/>
+<img alt="ปลานกยูง" class="fish-photo" src="images/fish/peacock-cichlid.jpg"/>
 <h2>ปลานกยูง</h2>
 <p>ประเภท: ปลาน้ำจืด</p>
 <p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 48. ปลาคาร์พ -->
-<div class="fish-card" data-bait="ขนมปัง / เหยื่อเม็ด" data-name="ปลาคาร์พ" data-photo-search="Cyprinus carpio" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาคาร์พ" class="fish-photo" data-wiki-title="Cyprinus carpio" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Cyprinus_carpio_2008_G1_%28cropped%29.jpg"/>
-<h2>ปลาคาร์พ</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 49. ปลาคาร์พยักษ์ -->
-<div class="fish-card" data-bait="เหยื่อเม็ด / ข้าวโพด" data-name="ปลาคาร์พยักษ์" data-photo-search="Catlocarpio siamensis" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาคาร์พยักษ์" class="fish-photo" data-wiki-title="Catlocarpio siamensis" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Giant_Barb.jpg"/>
-<h2>ปลาคาร์พยักษ์</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อเม็ด / ข้าวโพด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 50. ปลาคาร์พจีน -->
-<div class="fish-card" data-bait="ข้าวโพด / รำ" data-name="ปลาคาร์พจีน" data-photo-search="Hypophthalmichthys molitrix" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาคาร์พจีน" class="fish-photo" data-wiki-title="Hypophthalmichthys molitrix" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Silver_Carp_Adult_%28Hypophthalmichthys_molitrix%29.jpg"/>
-<h2>ปลาคาร์พจีน</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ข้าวโพด / รำ</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 51. ปลารูฮู -->
-<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลารูฮู" data-photo-search="Labeo rohita" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลารูฮู" class="fish-photo" data-wiki-title="Labeo rohita" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Rohu_at_Giant_Hypermarket_Kota_Damansara_20230203_105829.jpg"/>
-<h2>ปลารูฮู</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 52. ปลาตะเพียนยักษ์ -->
-<div class="fish-card" data-bait="เหยื่อเม็ด / รำ" data-name="ปลาตะเพียนยักษ์" data-photo-search="Catlocarpio siamensis" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาตะเพียนยักษ์" class="fish-photo" data-wiki-title="Catlocarpio siamensis" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Giant_Barb.jpg"/>
-<h2>ปลาตะเพียนยักษ์</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อเม็ด / รำ</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 53. ปลากดหางแดง -->
-<div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลากดหางแดง" data-photo-search="Phractocephalus hemioliopterus" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลากดหางแดง" class="fish-photo" data-wiki-title="Phractocephalus hemioliopterus" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Phractocephalus_hemioliopterus_Natural_History_Museum_University_of_Pisa.jpg"/>
-<h2>ปลากดหางแดง</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
-<p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
-</div>
 <!-- 54. ปลาซูรูบิม -->
-<div class="fish-card" data-bait="ปลา / เหยื่อสด" data-name="ปลาซูรูบิม" data-photo-search="Pseudoplatystoma corruscans" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาซูรูบิม" class="fish-photo" data-wiki-title="Pseudoplatystoma corruscans" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Pseudoplatystoma_corruscans_RIP.png"/>
-<h2>ปลาซูรูบิม</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ปลา / เหยื่อสด</p>
-<p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
-</div>
 <!-- 55. ปลาไทกรินัส -->
-<div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลาไทกรินัส" data-photo-search="Pseudoplatystoma tigrinum" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลาไทกรินัส" class="fish-photo" data-wiki-title="Pseudoplatystoma tigrinum" src="https://upload.wikimedia.org/wikipedia/commons/1/18/Pseudoplatystoma_tigrinum.jpg"/>
-<h2>ปลาไทกรินัส</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
-<p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
-</div>
 <!-- 56. ปลามัสคีโนง -->
-<div class="fish-card" data-bait="เหยื่อปลอม" data-name="ปลามัสคีโนง" data-photo-search="Esox masquinongy" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลามัสคีโนง" class="fish-photo" data-wiki-title="Esox masquinongy" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Esox_masquinongyeditcrop.jpg"/>
-<h2>ปลามัสคีโนง</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 57. ปลาช่อนอเมซอน -->
-<div class="fish-card" data-bait="เหยื่อสด" data-name="ปลาช่อนอเมซอน" data-photo-search="Arapaima gigas" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาช่อนอเมซอน" class="fish-photo" data-wiki-title="Arapaima gigas" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Arapaima_gigas_at_Beijing_aquarium.JPG"/>
-<h2>ปลาช่อนอเมซอน</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อสด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 58. ปลากระโห้ยักษ์ -->
-<div class="fish-card" data-bait="ขนมปัง / เหยื่อเม็ด" data-name="ปลากระโห้ยักษ์" data-photo-search="Catlocarpio siamensis" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากระโห้ยักษ์" class="fish-photo" data-wiki-title="Catlocarpio siamensis" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Giant_Barb.jpg"/>
-<h2>ปลากระโห้ยักษ์</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 59. ปลาสวายเผือก -->
-<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลาสวายเผือก" data-photo-search="Pangasianodon hypophthalmus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาสวายเผือก" class="fish-photo" data-wiki-title="Pangasianodon hypophthalmus" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Iridescent_shark.jpg"/>
-<h2>ปลาสวายเผือก</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 60. ปลาบึกเผือก -->
-<div class="fish-card" data-bait="เหยื่อเม็ด / ขนมปัง" data-name="ปลาบึกเผือก" data-photo-search="Pangasianodon gigas" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาบึกเผือก" class="fish-photo" data-wiki-title="Pangasianodon gigas" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Pangasianodon_gigas_in_Gifu_World_Fresh_Water_Aquarium_-_2.jpg"/>
-<h2>ปลาบึกเผือก</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อเม็ด / ขนมปัง</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 61. ปลากะโห้เผือก -->
-<div class="fish-card" data-bait="เหยื่อเม็ด" data-name="ปลากะโห้เผือก" data-photo-search="Catlocarpio siamensis" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลากะโห้เผือก" class="fish-photo" data-wiki-title="Catlocarpio siamensis" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Giant_Barb.jpg"/>
-<h2>ปลากะโห้เผือก</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อเม็ด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 62. ปลาคาร์พแฟนซี -->
-<div class="fish-card" data-bait="ขนมปัง / เหยื่อเม็ด" data-name="ปลาคาร์พแฟนซี" data-photo-search="Cyprinus carpio" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาคาร์พแฟนซี" class="fish-photo" data-wiki-title="Cyprinus carpio" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Cyprinus_carpio_2008_G1_%28cropped%29.jpg"/>
-<h2>ปลาคาร์พแฟนซี</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 63. ปลากดส้ม -->
-<div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลากดส้ม" data-photo-search="Hemibagrus wyckioides" data-time="เย็น - กลางคืน" data-type="น้ำจืด">
-<img alt="ปลากดส้ม" class="fish-photo" data-wiki-title="Hemibagrus wyckioides" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Redtail-Catfish.jpg"/>
-<h2>ปลากดส้ม</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
-<p>ช่วงเวลาที่เหมาะ: เย็น - กลางคืน</p>
-</div>
 <!-- 64. ปลาสวายแม่น้ำ -->
-<div class="fish-card" data-bait="ขนมปัง / รำ" data-name="ปลาสวายแม่น้ำ" data-photo-search="Pangasianodon hypophthalmus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาสวายแม่น้ำ" class="fish-photo" data-wiki-title="Pangasianodon hypophthalmus" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Iridescent_shark.jpg"/>
-<h2>ปลาสวายแม่น้ำ</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ขนมปัง / รำ</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 65. ปลาบึกแม่น้ำ -->
-<div class="fish-card" data-bait="เหยื่อธรรมชาติ" data-name="ปลาบึกแม่น้ำ" data-photo-search="Pangasianodon gigas" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาบึกแม่น้ำ" class="fish-photo" data-wiki-title="Pangasianodon gigas" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Pangasianodon_gigas_in_Gifu_World_Fresh_Water_Aquarium_-_2.jpg"/>
-<h2>ปลาบึกแม่น้ำ</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อธรรมชาติ</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 66. ปลาตะเพียนยักษ์สยาม -->
-<div class="fish-card" data-bait="เหยื่อเม็ด" data-name="ปลาตะเพียนยักษ์สยาม" data-photo-search="Catlocarpio siamensis" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาตะเพียนยักษ์สยาม" class="fish-photo" data-wiki-title="Catlocarpio siamensis" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Giant_Barb.jpg"/>
-<h2>ปลาตะเพียนยักษ์สยาม</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: เหยื่อเม็ด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 67. ปลาหมอเทศยักษ์ -->
-<div class="fish-card" data-bait="ขนมปัง / เหยื่อเม็ด" data-name="ปลาหมอเทศยักษ์" data-photo-search="Oreochromis mossambicus" data-time="เช้า - เย็น" data-type="น้ำจืด">
-<img alt="ปลาหมอเทศยักษ์" class="fish-photo" data-wiki-title="Oreochromis mossambicus" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Oreochromis_mossambicus.JPG"/>
-<h2>ปลาหมอเทศยักษ์</h2>
-<p>ประเภท: ปลาน้ำจืด</p>
-<p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อเม็ด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 68. ปลากะพงแดง -->
-<div class="fish-card" data-bait="กุ้ง / เหยื่อสด" data-name="ปลากะพงแดง" data-photo-search="Lutjanus argentimaculatus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากะพงแดง" class="fish-photo" data-wiki-title="Lutjanus argentimaculatus" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Lutjanus_argentimaculatus_Taiwan.png"/>
+<div class="fish-card" data-bait="กุ้ง / เหยื่อสด" data-name="ปลากะพงแดง" data-photo-search="Lutjanus argentimaculatus" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="กะพงแดงปากแม่น้ำ, ปลากะพงสีเลือด, ปลากะพงแดงป่าชายเลน, ปลากะพงแดงสีเลือดหมู">
+<p class="fish-local-south">🗣️ ภาคใต้: กะพงแดงปากแม่น้ำ, ปลากะพงสีเลือด, ปลากะพงแดงป่าชายเลน, ปลากะพงแดงสีเลือดหมู</p><img alt="ปลากะพงแดง" class="fish-photo" src="images/fish/red-snapper.jpg"/>
 <h2>ปลากะพงแดง</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 69. ปลาสาก -->
-<div class="fish-card" data-bait="เหยื่อปลอม / ปลา" data-name="ปลาสาก" data-photo-search="Sphyraena barracuda" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาสาก" class="fish-photo" data-wiki-title="Sphyraena barracuda" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Gran_barracuda_%28Sphyraena_barracuda%29%2C_Yeda%2C_Arabia_Saudita%2C_2025-05-20%2C_DD_118.jpg"/>
+<div class="fish-card" data-bait="เหยื่อปลอม / ปลา" data-name="ปลาสาก" data-photo-search="Sphyraena barracuda" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="ปลาสากใหญ่, ปลาสากยักษ์">
+<p class="fish-local-south">🗣️ ภาคใต้: ปลาสากใหญ่, ปลาสากยักษ์</p><img alt="ปลาสาก" class="fish-photo" src="images/fish/barracuda.jpg"/>
 <h2>ปลาสาก</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: เหยื่อปลอม / ปลา</p>
@@ -668,15 +511,15 @@
 </div>
 <!-- 70. ปลาอินทรี -->
 <div class="fish-card" data-bait="เหยื่อปลอม / ปลา" data-name="ปลาอินทรี" data-photo-search="Scomberomorus commerson" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาอินทรี" class="fish-photo" data-wiki-title="Scomberomorus commerson" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sccom_u0.gif"/>
+<img alt="ปลาอินทรี" class="fish-photo" src="images/fish/spanish-mackerel.jpg"/>
 <h2>ปลาอินทรี</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: เหยื่อปลอม / ปลา</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 71. ปลาอินทรีบั้ง -->
-<div class="fish-card" data-bait="เหยื่อปลอม" data-name="ปลาอินทรีบั้ง" data-photo-search="Scomberomorus commerson" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาอินทรีบั้ง" class="fish-photo" data-wiki-title="Scomberomorus commerson" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sccom_u0.gif"/>
+<div class="fish-card" data-bait="เหยื่อปลอม" data-name="ปลาอินทรีบั้ง" data-photo-search="Scomberomorus commerson" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="เบกา">
+<p class="fish-local-south">🗣️ ภาคใต้: เบกา</p><img alt="ปลาอินทรีบั้ง" class="fish-photo" src="images/fish/indian-mackerel.jpg"/>
 <h2>ปลาอินทรีบั้ง</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
@@ -684,15 +527,15 @@
 </div>
 <!-- 72. ปลาสละ -->
 <div class="fish-card" data-bait="เหยื่อสด / เหยื่อปลอม" data-name="ปลาสละ" data-photo-search="Tenualosa toli" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาสละ" class="fish-photo" data-wiki-title="Tenualosa toli" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Tenualosa_toli.jpg"/>
+<img alt="ปลาสละ" class="fish-photo" src="images/fish/queenfish.jpg"/>
 <h2>ปลาสละ</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: เหยื่อสด / เหยื่อปลอม</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 73. ปลาสีกุน -->
-<div class="fish-card" data-bait="เหยื่อปลอม / กุ้ง" data-name="ปลาสีกุน" data-photo-search="Carangoides malabaricus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาสีกุน" class="fish-photo" data-wiki-title="Carangoides malabaricus" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Carangoides_orthogrammus.jpg"/>
+<div class="fish-card" data-bait="เหยื่อปลอม / กุ้ง" data-name="ปลาสีกุน" data-photo-search="Carangoides" data-time="เช้า - เย็น" data-type="ทะเล">
+<img alt="ปลาสีกุน" class="fish-photo" src="images/fish/scad.jpg"/>
 <h2>ปลาสีกุน</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: เหยื่อปลอม / กุ้ง</p>
@@ -700,7 +543,7 @@
 </div>
 <!-- 74. ปลาทู -->
 <div class="fish-card" data-bait="เหยื่อเล็ก / Sabiki" data-name="ปลาทู" data-photo-search="Rastrelliger kanagurta" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาทู" class="fish-photo" data-wiki-title="Rastrelliger kanagurta" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Rastrelliger_kanagurta_JNC2855.JPG"/>
+<img alt="ปลาทู" class="fish-photo" src="images/fish/short-mackerel.jpg"/>
 <h2>ปลาทู</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: เหยื่อเล็ก / Sabiki</p>
@@ -708,39 +551,39 @@
 </div>
 <!-- 75. ปลาโฉมงาม -->
 <div class="fish-card" data-bait="กุ้ง / เหยื่อสด" data-name="ปลาโฉมงาม" data-photo-search="Lutjanus sebae" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาโฉมงาม" class="fish-photo" data-wiki-title="Lutjanus sebae" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Lutjanus_sebae_in_UShaka_Sea_World_0862a.jpg"/>
+<img alt="ปลาโฉมงาม" class="fish-photo" src="images/fish/queenfish-large.jpg"/>
 <h2>ปลาโฉมงาม</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 76. ปลากุเลา -->
-<div class="fish-card" data-bait="กุ้ง / เหยื่อปลอม" data-name="ปลากุเลา" data-photo-search="Eleutheronema tetradactylum" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากุเลา" class="fish-photo" data-wiki-title="Eleutheronema tetradactylum" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Eleutheronema_tetradactylum%28Shaw%2C_1804%29.jpg"/>
+<div class="fish-card" data-bait="กุ้ง / เหยื่อปลอม" data-name="ปลากุเลา" data-photo-search="Eleutheronema tetradactylum" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="กุเรา, กุเราหนวดสี่เส้น">
+<p class="fish-local-south">🗣️ ภาคใต้: กุเรา, กุเราหนวดสี่เส้น</p><img alt="ปลากุเลา" class="fish-photo" src="images/fish/fourfinger-threadfin.jpg"/>
 <h2>ปลากุเลา</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อปลอม</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 77. ปลากระมง -->
-<div class="fish-card" data-bait="Jig / เหยื่อปลอม" data-name="ปลากระมง" data-photo-search="Caranx sexfasciatus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากระมง" class="fish-photo" data-wiki-title="Caranx sexfasciatus" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Bigeye_trevally_BoraBora.jpg"/>
-<h2>ปลากระมง</h2>
+<div class="fish-card" data-bait="Jig / เหยื่อปลอม" data-name="ปลากะมง" data-photo-search="Caranx sexfasciatus" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="ปลาผี">
+<p class="fish-local-south">🗣️ ภาคใต้: ปลาผี</p><img alt="ปลากะมง" class="fish-photo" data-wiki-title="Caranx sexfasciatus" src="images/fish/trevally.jpg"/>
+<h2>ปลากะมง</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 78. ปลากระมงขาว -->
-<div class="fish-card" data-bait="Jig / เหยื่อสด" data-name="ปลากระมงขาว" data-photo-search="Caranx ignobilis" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากระมงขาว" class="fish-photo" data-wiki-title="Caranx ignobilis" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Caranx_ignobilis.jpg"/>
-<h2>ปลากระมงขาว</h2>
+<div class="fish-card" data-bait="Jig / เหยื่อสด" data-name="ปลากะมงขาว" data-photo-search="Caranx ignobilis" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="ปลามงพร้าว">
+<p class="fish-local-south">🗣️ ภาคใต้: ปลามงพร้าว</p><img alt="ปลากะมงขาว" class="fish-photo" data-wiki-title="Caranx ignobilis" src="images/fish/white-trevally.jpg"/>
+<h2>ปลากะมงขาว</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: Jig / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 79. ปลาโอ -->
-<div class="fish-card" data-bait="Jig / เหยื่อปลอม" data-name="ปลาโอ" data-photo-search="Euthynnus affinis" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาโอ" class="fish-photo" data-wiki-title="Euthynnus affinis" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Euthynnus_affinis_Maldives.JPG"/>
+<div class="fish-card" data-bait="Jig / เหยื่อปลอม" data-name="ปลาโอ" data-photo-search="Euthynnus affinis" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="ปลาโอลาย">
+<p class="fish-local-south">🗣️ ภาคใต้: ปลาโอลาย</p><img alt="ปลาโอ" class="fish-photo" src="images/fish/bonito.jpg"/>
 <h2>ปลาโอ</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
@@ -748,39 +591,18 @@
 </div>
 <!-- 80. ปลาทูน่าครีบเหลือง -->
 <div class="fish-card" data-bait="Jig / เหยื่อสด" data-name="ปลาทูน่าครีบเหลือง" data-photo-search="Thunnus albacares" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาทูน่าครีบเหลือง" class="fish-photo" data-wiki-title="Thunnus albacares" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Thunnus_albacares.png"/>
+<img alt="ปลาทูน่าครีบเหลือง" class="fish-photo" src="images/fish/yellowfin-tuna.jpg"/>
 <h2>ปลาทูน่าครีบเหลือง</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: Jig / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 81. ปลาโอแถบ -->
-<div class="fish-card" data-bait="Jig / เหยื่อปลอม" data-name="ปลาโอแถบ" data-photo-search="Katsuwonus pelamis" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาโอแถบ" class="fish-photo" data-wiki-title="Katsuwonus pelamis" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Katsuwonus_pelamis.png"/>
-<h2>ปลาโอแถบ</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 82. ปลาอินทรีทะเล -->
-<div class="fish-card" data-bait="เหยื่อปลอม" data-name="ปลาอินทรีทะเล" data-photo-search="Scomberomorus commerson" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาอินทรีทะเล" class="fish-photo" data-wiki-title="Scomberomorus commerson" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sccom_u0.gif"/>
-<h2>ปลาอินทรีทะเล</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: เหยื่อปลอม</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 83. ปลาบาราคูด้า -->
-<div class="fish-card" data-bait="Jig / เหยื่อปลอม" data-name="ปลาบาราคูด้า" data-photo-search="Sphyraena barracuda" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาบาราคูด้า" class="fish-photo" data-wiki-title="Sphyraena barracuda" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Gran_barracuda_%28Sphyraena_barracuda%29%2C_Yeda%2C_Arabia_Saudita%2C_2025-05-20%2C_DD_118.jpg"/>
-<h2>ปลาบาราคูด้า</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 84. ปลาเก๋า -->
 <div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลาเก๋า" data-photo-search="Epinephelus coioides" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาเก๋า" class="fish-photo" data-wiki-title="Epinephelus coioides" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Epinephelus_coioides_Thailand.jpg"/>
+<img alt="ปลาเก๋า" class="fish-photo" src="images/fish/grouper.jpg"/>
 <h2>ปลาเก๋า</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
@@ -788,127 +610,71 @@
 </div>
 <!-- 85. ปลากะรัง -->
 <div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลากะรัง" data-photo-search="Epinephelus coioides" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากะรัง" class="fish-photo" data-wiki-title="Epinephelus coioides" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Epinephelus_coioides_Thailand.jpg"/>
+<img alt="ปลากะรัง" class="fish-photo" src="images/fish/coral-grouper.jpg"/>
 <h2>ปลากะรัง</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 86. ปลาเก๋าหมอทะเล -->
-<div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลาเก๋าหมอทะเล" data-photo-search="Epinephelus lanceolatus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาเก๋าหมอทะเล" class="fish-photo" data-wiki-title="Epinephelus lanceolatus" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Epinephelus_lanceolatus.jpeg"/>
-<h2>ปลาเก๋าหมอทะเล</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 87. ปลาหมอทะเล -->
 <div class="fish-card" data-bait="กุ้ง / ปลา" data-name="ปลาหมอทะเล" data-photo-search="Epinephelus lanceolatus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาหมอทะเล" class="fish-photo" data-wiki-title="Epinephelus lanceolatus" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Epinephelus_lanceolatus.jpeg"/>
+<img alt="ปลาหมอทะเล" class="fish-photo" src="images/fish/giant-grouper.jpg"/>
 <h2>ปลาหมอทะเล</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: กุ้ง / ปลา</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 88. ปลาสร้อยนกเขา -->
-<div class="fish-card" data-bait="กุ้ง / เหยื่อสด" data-name="ปลาสร้อยนกเขา" data-photo-search="Scolopsis bilineata" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาสร้อยนกเขา" class="fish-photo" data-wiki-title="Scolopsis" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Besugato_rayado_%28Scolopsis_bilineata%29%2C_Anilao%2C_Filipinas%2C_2023-08-25%2C_DD_237.jpg"/>
+<div class="fish-card" data-bait="กุ้ง / เหยื่อสด" data-name="ปลาสร้อยนกเขา" data-photo-search="Scolopsis" data-time="เช้า - เย็น" data-type="ทะเล">
+<img alt="ปลาสร้อยนกเขา" class="fish-photo" src="images/fish/osteochilus-vittatus.jpg"/>
 <h2>ปลาสร้อยนกเขา</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อสด</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 89. ปลาจาระเม็ด -->
-<div class="fish-card" data-bait="กุ้ง / เหยื่อธรรมชาติ" data-name="ปลาจาระเม็ด" data-photo-search="Pampus argenteus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาจาระเม็ด" class="fish-photo" data-wiki-title="Pampus argenteus" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Pampus_argenteus_1.jpg"/>
-<h2>ปลาจาระเม็ด</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อธรรมชาติ</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 90. ปลากระบอก -->
-<div class="fish-card" data-bait="ขนมปัง / เหยื่อธรรมชาติ" data-name="ปลากระบอก" data-photo-search="Mugil cephalus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากระบอก" class="fish-photo" data-wiki-title="Mugil cephalus" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/M%C3%BAjol_%28Mugil_cephalus%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2021-09-09%2C_DD_25.jpg"/>
+<div class="fish-card" data-bait="ขนมปัง / เหยื่อธรรมชาติ" data-name="ปลากระบอก" data-photo-search="Mugil cephalus" data-time="เช้า - เย็น" data-type="ทะเล" data-local-south="ปลาหมก, ปลากระบอกเทา">
+<p class="fish-local-south">🗣️ ภาคใต้: ปลาหมก, ปลากระบอกเทา</p><img alt="ปลากระบอก" class="fish-photo" src="images/fish/mullet.jpg"/>
 <h2>ปลากระบอก</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: ขนมปัง / เหยื่อธรรมชาติ</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 91. ปลาเห็ดโคน -->
-<div class="fish-card" data-bait="กุ้ง / หนอน" data-name="ปลาเห็ดโคน" data-photo-search="Sillago sihama" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาเห็ดโคน" class="fish-photo" data-wiki-title="Sillago sihama" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Sillago_sihama.jpg"/>
-<h2>ปลาเห็ดโคน</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: กุ้ง / หนอน</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 92. ปลากะพงลาย -->
-<div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลากะพงลาย" data-photo-search="Lutjanus lutjanus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากะพงลาย" class="fish-photo" data-wiki-title="Lutjanus" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Lutjanus_lutjanus.JPG"/>
+<div class="fish-card" data-bait="ปลา / กุ้ง" data-name="ปลากะพงลาย" data-photo-search="Lutjanus" data-time="เช้า - เย็น" data-type="ทะเล">
+<img alt="ปลากะพงลาย" class="fish-photo" src="images/fish/striped-bass.jpg"/>
 <h2>ปลากะพงลาย</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: ปลา / กุ้ง</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 93. ปลาใบเรือ -->
-<div class="fish-card" data-bait="เหยื่อปลอม / เหยื่อสด" data-name="ปลาใบเรือ" data-photo-search="Istiophorus platypterus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาใบเรือ" class="fish-photo" data-wiki-title="Istiophorus platypterus" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Istiophorus_platypterus_101956558.jpg"/>
-<h2>ปลาใบเรือ</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: เหยื่อปลอม / เหยื่อสด</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 94. ปลากระโทงร่ม -->
 <div class="fish-card" data-bait="เหยื่อสด / Trolling" data-name="ปลากระโทงร่ม" data-photo-search="Istiophorus platypterus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากระโทงร่ม" class="fish-photo" data-wiki-title="Istiophorus platypterus" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Istiophorus_platypterus_101956558.jpg"/>
+<img alt="ปลากระโทงร่ม" class="fish-photo" src="images/fish/marlin-swordfish.jpg"/>
 <h2>ปลากระโทงร่ม</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: เหยื่อสด / Trolling</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 95. ปลาเซลฟิช -->
-<div class="fish-card" data-bait="เหยื่อสด / Trolling" data-name="ปลาเซลฟิช" data-photo-search="Istiophorus platypterus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาเซลฟิช" class="fish-photo" data-wiki-title="Istiophorus platypterus" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Istiophorus_platypterus_101956558.jpg"/>
-<h2>ปลาเซลฟิช</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: เหยื่อสด / Trolling</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 96. ปลามาร์ลิน -->
-<div class="fish-card" data-bait="เหยื่อสด / Trolling" data-name="ปลามาร์ลิน" data-photo-search="Makaira nigricans" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลามาร์ลิน" class="fish-photo" data-wiki-title="Makaira nigricans" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Atlantic_blue_marlin.jpg"/>
-<h2>ปลามาร์ลิน</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: เหยื่อสด / Trolling</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 97. ปลาอินทรีจุด -->
-<div class="fish-card" data-bait="เหยื่อปลอม / ปลา" data-name="ปลาอินทรีจุด" data-photo-search="Scomberomorus guttatus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาอินทรีจุด" class="fish-photo" data-wiki-title="Scomberomorus guttatus" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Scgut_u0.gif"/>
-<h2>ปลาอินทรีจุด</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: เหยื่อปลอม / ปลา</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 98. ปลากะพงลายจุด -->
 <div class="fish-card" data-bait="กุ้ง / เหยื่อปลอม" data-name="ปลากะพงลายจุด" data-photo-search="Lutjanus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากะพงลายจุด" class="fish-photo" data-wiki-title="Lutjanus" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Lutjanus_lutjanus.JPG"/>
+<img alt="ปลากะพงลายจุด" class="fish-photo" src="images/fish/spotted-seabass.jpg"/>
 <h2>ปลากะพงลายจุด</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: กุ้ง / เหยื่อปลอม</p>
 <p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
 </div>
 <!-- 99. ปลากระมงพร้าววัยอ่อน -->
-<div class="fish-card" data-bait="Jig / เหยื่อปลอม" data-name="ปลากระมงพร้าววัยอ่อน" data-photo-search="Caranx ignobilis" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลากระมงพร้าววัยอ่อน" class="fish-photo" data-wiki-title="Caranx ignobilis" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Caranx_ignobilis.jpg"/>
-<h2>ปลากระมงพร้าววัยอ่อน</h2>
-<p>ประเภท: ปลาทะเล</p>
-<p>เหยื่อที่แนะนำ: Jig / เหยื่อปลอม</p>
-<p>ช่วงเวลาที่เหมาะ: เช้า - เย็น</p>
-</div>
 <!-- 100. ปลาทูน่าตาโต -->
 <div class="fish-card" data-bait="Jig / Trolling" data-name="ปลาทูน่าตาโต" data-photo-search="Thunnus obesus" data-time="เช้า - เย็น" data-type="ทะเล">
-<img alt="ปลาทูน่าตาโต" class="fish-photo" data-wiki-title="Thunnus obesus" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Thunnus_obesus_%28bigeye_tuna%29.jpg"/>
+<img alt="ปลาทูน่าตาโต" class="fish-photo" src="images/fish/bigeye-tuna.jpg"/>
 <h2>ปลาทูน่าตาโต</h2>
 <p>ประเภท: ปลาทะเล</p>
 <p>เหยื่อที่แนะนำ: Jig / Trolling</p>
@@ -944,6 +710,7 @@
 <p id="modalDifficulty">
                 ⭐ ระดับความยาก:
             </p>
+<p id="modalLocalSouth" class="modal-local-south" hidden></p>
 <div class="modal-buttons">
 <button class="save-fish-button" id="saveFishButton">
                     🎣 บันทึกปลาตัวนี้
@@ -954,11 +721,83 @@
 </div>
 </div>
 </div>
+<style>
+        /* FishFinder: local, reliable images only */
+        .fish-photo {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
 
+        #modalImage {
+            display: block;
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        .fish-image-note {
+            display: block;
+        }
+    </style>
+<style>
+        .fish-photo {
+            background: #eaf6ff;
+            object-fit: cover;
+        }
+
+        .fish-image-note {
+            margin: -8px 0 10px;
+            font-size: 11px;
+            opacity: .72;
+            text-align: center;
+        }
+    </style>
+<style>
+        /* Stable image sizing */
+        .fish-photo {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 14px;
+            background: #eef6fb;
+        }
+
+        .fish-image-source {
+            font-size: 10px;
+            opacity: .65;
+            margin-top: -4px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+    </style>
 <script src="js/fish-data.js"></script>
-<script src="js/fish-images.js"></script>
-<!-- Auto-match fish images by scientific name -->
-
 <script src="js/main.js"></script>
-<script src="js/fish-data.js"></script><script src="js/main.js"></script></body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const modalLocalSouth = document.getElementById("modalLocalSouth");
+    if (!modalLocalSouth) return;
+
+    document.querySelectorAll(".fish-card").forEach(function (card) {
+        card.addEventListener("click", function () {
+            const localName = (card.dataset.localSouth || "").trim();
+
+            if (localName) {
+                modalLocalSouth.textContent =
+                    "🗣️ ชื่อท้องถิ่นภาคใต้: " + localName;
+                modalLocalSouth.hidden = false;
+            } else {
+                modalLocalSouth.textContent = "";
+                modalLocalSouth.hidden = true;
+            }
+        });
+    });
+});
+</script>
+
+</body>
 </html>
