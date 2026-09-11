@@ -220,6 +220,27 @@
         </div>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+
+    <script>
+        window.supabaseClient =
+            window.supabase.createClient(
+                SUPABASE_URL,
+                SUPABASE_PUBLISHABLE_KEY
+            );
+    </script>
+
+    <script src="js/analytics.js"></script>
+    <script src="js/menu-analytics.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            trackEvent("page_view", {
+                page: "index"
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 
 </body>

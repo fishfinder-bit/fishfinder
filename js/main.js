@@ -147,6 +147,8 @@ function filterFish() {
                 ).toLowerCase();
 
 
+
+
             const type =
                 (
                     card.dataset.type ||
@@ -255,6 +257,23 @@ if (fishSearchInput) {
             filterFish();
         }
     );
+    let fishSearchTimer;
+
+    fishSearchInput.addEventListener("input", function () {
+        clearTimeout(fishSearchTimer);
+
+        const keyword = this.value.trim();
+
+        if (!keyword) {
+            return;
+        }
+
+        fishSearchTimer = setTimeout(function () {
+            trackEvent("fish_search", {
+                keyword: keyword
+            });
+        }, 800);
+    });
 }
 
 
@@ -596,60 +615,50 @@ if (fishModal) {
             "modalImage"
         );
 
-
     const modalName =
         document.getElementById(
             "modalName"
         );
-
 
     const modalType =
         document.getElementById(
             "modalType"
         );
 
-
     const modalBait =
         document.getElementById(
             "modalBait"
         );
-
 
     const modalTime =
         document.getElementById(
             "modalTime"
         );
 
-
     const modalSize =
         document.getElementById(
             "modalSize"
         );
-
 
     const modalHabitat =
         document.getElementById(
             "modalHabitat"
         );
 
-
     const modalDifficulty =
         document.getElementById(
             "modalDifficulty"
         );
-
 
     const modalClose =
         document.getElementById(
             "modalClose"
         );
 
-
     const modalCloseButton =
         document.getElementById(
             "modalCloseButton"
         );
-
 
     const saveFishButton =
         document.getElementById(
@@ -657,7 +666,10 @@ if (fishModal) {
         );
 
 
-    // คลิกการ์ด
+    // ========================================
+    // คลิกการ์ดปลา
+    // ========================================
+
     document.addEventListener(
         "click",
         function (event) {
@@ -676,6 +688,25 @@ if (fishModal) {
             const name =
                 card.dataset.name ||
                 "ไม่ทราบชื่อ";
+
+
+            // ========================================
+            // บันทึกเฉพาะปลาที่ผู้ใช้คลิก
+            // ========================================
+
+            if (
+                typeof trackEvent ===
+                "function"
+            ) {
+
+                trackEvent(
+                    "fish_view",
+                    {
+                        fish: name
+                    }
+                );
+
+            }
 
 
             const type =
@@ -705,6 +736,7 @@ if (fishModal) {
                 fishInfo =
                     fishDetails[name] ||
                     null;
+
             }
 
 
@@ -757,13 +789,16 @@ if (fishModal) {
                 modalImage.alt =
                     image.alt ||
                     name;
+
             }
 
 
             if (modalName) {
 
                 modalName.textContent =
-                    "🐟 " + name;
+                    "🐟 " +
+                    name;
+
             }
 
 
@@ -772,6 +807,7 @@ if (fishModal) {
                 modalType.textContent =
                     "🌊 ประเภท: " +
                     type;
+
             }
 
 
@@ -780,6 +816,7 @@ if (fishModal) {
                 modalBait.textContent =
                     "🎣 เหยื่อที่แนะนำ: " +
                     bait;
+
             }
 
 
@@ -788,6 +825,7 @@ if (fishModal) {
                 modalTime.textContent =
                     "⏰ ช่วงเวลาที่เหมาะ: " +
                     time;
+
             }
 
 
@@ -796,6 +834,7 @@ if (fishModal) {
                 modalSize.textContent =
                     "📏 ขนาดโดยประมาณ: " +
                     size;
+
             }
 
 
@@ -804,6 +843,7 @@ if (fishModal) {
                 modalHabitat.textContent =
                     "📍 แหล่งอาศัย: " +
                     habitat;
+
             }
 
 
@@ -812,6 +852,7 @@ if (fishModal) {
                 modalDifficulty.textContent =
                     "⭐ ระดับความยาก: " +
                     difficulty;
+
             }
 
 
@@ -823,16 +864,21 @@ if (fishModal) {
 
                 saveFishButton.dataset.type =
                     type;
+
             }
 
 
             fishModal.style.display =
                 "flex";
+
         }
     );
 
 
-    // X
+    // ========================================
+    // ปุ่ม X
+    // ========================================
+
     if (modalClose) {
 
         modalClose.addEventListener(
@@ -841,12 +887,17 @@ if (fishModal) {
 
                 fishModal.style.display =
                     "none";
+
             }
         );
+
     }
 
 
+    // ========================================
     // ปุ่มปิด
+    // ========================================
+
     if (modalCloseButton) {
 
         modalCloseButton.addEventListener(
@@ -855,12 +906,17 @@ if (fishModal) {
 
                 fishModal.style.display =
                     "none";
+
             }
         );
+
     }
 
 
+    // ========================================
     // คลิกพื้นหลัง
+    // ========================================
+
     fishModal.addEventListener(
         "click",
         function (event) {
@@ -872,12 +928,17 @@ if (fishModal) {
 
                 fishModal.style.display =
                     "none";
+
             }
+
         }
     );
 
 
+    // ========================================
     // บันทึกปลาตัวนี้
+    // ========================================
+
     if (saveFishButton) {
 
         saveFishButton.addEventListener(
@@ -898,6 +959,7 @@ if (fishModal) {
                 ) {
 
                     return;
+
                 }
 
 
@@ -910,10 +972,18 @@ if (fishModal) {
                     encodeURIComponent(
                         type
                     );
+
             }
         );
+
     }
+
 }
+
+
+// ========================================
+// 7. LOG - PREFILL FROM FISH GUIDE
+// ========================================
 
 
 // ========================================
