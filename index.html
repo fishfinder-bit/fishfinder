@@ -233,6 +233,47 @@
     </script>
 
     <script src="js/analytics.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+
+            try {
+
+                const {
+                    data,
+                    error
+                } = await window.supabaseClient.auth.getSession();
+
+                if (error) {
+                    console.error(
+                        "ตรวจสอบสถานะการเข้าสู่ระบบไม่สำเร็จ:",
+                        error
+                    );
+                    return;
+                }
+
+                const session =
+                    data && data.session;
+
+                // ยังไม่ได้ล็อกอิน
+                if (!session) {
+
+                    window.location.replace(
+                        "login.html"
+                    );
+
+                }
+
+            } catch (error) {
+
+                console.error(
+                    "Auth Guard Error:",
+                    error
+                );
+
+            }
+
+        });
+    </script>
     <script src="js/menu-analytics.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
