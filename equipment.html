@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,31 +36,6 @@
         }
 
         /* =========================
-           Search
-        ========================= */
-
-        .equipment-search {
-            max-width: 820px;
-            margin: 0 auto 28px;
-        }
-
-        .equipment-search label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .equipment-search input {
-            width: 100%;
-            box-sizing: border-box;
-            padding: 14px 16px;
-            border: 1px solid #d7dee4;
-            border-radius: 14px;
-            font-size: 16px;
-            background: #fff;
-        }
-
-        /* =========================
            Recommender
         ========================= */
 
@@ -71,7 +45,7 @@
             padding: 30px;
             border-radius: 24px;
             background: #fff;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+            box-shadow: 0 12px 35px rgba(0,0,0,.08);
         }
 
         .recommender-top {
@@ -392,7 +366,7 @@
 
         .equipment-list {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0,1fr));
             gap: 22px;
         }
 
@@ -400,7 +374,7 @@
             padding: 24px;
             border-radius: 20px;
             background: #fff;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+            box-shadow: 0 8px 25px rgba(0,0,0,.08);
             cursor: pointer;
             transition: .2s;
             text-align: center;
@@ -408,7 +382,7 @@
 
         .equipment-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 14px 30px rgba(0, 0, 0, .12);
+            box-shadow: 0 14px 30px rgba(0,0,0,.12);
         }
 
         .equipment-icon {
@@ -494,7 +468,7 @@
             margin: 0 auto 22px;
         }
 
-        .product-tools>label {
+        .product-tools > label {
             display: block;
             font-weight: 700;
             margin-bottom: 8px;
@@ -561,7 +535,7 @@
 
         .recommended-product-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(4,minmax(0,1fr));
             gap: 22px;
         }
 
@@ -569,7 +543,7 @@
             padding: 18px;
             border-radius: 20px;
             background: #fff;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+            box-shadow: 0 8px 24px rgba(0,0,0,.08);
             border: 1px solid #e8edf0;
             transition: .2s ease;
             overflow: hidden;
@@ -577,7 +551,7 @@
 
         .recommended-product-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 14px 30px rgba(0, 0, 0, .12);
+            box-shadow: 0 14px 30px rgba(0,0,0,.12);
         }
 
         .recommended-product-image {
@@ -645,7 +619,6 @@
             gap: 6px;
             margin: 9px 0 10px;
         }
-
         .recommended-product-size-label {
             display: block;
             margin-top: 12px;
@@ -685,7 +658,6 @@
             color: #7a838a;
             pointer-events: none;
         }
-
         .recommended-product-button:not(.disabled) {
             display: block;
             background: #0b8f08;
@@ -779,7 +751,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background: rgba(0, 0, 0, .55);
+            background: rgba(0,0,0,.55);
             z-index: 9999;
         }
 
@@ -796,7 +768,7 @@
             padding: 32px;
             border-radius: 24px;
             background: #fff;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+            box-shadow: 0 20px 60px rgba(0,0,0,.25);
             text-align: center;
         }
 
@@ -849,7 +821,7 @@
 
         .modal-equipment-info {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3,1fr);
             gap: 12px;
             margin-top: 25px;
         }
@@ -1001,10 +973,9 @@
         ========================= */
 
         @media (max-width:1000px) {
-
             .equipment-list,
             .recommended-product-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-columns: repeat(2,minmax(0,1fr));
             }
         }
 
@@ -1074,377 +1045,267 @@
         }
     </style>
 
-    <style>
-        @media (max-width: 560px) {
-            .recommended-item {
-                flex-wrap: wrap;
-            }
+<style>
+@media (max-width: 560px) {
+    .recommended-item {
+        flex-wrap: wrap;
+    }
 
-            .recommended-item strong {
-                flex: 1 1 calc(100% - 64px);
-            }
+    .recommended-item strong {
+        flex: 1 1 calc(100% - 64px);
+    }
 
-            .recommended-item p {
-                flex: 1 1 100%;
-                margin-left: 64px;
-            }
-        }
-    </style>
+    .recommended-item p {
+        flex: 1 1 100%;
+        margin-left: 64px;
+    }
+}
+</style>
 
 </head>
 
 <body>
 
-    <header>
-        <h2>🎣 FishFinder</h2>
+<header>
+    <h2>🎣 FishFinder</h2>
 
-        <nav>
-            <a href="index.html">หน้าหลัก</a>
-            <a href="fish.html">คู่มือ</a>
-            <a href="log.html">บันทึกการตกปลา</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="equipment.html">สินค้า</a>
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="fish.html">คู่มือ</a>
+        <a href="log.html">บันทึกการตกปลา</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="equipment.html">สินค้า</a>
+        <a href="about.html">เกี่ยวกับ</a>
 
-            <a href="about.html">เกี่ยวกับ</a>
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button">
+            🌙
+        </button>
+    </nav>
+</header>
 
-            <button id="themeToggle" class="theme-toggle" type="button">
-                🌙
-            </button>
-        </nav>
-    </header>
 
+<main class="equipment-page">
 
-    <main class="equipment-page">
-
-        <!-- =========================
+    <!-- =========================
          Hero
     ========================== -->
 
-        <section class="equipment-hero">
+    <section class="equipment-hero">
 
-            <div class="equipment-hero-icon">
-                🎣
-            </div>
+        <div class="equipment-hero-icon">
+            🎣
+        </div>
 
-            <h1>
-                อุปกรณ์การตกปลา
-            </h1>
+        <h1>
+           สินค้าและอุปกรณ์การตกปลา
+        </h1>
 
-            <p>
-                เรียนรู้ เลือกอุปกรณ์ และดูสินค้าแนะนำให้เหมาะกับวิธีตกปลาและปลาเป้าหมาย
-            </p>
+        <p>
+            คำแนะนำอุปกรณ์การตกปลาที่เหมาะสม และสินค้าอุปกรณ์ตกปลา
+        </p>
 
-        </section>
-
-
-        <!-- =========================
-         Search
-    ========================== -->
-
-        <section class="equipment-search">
-
-            <label for="equipmentSearch">
-                🔎 ค้นหาอุปกรณ์
-            </label>
-
-            <input id="equipmentSearch" type="text" placeholder="เช่น คันเบ็ด รอก สาย เบ็ด เหยื่อ...">
-
-        </section>
+    </section>
 
 
-        <!-- =========================
+    <!-- =========================
          Recommender
     ========================== -->
 
-        <section class="equipment-recommender">
+    <section class="equipment-recommender">
 
-            <div class="recommender-top">
+        <div class="recommender-top">
 
-                <div class="recommender-icon" id="recommenderMainIcon">
-                </div>
-
-                <div>
-
-                    <h2>
-                        ช่วยเลือกอุปกรณ์ให้เหมาะกับคุณ
-                    </h2>
-
-                    <p>
-                        เลือกข้อมูล 3 ข้อ แล้ว FishFinder จะจัดชุดอุปกรณ์เบื้องต้นให้
-                    </p>
-
-                </div>
-
+            <div
+                class="recommender-icon"
+                id="recommenderMainIcon">
             </div>
 
-
-            <div class="recommend-progress">
-
-                <div class="progress-item active">
-                    <span>1</span>
-                    <p>วิธีตกปลา</p>
-                </div>
-
-                <div class="progress-line"></div>
-
-                <div class="progress-item active">
-                    <span>2</span>
-                    <p>ประสบการณ์</p>
-                </div>
-
-                <div class="progress-line"></div>
-
-                <div class="progress-item active">
-                    <span>3</span>
-                    <p>ปลาเป้าหมาย</p>
-                </div>
-
-            </div>
-
-
-            <div class="recommend-form">
-
-                <div class="recommend-box">
-
-                    <div class="recommend-box-number">
-                        1
-                    </div>
-
-                    <div class="recommend-box-content">
-
-                        <label for="fishingStyle">
-                            วิธีตกปลา
-                        </label>
-
-                        <small>
-                            เลือกรูปแบบที่คุณต้องการ
-                        </small>
-
-                        <select id="fishingStyle">
-
-                            <option value="freshwater">
-                                💧 น้ำจืด
-                            </option>
-
-                            <option value="sea">
-                                🌊 ทะเล
-                            </option>
-
-                            <option value="lure">
-                                🐟 ตีเหยื่อปลอม
-                            </option>
-
-                            <option value="bottom">
-                                🎣 ตกหน้าดิน
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <div class="recommend-box">
-
-                    <div class="recommend-box-number">
-                        2
-                    </div>
-
-                    <div class="recommend-box-content">
-
-                        <label for="fishingLevel">
-                            ระดับประสบการณ์
-                        </label>
-
-                        <small>
-                            เพื่อให้คำแนะนำเหมาะกับผู้ใช้
-                        </small>
-
-                        <select id="fishingLevel">
-
-                            <option value="beginner">
-                                🟢 มือใหม่
-                            </option>
-
-                            <option value="normal">
-                                🟡 ทั่วไป
-                            </option>
-
-                            <option value="advanced">
-                                🔴 มีประสบการณ์
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <div class="recommend-box">
-
-                    <div class="recommend-box-number">
-                        3
-                    </div>
-
-                    <div class="recommend-box-content">
-
-                        <label for="targetFish">
-                            ปลาเป้าหมาย
-                        </label>
-
-                        <small>
-                            เลือกจากคู่มือปลา FishFinder
-                        </small>
-
-                        <select id="targetFish">
-
-                            <option value="">
-                                ⏳ กำลังโหลดข้อมูลปลา...
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <button id="recommendEquipmentButton" class="recommend-button" type="button">
-
-                🎯 แนะนำอุปกรณ์ให้ฉัน
-
-            </button>
-
-
-            <p class="recommend-hint">
-                💡 ระบบใช้ข้อมูลจากการ์ดปลาใน fish.html เพื่อช่วยจัดแนวทางเบื้องต้น
-            </p>
-
-
-            <div id="recommendationResult" class="recommendation-result">
-
-                <div class="result-header">
-
-                    <div style="font-size:34px">
-                        ✨
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            ชุดที่ FishFinder แนะนำ
-                        </h3>
-
-                        <p>
-                            คำแนะนำเบื้องต้นสำหรับตัวเลือกของคุณ
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div id="recommendedItems" class="recommendation-items">
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-         Products
-    ========================== -->
-
-        <section class="product-section">
-
-            <div class="product-section-header">
-
-                <span class="product-section-icon">
-                    🛒
-                </span>
+            <div>
 
                 <h2>
-                    สินค้าแนะนำ
+                    แนะนำอุปกรณ์ที่เหมาะกับคุณ
                 </h2>
 
                 <p>
-                    จัดอันดับตามความเหมาะสมกับปลาเป้าหมายและวิธีตกปลา
+                    เลือกข้อมูล 3 ข้อ แล้ว FishFinder จะจัดชุดอุปกรณ์เบื้องต้นให้
                 </p>
 
             </div>
 
+        </div>
 
-            <div class="product-tools">
 
-                <label for="productSearch">
-                    🔎 ค้นหาสินค้า
-                </label>
+        <div class="recommend-progress">
 
-                <input id="productSearch" type="text" placeholder="เช่น PE 1.0, รอก 2500, เวท M, เบ็ด #4">
+            <div class="progress-item active">
+                <span>1</span>
+                <p>วิธีตกปลา</p>
+            </div>
 
-                <div class="product-category-filter">
+            <div class="progress-line"></div>
 
-                    <button class="product-category-button active" data-product-category="all" type="button">
-                        ทั้งหมด
-                    </button>
+            <div class="progress-item active">
+                <span>2</span>
+                <p>ความชำนาญ</p>
+            </div>
 
-                    <button class="product-category-button" data-product-category="คันเบ็ด" type="button">
-                        คันเบ็ด
-                    </button>
+            <div class="progress-line"></div>
 
-                    <button class="product-category-button" data-product-category="รอก" type="button">
-                        รอก
-                    </button>
+            <div class="progress-item active">
+                <span>3</span>
+                <p>ปลาเป้าหมาย</p>
+            </div>
 
-                    <button class="product-category-button" data-product-category="สาย" type="button">
-                        สาย
-                    </button>
+        </div>
 
-                    <button class="product-category-button" data-product-category="สายหน้า" type="button">
-                        สายหน้า
-                    </button>
 
-                    <button class="product-category-button" data-product-category="เบ็ด" type="button">
-                        เบ็ด
-                    </button>
+        <div class="recommend-form">
 
-                    <button class="product-category-button" data-product-category="เหยื่อ" type="button">
-                        เหยื่อ
-                    </button>
+            <div class="recommend-box">
 
-                    <button class="product-category-button" data-product-category="อุปกรณ์เสริม" type="button">
-                        อุปกรณ์เสริม
-                    </button>
-
+                <div class="recommend-box-number">
+                    1
                 </div>
 
-                <div id="productSearchCount" class="product-search-count">
-                    แสดงสินค้า
+                <div class="recommend-box-content">
+
+                    <label for="fishingStyle">
+                        วิธีตกปลา
+                    </label>
+
+                    <small>
+                        เลือกรูปแบบที่คุณต้องการ
+                    </small>
+
+                    <select id="fishingStyle">
+
+                        <option value="freshwater">
+                            💧 น้ำจืด
+                        </option>
+
+                        <option value="sea">
+                            🌊 ทะเล
+                        </option>
+
+                        <option value="lure">
+                            🐟 ตีเหยื่อปลอม
+                        </option>
+
+                        <option value="bottom">
+                            🎣 ตกหน้าดิน
+                        </option>
+
+                    </select>
+
                 </div>
 
             </div>
 
-            <div id="recommendedProductGrid" class="recommended-product-grid">
 
-                <div class="product-placeholder product-loading-state">
+            <div class="recommend-box">
 
-                    <div class="product-placeholder-icon">
-                        🛒
-                    </div>
+                <div class="recommend-box-number">
+                    2
+                </div>
+
+                <div class="recommend-box-content">
+
+                    <label for="fishingLevel">
+                        ระดับความชำนาญ
+                    </label>
+
+                    <small>
+                        เพื่อให้คำแนะนำเหมาะกับผู้ใช้
+                    </small>
+
+                    <select id="fishingLevel">
+
+                        <option value="beginner">
+                            🟢 มือใหม่
+                        </option>
+
+                        <option value="normal">
+                            🟡 ทั่วไป
+                        </option>
+
+                        <option value="advanced">
+                            🔴 มีความชำนาญ
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="recommend-box">
+
+                <div class="recommend-box-number">
+                    3
+                </div>
+
+                <div class="recommend-box-content">
+
+                    <label for="targetFish">
+                        ปลาเป้าหมาย
+                    </label>
+
+                    <small>
+                        เลือกจากคู่มือปลา FishFinder
+                    </small>
+
+                    <select id="targetFish">
+
+                        <option value="">
+                            ⏳ กำลังโหลดข้อมูลปลา...
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="recommendEquipmentButton"
+            class="recommend-button"
+            type="button">
+
+            🎯 แนะนำอุปกรณ์ให้ฉัน
+
+        </button>
+
+
+        <p class="recommend-hint">
+            💡 ระบบใช้ข้อมูลจากการ์ดปลาใน fish.html เพื่อช่วยจัดแนวทางเบื้องต้น
+        </p>
+
+
+        <div
+            id="recommendationResult"
+            class="recommendation-result">
+
+            <div class="result-header">
+
+                <div style="font-size:34px">
+                    ✨
+                </div>
+
+                <div>
 
                     <h3>
-                        สินค้าแนะนำ
+                        ชุดที่ FishFinder แนะนำ
                     </h3>
 
                     <p>
-                        กำลังแสดงสินค้าทั่วไปสำหรับการตกปลา
-                        สามารถเลือกปลาและกด “แนะนำอุปกรณ์ให้ฉัน”
-                        เพื่อปรับสินค้าให้ตรงกับคุณมากขึ้น
+                        คำแนะนำเบื้องต้นสำหรับตัวเลือกของคุณ
                     </p>
 
                 </div>
@@ -1452,74 +1313,211 @@
             </div>
 
 
-            <p class="affiliate-note">
-                หมายเหตุ: ตอนนำสินค้าจริงมาใส่
-                ให้ใส่ราคา รูปสินค้า และลิงก์ร้านค้าจริง
-                และเปิดเผยว่าเป็น Affiliate Link เมื่อเกี่ยวข้อง
+            <div
+                id="recommendedItems"
+                class="recommendation-items">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Products
+    ========================== -->
+
+    <section class="product-section">
+
+        <div class="product-section-header">
+
+            <span class="product-section-icon">
+                🛒
+            </span>
+
+            <h2>
+                สินค้าแนะนำ
+            </h2>
+
+            <p>
+                จัดอันดับตามความเหมาะสมกับปลาเป้าหมายและวิธีตกปลา
             </p>
 
-        </section>
-
-    </main>
+        </div>
 
 
-    <script>
+        <div class="product-tools">
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
+            <label for="productSearch">
+                🔎 ค้นหาสินค้า
+            </label>
 
-                /* =====================================
-                   Helper
-                ===================================== */
+            <input
+                id="productSearch"
+                type="text"
+                placeholder="เช่น PE 1.0, รอก 2500, เวท M, เบ็ด #4">
 
-                const $ = function (id) {
-                    return document.getElementById(id);
-                };
+            <div class="product-category-filter">
+
+                <button
+                    class="product-category-button active"
+                    data-product-category="all"
+                    type="button">
+                    ทั้งหมด
+                </button>
+
+                <button
+                    class="product-category-button"
+                    data-product-category="คันเบ็ด"
+                    type="button">
+                    คันเบ็ด
+                </button>
+
+                <button
+                    class="product-category-button"
+                    data-product-category="รอก"
+                    type="button">
+                    รอก
+                </button>
+
+                <button
+                    class="product-category-button"
+                    data-product-category="สาย"
+                    type="button">
+                    สาย
+                </button>
+
+                <button
+                    class="product-category-button"
+                    data-product-category="สายหน้า"
+                    type="button">
+                    สายหน้า
+                </button>
+
+                <button
+                    class="product-category-button"
+                    data-product-category="เบ็ด"
+                    type="button">
+                    เบ็ด
+                </button>
+
+                <button
+                    class="product-category-button"
+                    data-product-category="เหยื่อ"
+                    type="button">
+                    เหยื่อ
+                </button>
+
+                <button
+                    class="product-category-button"
+                    data-product-category="อุปกรณ์เสริม"
+                    type="button">
+                    อุปกรณ์เสริม
+                </button>
+
+            </div>
+
+            <div
+                id="productSearchCount"
+                class="product-search-count">
+                แสดงสินค้า
+            </div>
+
+        </div>
+
+        <div
+            id="recommendedProductGrid"
+            class="recommended-product-grid">
+
+            <div class="product-placeholder product-loading-state">
+
+                <div class="product-placeholder-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    สินค้าแนะนำ
+                </h3>
+
+                <p>
+                    กำลังแสดงสินค้าทั่วไปสำหรับการตกปลา
+                    สามารถเลือกปลาและกด “แนะนำอุปกรณ์ให้ฉัน”
+                    เพื่อปรับสินค้าให้ตรงกับคุณมากขึ้น
+                </p>
+
+            </div>
+
+        </div>
 
 
-                /* =====================================
-                   Recommendation DOM References
-                ===================================== */
+        <p class="affiliate-note">
+            หมายเหตุ: ตอนนำสินค้าจริงมาใส่
+            ให้ใส่ราคา รูปสินค้า และลิงก์ร้านค้าจริง
+            และเปิดเผยว่าเป็น Affiliate Link เมื่อเกี่ยวข้อง
+        </p>
 
-                const result =
-                    $("recommendationResult");
+    </section>
 
-                const recommendedItems =
-                    $("recommendedItems");
+</main>
 
-                const productGrid =
-                    $("recommendedProductGrid");
 
-                /* =====================================
-                   Equipment Images
-                ===================================== */
+<script>
 
-                const equipmentImageMap = {
-                    rod: "images/equipment/rod.webp",
-                    reel: "images/equipment/spinning-reel.webp",
-                    line: "images/equipment/nylon-line.webp",
-                    pe: "images/equipment/pe-line.webp",
-                    nylon: "images/equipment/nylon-line.webp",
-                    hook: "images/equipment/hook.webp",
-                    lure: "images/equipment/lure.webp",
-                    bait: "images/equipment/live-bait.webp",
-                    net: "images/equipment/fishing-net.webp",
-                    box: "images/equipment/tackle-box.webp",
-                    pliers: "images/equipment/fishing-pliers.webp",
-                    float: "images/equipment/float.webp"
-                };
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
-                function equipmentImage(
-                    type,
-                    alt = "อุปกรณ์ตกปลา",
-                    className = ""
-                ) {
-                    const src =
-                        equipmentImageMap[type] ||
-                        equipmentImageMap.rod;
+        /* =====================================
+           Helper
+        ===================================== */
 
-                    return `
+        const $ = function (id) {
+            return document.getElementById(id);
+        };
+
+
+        /* =====================================
+           Recommendation DOM References
+        ===================================== */
+
+        const result =
+            $("recommendationResult");
+
+        const recommendedItems =
+            $("recommendedItems");
+
+        const productGrid =
+            $("recommendedProductGrid");
+
+        /* =====================================
+           Equipment Images
+        ===================================== */
+
+        const equipmentImageMap = {
+            rod: "images/equipment/rod.webp",
+            reel: "images/equipment/spinning-reel.webp",
+            line: "images/equipment/nylon-line.webp",
+            pe: "images/equipment/pe-line.webp",
+            nylon: "images/equipment/nylon-line.webp",
+            hook: "images/equipment/hook.webp",
+            lure: "images/equipment/lure.webp",
+            bait: "images/equipment/live-bait.webp",
+            net: "images/equipment/fishing-net.webp",
+            box: "images/equipment/tackle-box.webp",
+            pliers: "images/equipment/fishing-pliers.webp",
+            float: "images/equipment/float.webp"
+        };
+
+        function equipmentImage(
+            type,
+            alt = "อุปกรณ์ตกปลา",
+            className = ""
+        ) {
+            const src =
+                equipmentImageMap[type] ||
+                equipmentImageMap.rod;
+
+            return `
                 <img
                     src="${src}"
                     alt="${alt}"
@@ -1528,773 +1526,773 @@
                     onerror="this.style.display='none';"
                 >
             `;
-                }
+        }
 
-                $("recommenderMainIcon").innerHTML =
-                    equipmentImage(
-                        "rod",
-                        "คันเบ็ด"
+        $("recommenderMainIcon").innerHTML =
+            equipmentImage(
+                "rod",
+                "คันเบ็ด"
+            );
+
+
+        /* =====================================
+           Load Fish Data From fish.html
+        ===================================== */
+
+        let fishGuideData = [];
+
+
+        async function loadFishGuide() {
+
+            try {
+
+                const response =
+                    await fetch(
+                        "fish.html",
+                        {
+                            cache:
+                                "no-store"
+                        }
                     );
 
 
-                /* =====================================
-                   Load Fish Data From fish.html
-                ===================================== */
+                if (!response.ok) {
 
-                let fishGuideData = [];
+                    throw new Error(
+                        "โหลด fish.html ไม่สำเร็จ"
+                    );
 
-
-                async function loadFishGuide() {
-
-                    try {
-
-                        const response =
-                            await fetch(
-                                "fish.html",
-                                {
-                                    cache:
-                                        "no-store"
-                                }
-                            );
+                }
 
 
-                        if (!response.ok) {
+                const html =
+                    await response.text();
 
-                            throw new Error(
-                                "โหลด fish.html ไม่สำเร็จ"
-                            );
+
+                const doc =
+                    new DOMParser()
+                        .parseFromString(
+                            html,
+                            "text/html"
+                        );
+
+
+                fishGuideData =
+                    Array.from(
+                        doc.querySelectorAll(
+                            ".fish-card"
+                        )
+                    )
+                    .map(
+                        function (card) {
+
+                            return {
+
+                                name:
+                                    card.dataset
+                                        .name ||
+                                    "",
+
+                                type:
+                                    card.dataset
+                                        .type ||
+                                    "",
+
+                                bait:
+                                    card.dataset
+                                        .bait ||
+                                    "",
+
+                                time:
+                                    card.dataset
+                                        .time ||
+                                    ""
+
+                            };
 
                         }
+                    )
+                    .filter(
+                        function (fish) {
+
+                            return fish.name;
+
+                        }
+                    );
 
 
-                        const html =
-                            await response.text();
-
-
-                        const doc =
-                            new DOMParser()
-                                .parseFromString(
-                                    html,
-                                    "text/html"
-                                );
-
-
-                        fishGuideData =
-                            Array.from(
-                                doc.querySelectorAll(
-                                    ".fish-card"
-                                )
-                            )
-                                .map(
-                                    function (card) {
-
-                                        return {
-
-                                            name:
-                                                card.dataset
-                                                    .name ||
-                                                "",
-
-                                            type:
-                                                card.dataset
-                                                    .type ||
-                                                "",
-
-                                            bait:
-                                                card.dataset
-                                                    .bait ||
-                                                "",
-
-                                            time:
-                                                card.dataset
-                                                    .time ||
-                                                ""
-
-                                        };
-
-                                    }
-                                )
-                                .filter(
-                                    function (fish) {
-
-                                        return fish.name;
-
-                                    }
-                                );
-
-
-                        targetFish.innerHTML = `
+                targetFish.innerHTML = `
                     <option value="">
                         🐟 เลือกปลา
                     </option>
                 `;
 
 
-                        fishGuideData.forEach(
-                            function (
-                                fish,
-                                index
-                            ) {
+                fishGuideData.forEach(
+                    function (
+                        fish,
+                        index
+                    ) {
 
-                                const option =
-                                    document.createElement(
-                                        "option"
-                                    );
-
-
-                                option.value =
-                                    index;
+                        const option =
+                            document.createElement(
+                                "option"
+                            );
 
 
-                                option.textContent =
-                                    fish.name;
+                        option.value =
+                            index;
 
 
-                                targetFish.appendChild(
-                                    option
-                                );
+                        option.textContent =
+                            fish.name;
 
-                            }
+
+                        targetFish.appendChild(
+                            option
                         );
 
-
-                        console.log(
-                            "✅ โหลดข้อมูลปลา:",
-                            fishGuideData.length,
-                            "ตัว"
-                        );
-
-                    } catch (error) {
-
-                        console.error(
-                            error
-                        );
+                    }
+                );
 
 
-                        targetFish.innerHTML = `
+                console.log(
+                    "✅ โหลดข้อมูลปลา:",
+                    fishGuideData.length,
+                    "ตัว"
+                );
+
+            } catch (error) {
+
+                console.error(
+                    error
+                );
+
+
+                targetFish.innerHTML = `
                     <option value="">
                         ❌ โหลดข้อมูลปลาไม่ได้
                     </option>
                 `;
 
-                    }
+            }
 
-                }
-
-
-                const targetFish =
-                    $("targetFish");
+        }
 
 
-                /* =====================================
-                   Recommendation
-                ===================================== */
+        const targetFish =
+            $("targetFish");
 
-                function makeRecommendation(style, level, fish) {
 
-                    const bait =
-                        (fish.bait || "").toLowerCase();
+        /* =====================================
+           Recommendation
+        ===================================== */
 
-                    const fishName = fish.name || "";
-                    const fishType = fish.type || "";
+        function makeRecommendation(style, level, fish) {
 
-                    /*
-                     * คำแนะนำเป็น "ช่วง" เพื่อให้ปรับใช้กับอุปกรณ์จริงได้
-                     * ค่า PE / lb อาจแตกต่างตามแบรนด์และโครงสร้างสาย
-                     */
-                    let rec = {
-                        rod: "คัน Spinning | เวท 8–17 lb | เหยื่อ 7–21 g",
-                        reel: "รอก Spinning ขนาด 2000–2500",
-                        line: "สาย PE 0.8–1.2 | ประมาณ 12–20 lb",
-                        leader: "Fluorocarbon 12–20 lb",
-                        hook: "เบ็ดขนาดประมาณ #4–#1",
-                        lure: fish.bait || "เหยื่อธรรมชาติ",
-                        lureWeight: "ประมาณ 5–15 g",
-                        note: "ชุดกลาง เน้นใช้งานง่ายและควบคุมได้ไม่ยาก"
-                    };
+            const bait =
+                (fish.bait || "").toLowerCase();
 
-                    /* -------------------------------------
-                       แยกตามวิธีตกปลา
-                    ------------------------------------- */
+            const fishName = fish.name || "";
+            const fishType = fish.type || "";
 
-                    if (style === "freshwater") {
-                        rec = {
-                            rod: "คัน Spinning | เวท 6–12 lb | เหยื่อ 5–14 g",
-                            reel: "รอก Spinning ขนาด 1000–2500",
-                            line: "สาย PE 0.6–1.0 | ประมาณ 10–18 lb",
-                            leader: "Fluorocarbon 10–16 lb",
-                            hook: "เบ็ดขนาดประมาณ #6–#1",
-                            lure: fish.bait || "เหยื่อธรรมชาติ",
-                            lureWeight: "ประมาณ 3–12 g",
-                            note: "เหมาะกับงานน้ำจืดทั่วไป เน้นชุดไม่หนักเกินไป"
-                        };
-                    }
+            /*
+             * คำแนะนำเป็น "ช่วง" เพื่อให้ปรับใช้กับอุปกรณ์จริงได้
+             * ค่า PE / lb อาจแตกต่างตามแบรนด์และโครงสร้างสาย
+             */
+            let rec = {
+                rod: "คัน Spinning | เวท 8–17 lb | เหยื่อ 7–21 g",
+                reel: "รอก Spinning ขนาด 2000–2500",
+                line: "สาย PE 0.8–1.2 | ประมาณ 12–20 lb",
+                leader: "Fluorocarbon 12–20 lb",
+                hook: "เบ็ดขนาดประมาณ #4–#1",
+                lure: fish.bait || "เหยื่อธรรมชาติ",
+                lureWeight: "ประมาณ 5–15 g",
+                note: "ชุดกลาง เน้นใช้งานง่ายและควบคุมได้ไม่ยาก"
+            };
 
-                    if (style === "lure") {
-                        rec = {
-                            rod: "คันตีเหยื่อปลอม | เวท 8–17 lb | เหยื่อ 7–21 g",
-                            reel: "รอก Spinning 2000–2500 หรือ Baitcasting ขนาดกลาง",
-                            line: "สาย PE 0.8–1.5 | ประมาณ 12–25 lb",
-                            leader: "Fluorocarbon 16–25 lb",
-                            hook: "เบ็ด/สปินเนอร์/หัวจิ๊ก เลือกตามชนิดเหยื่อ",
-                            lure: fish.bait || "เหยื่อปลอม",
-                            lureWeight: "ประมาณ 5–20 g",
-                            note: "เน้นความสมดุลระหว่างระยะตีเหยื่อ การควบคุม และแรงดึง"
-                        };
-                    }
+            /* -------------------------------------
+               แยกตามวิธีตกปลา
+            ------------------------------------- */
 
-                    if (style === "bottom") {
-                        rec = {
-                            rod: "คันหน้าดิน | เวท 10–20 lb",
-                            reel: "รอก Spinning ขนาด 3000–5000",
-                            line: "สาย PE 1.5–2.5 หรือสายเอ็น 15–30 lb",
-                            leader: "Fluorocarbon/Leader 20–30 lb",
-                            hook: "เบ็ดประมาณ #2–1/0 โดยเลือกตามเหยื่อและปลา",
-                            lure: fish.bait || "เหยื่อสด/เหยื่อธรรมชาติ",
-                            lureWeight: "ขึ้นกับชุดตะกั่วและระยะตก",
-                            note: "เหมาะกับการวางเหยื่อและการคุมปลาใกล้โครงสร้าง"
-                        };
-                    }
+            if (style === "freshwater") {
+                rec = {
+                    rod: "คัน Spinning | เวท 6–12 lb | เหยื่อ 5–14 g",
+                    reel: "รอก Spinning ขนาด 1000–2500",
+                    line: "สาย PE 0.6–1.0 | ประมาณ 10–18 lb",
+                    leader: "Fluorocarbon 10–16 lb",
+                    hook: "เบ็ดขนาดประมาณ #6–#1",
+                    lure: fish.bait || "เหยื่อธรรมชาติ",
+                    lureWeight: "ประมาณ 3–12 g",
+                    note: "เหมาะกับงานน้ำจืดทั่วไป เน้นชุดไม่หนักเกินไป"
+                };
+            }
 
-                    if (style === "sea") {
-                        rec = {
-                            rod: "คันทะเล | เวท 12–25 lb | เหยื่อประมาณ 10–40 g",
-                            reel: "รอก Spinning ขนาด 3000–5000",
-                            line: "สาย PE 1.2–2.0 | ประมาณ 20–35 lb",
-                            leader: "Fluorocarbon 20–40 lb",
-                            hook: "เบ็ดประมาณ #2–2/0 ตามปลาและเหยื่อ",
-                            lure: fish.bait || "เหยื่อทะเล",
-                            lureWeight: "ประมาณ 10–40 g",
-                            note: "งานทะเลควรเผื่อความแข็งแรงและการเสียดสีกับโครงสร้าง"
-                        };
-                    }
+            if (style === "lure") {
+                rec = {
+                    rod: "คันตีเหยื่อปลอม | เวท 8–17 lb | เหยื่อ 7–21 g",
+                    reel: "รอก Spinning 2000–2500 หรือ Baitcasting ขนาดกลาง",
+                    line: "สาย PE 0.8–1.5 | ประมาณ 12–25 lb",
+                    leader: "Fluorocarbon 16–25 lb",
+                    hook: "เบ็ด/สปินเนอร์/หัวจิ๊ก เลือกตามชนิดเหยื่อ",
+                    lure: fish.bait || "เหยื่อปลอม",
+                    lureWeight: "ประมาณ 5–20 g",
+                    note: "เน้นความสมดุลระหว่างระยะตีเหยื่อ การควบคุม และแรงดึง"
+                };
+            }
 
-                    /* -------------------------------------
-                       ปรับตามปลา / ขนาดปลา
-                    ------------------------------------- */
+            if (style === "bottom") {
+                rec = {
+                    rod: "คันหน้าดิน | เวท 10–20 lb",
+                    reel: "รอก Spinning ขนาด 3000–5000",
+                    line: "สาย PE 1.5–2.5 หรือสายเอ็น 15–30 lb",
+                    leader: "Fluorocarbon/Leader 20–30 lb",
+                    hook: "เบ็ดประมาณ #2–1/0 โดยเลือกตามเหยื่อและปลา",
+                    lure: fish.bait || "เหยื่อสด/เหยื่อธรรมชาติ",
+                    lureWeight: "ขึ้นกับชุดตะกั่วและระยะตก",
+                    note: "เหมาะกับการวางเหยื่อและการคุมปลาใกล้โครงสร้าง"
+                };
+            }
 
-                    const bigFishKeywords = [
-                        "ชะโด", "บึก", "กะโห้", "อราไพม่า",
-                        "มาร์ลิน", "ใบเรือ", "กระโทง",
-                        "ทูน่า", "กะมงพร้าว"
-                    ];
+            if (style === "sea") {
+                rec = {
+                    rod: "คันทะเล | เวท 12–25 lb | เหยื่อประมาณ 10–40 g",
+                    reel: "รอก Spinning ขนาด 3000–5000",
+                    line: "สาย PE 1.2–2.0 | ประมาณ 20–35 lb",
+                    leader: "Fluorocarbon 20–40 lb",
+                    hook: "เบ็ดประมาณ #2–2/0 ตามปลาและเหยื่อ",
+                    lure: fish.bait || "เหยื่อทะเล",
+                    lureWeight: "ประมาณ 10–40 g",
+                    note: "งานทะเลควรเผื่อความแข็งแรงและการเสียดสีกับโครงสร้าง"
+                };
+            }
 
-                    const isBigFish =
-                        bigFishKeywords.some(
-                            keyword => fishName.includes(keyword)
-                        );
+            /* -------------------------------------
+               ปรับตามปลา / ขนาดปลา
+            ------------------------------------- */
 
-                    if (isBigFish) {
-                        rec.rod = "คัน Medium-Heavy ถึง Heavy | เวทประมาณ 15–30+ lb";
-                        rec.reel = "รอก Spinning 5000–8000 หรือขนาดที่เหมาะกับคัน";
-                        rec.line = "สาย PE 2.0–4.0 | แรงดึงขึ้นกับแบรนด์และรุ่น";
-                        rec.leader = "Leader ประมาณ 30–60 lb หรือมากกว่าตามหมาย";
-                        rec.hook = "เบ็ดขนาดกลางถึงใหญ่ เลือกตามเหยื่อและปลา";
-                        rec.lureWeight = "ประมาณ 15–60+ g ตามชนิดเหยื่อ";
-                        rec.note = "ปลาใหญ่หรือหมายมีสิ่งกีดขวาง ควรเพิ่มขนาดชุดและตรวจแรงรับของอุปกรณ์ทั้งชุด";
-                    }
+            const bigFishKeywords = [
+                "ชะโด", "บึก", "กะโห้", "อราไพม่า",
+                "มาร์ลิน", "ใบเรือ", "กระโทง",
+                "ทูน่า", "กะมงพร้าว"
+            ];
 
-                    if (fishType === "ทะเล" && !isBigFish) {
-                        rec.line = "สาย PE 1.2–2.0 | ประมาณ 20–35 lb";
-                        rec.leader = "Fluorocarbon 20–40 lb";
-                    }
+            const isBigFish =
+                bigFishKeywords.some(
+                    keyword => fishName.includes(keyword)
+                );
 
-                    /* -------------------------------------
-                       ตัวอย่างปลาเป้าหมายที่ใช้บ่อย
-                    ------------------------------------- */
+            if (isBigFish) {
+                rec.rod = "คัน Medium-Heavy ถึง Heavy | เวทประมาณ 15–30+ lb";
+                rec.reel = "รอก Spinning 5000–8000 หรือขนาดที่เหมาะกับคัน";
+                rec.line = "สาย PE 2.0–4.0 | แรงดึงขึ้นกับแบรนด์และรุ่น";
+                rec.leader = "Leader ประมาณ 30–60 lb หรือมากกว่าตามหมาย";
+                rec.hook = "เบ็ดขนาดกลางถึงใหญ่ เลือกตามเหยื่อและปลา";
+                rec.lureWeight = "ประมาณ 15–60+ g ตามชนิดเหยื่อ";
+                rec.note = "ปลาใหญ่หรือหมายมีสิ่งกีดขวาง ควรเพิ่มขนาดชุดและตรวจแรงรับของอุปกรณ์ทั้งชุด";
+            }
 
-                    if (fishName.includes("ช่อน")) {
-                        rec.rod = "คันตีเหยื่อปลอม | เวท 8–17 lb | เหยื่อ 7–21 g";
-                        rec.reel = "รอก Spinning 2000–2500";
-                        rec.line = "สาย PE 1.0–1.5 | ประมาณ 16–25 lb";
-                        rec.leader = "Fluorocarbon 16–25 lb";
-                        rec.hook = "เบ็ดเดี่ยว/เบ็ดสามทาง เลือกตามเหยื่อ";
-                        rec.lure = bait.includes("กบ") ? "กบยาง / เหยื่อผิวน้ำ" : (fish.bait || "เหยื่อปลอม");
-                        rec.lureWeight = "ประมาณ 7–20 g";
-                        rec.note = "ช่อนที่อยู่ในรกหรือวัชพืชมากอาจต้องขยับสายและชุดให้แข็งขึ้น";
-                    }
+            if (fishType === "ทะเล" && !isBigFish) {
+                rec.line = "สาย PE 1.2–2.0 | ประมาณ 20–35 lb";
+                rec.leader = "Fluorocarbon 20–40 lb";
+            }
 
-                    if (fishName.includes("กระสูบ")) {
-                        rec.rod = "คัน Light–Medium | เวท 4–10 lb | เหยื่อ 3–12 g";
-                        rec.reel = "รอก Spinning 1000–2500";
-                        rec.line = "สาย PE 0.6–1.0 | ประมาณ 10–18 lb";
-                        rec.leader = "Fluorocarbon 8–14 lb";
-                        rec.hook = "เบ็ด/หัวจิ๊กขนาดเล็กตามเหยื่อ";
-                        rec.lure = "เหยื่อปลอมขนาดเล็ก";
-                        rec.lureWeight = "ประมาณ 3–10 g";
-                        rec.note = "ชุดค่อนข้างเบาเพื่อให้ตีเหยื่อขนาดเล็กได้ง่าย";
-                    }
+            /* -------------------------------------
+               ตัวอย่างปลาเป้าหมายที่ใช้บ่อย
+            ------------------------------------- */
 
-                    if (fishName.includes("ปลานิล") || fishName.includes("ตะเพียน")) {
-                        rec.rod = "คัน Light | เวทประมาณ 2–8 lb";
-                        rec.reel = "รอก Spinning 1000–2000";
-                        rec.line = "สายเอ็น 4–8 lb หรือ PE 0.4–0.6";
-                        rec.leader = "Fluorocarbon 4–8 lb";
-                        rec.hook = "เบ็ดขนาดประมาณ #8–#4";
-                        rec.lure = fish.bait || "ขนมปัง / เหยื่อธรรมชาติ";
-                        rec.lureWeight = "ใช้ตามทุ่นและชุดปลายสาย";
-                        rec.note = "เน้นชุดเบาและเหยื่อขนาดเล็ก เหมาะกับการตกปลาน้ำจืดทั่วไป";
-                    }
+            if (fishName.includes("ช่อน")) {
+                rec.rod = "คันตีเหยื่อปลอม | เวท 8–17 lb | เหยื่อ 7–21 g";
+                rec.reel = "รอก Spinning 2000–2500";
+                rec.line = "สาย PE 1.0–1.5 | ประมาณ 16–25 lb";
+                rec.leader = "Fluorocarbon 16–25 lb";
+                rec.hook = "เบ็ดเดี่ยว/เบ็ดสามทาง เลือกตามเหยื่อ";
+                rec.lure = bait.includes("กบ") ? "กบยาง / เหยื่อผิวน้ำ" : (fish.bait || "เหยื่อปลอม");
+                rec.lureWeight = "ประมาณ 7–20 g";
+                rec.note = "ช่อนที่อยู่ในรกหรือวัชพืชมากอาจต้องขยับสายและชุดให้แข็งขึ้น";
+            }
 
-                    /* -------------------------------------
-                       ระดับประสบการณ์
-                    ------------------------------------- */
+            if (fishName.includes("กระสูบ")) {
+                rec.rod = "คัน Light–Medium | เวท 4–10 lb | เหยื่อ 3–12 g";
+                rec.reel = "รอก Spinning 1000–2500";
+                rec.line = "สาย PE 0.6–1.0 | ประมาณ 10–18 lb";
+                rec.leader = "Fluorocarbon 8–14 lb";
+                rec.hook = "เบ็ด/หัวจิ๊กขนาดเล็กตามเหยื่อ";
+                rec.lure = "เหยื่อปลอมขนาดเล็ก";
+                rec.lureWeight = "ประมาณ 3–10 g";
+                rec.note = "ชุดค่อนข้างเบาเพื่อให้ตีเหยื่อขนาดเล็กได้ง่าย";
+            }
 
-                    if (level === "beginner") {
-                        rec.reel = rec.reel + " | เน้นรุ่นที่ใช้งานง่าย";
-                        rec.note += " มือใหม่ควรเลือกชุดที่ไม่หนักเกินไปและตั้งเบรก/ดรากให้เหมาะสม";
-                    }
+            if (fishName.includes("ปลานิล") || fishName.includes("ตะเพียน")) {
+                rec.rod = "คัน Light | เวทประมาณ 2–8 lb";
+                rec.reel = "รอก Spinning 1000–2000";
+                rec.line = "สายเอ็น 4–8 lb หรือ PE 0.4–0.6";
+                rec.leader = "Fluorocarbon 4–8 lb";
+                rec.hook = "เบ็ดขนาดประมาณ #8–#4";
+                rec.lure = fish.bait || "ขนมปัง / เหยื่อธรรมชาติ";
+                rec.lureWeight = "ใช้ตามทุ่นและชุดปลายสาย";
+                rec.note = "เน้นชุดเบาและเหยื่อขนาดเล็ก เหมาะกับการตกปลาน้ำจืดทั่วไป";
+            }
 
-                    if (level === "advanced") {
-                        rec.note += " ผู้มีประสบการณ์สามารถปรับ PE, leader และน้ำหนักเหยื่อตามหมายจริงได้";
-                    }
+            /* -------------------------------------
+               ระดับประสบการณ์
+            ------------------------------------- */
 
-                    return rec;
-                }
+            if (level === "beginner") {
+                rec.reel = rec.reel + " | เน้นรุ่นที่ใช้งานง่าย";
+                rec.note += " มือใหม่ควรเลือกชุดที่ไม่หนักเกินไปและตั้งเบรก/ดรากให้เหมาะสม";
+            }
 
-                /* =====================================
-                   Products
-                ===================================== */
+            if (level === "advanced") {
+                rec.note += " ผู้มีประสบการณ์สามารถปรับ PE, leader และน้ำหนักเหยื่อตามหมายจริงได้";
+            }
 
-                /*
-                 * ข้อมูลสินค้า
-                 * ตอนใส่สินค้าจริง ให้แก้เฉพาะใน variants:
-                 * label = ขนาด/เวท/เบอร์
-                 * price = ราคาจริง
-                 * link = Affiliate URL ของขนาดนั้น
-                 */
-                const productData = [
+            return rec;
+        }
 
-                    {
-                        id: "rod",
-                        name: "คันเบ็ด",
-                        icon: "rod",
-                        category: "คันเบ็ด",
-                        desc: "เลือกเวทให้เหมาะกับปลาและวิธีตกปลา",
-                        fish: ["ปลาช่อน", "ปลาชะโด", "ปลากระสูบ", "ปลานิล", "ปลาตะเพียน", "ปลาดุก", "ปลากด", "ปลากะพงขาว", "ปลากะมงพร้าว", "ปลาบึก", "ปลาทูน่า"],
-                        styles: ["freshwater", "lure", "bottom", "sea"],
-                        variants: [
-                            { label: "UL | 1–4 lb", price: "฿ —", link: "#" },
-                            { label: "L | 2–8 lb", price: "฿ —", link: "#" },
-                            { label: "ML | 4–10 lb", price: "฿ —", link: "#" },
-                            { label: "M | 6–12 lb", price: "฿ —", link: "#" },
-                            { label: "M | 8–17 lb", price: "฿ —", link: "#" },
-                            { label: "MH | 10–20 lb", price: "฿ —", link: "#" },
-                            { label: "H | 15–30 lb", price: "฿ —", link: "#" }
-                        ],
-                        tag: "เลือกเวท"
-                    },
+        /* =====================================
+           Products
+        ===================================== */
 
-                    {
-                        id: "spinning",
-                        name: "รอก Spinning",
-                        icon: "reel",
-                        category: "รอก",
-                        desc: "เลือกขนาดรอกให้เหมาะกับชุดคันและสาย",
-                        fish: ["ปลาช่อน", "ปลาชะโด", "ปลากระสูบ", "ปลานิล", "ปลาตะเพียน", "ปลาดุก", "ปลากด", "ปลากะพงขาว", "ปลากะมงพร้าว", "ปลาบึก", "ปลาทูน่า"],
-                        styles: ["freshwater", "lure", "bottom", "sea"],
-                        variants: [
-                            { label: "500", price: "฿ —", link: "#" },
-                            { label: "1000", price: "฿ —", link: "#" },
-                            { label: "2000", price: "฿ —", link: "#" },
-                            { label: "2500", price: "฿ —", link: "#" },
-                            { label: "3000", price: "฿ —", link: "#" },
-                            { label: "4000", price: "฿ —", link: "#" },
-                            { label: "5000", price: "฿ —", link: "#" },
-                            { label: "6000", price: "฿ —", link: "#" },
-                            { label: "8000", price: "฿ —", link: "#" }
-                        ],
-                        tag: "เลือกขนาดรอก"
-                    },
+        /*
+         * ข้อมูลสินค้า
+         * ตอนใส่สินค้าจริง ให้แก้เฉพาะใน variants:
+         * label = ขนาด/เวท/เบอร์
+         * price = ราคาจริง
+         * link = Affiliate URL ของขนาดนั้น
+         */
+        const productData = [
 
-                    {
-                        id: "baitcasting",
-                        name: "รอก Baitcasting",
-                        icon: "reel",
-                        category: "รอก",
-                        desc: "รอกเบทสำหรับงานตีเหยื่อปลอม",
-                        fish: ["ปลาช่อน", "ปลาชะโด", "ปลากระสูบ"],
-                        styles: ["lure"],
-                        variants: [
-                            { label: "70", price: "฿ —", link: "#" },
-                            { label: "100", price: "฿ —", link: "#" },
-                            { label: "150", price: "฿ —", link: "#" },
-                            { label: "200", price: "฿ —", link: "#" }
-                        ],
-                        tag: "Baitcasting"
-                    },
+            {
+                id: "rod",
+                name: "คันเบ็ด",
+                icon: "rod",
+                category: "คันเบ็ด",
+                desc: "เลือกเวทให้เหมาะกับปลาและวิธีตกปลา",
+                fish: ["ปลาช่อน","ปลาชะโด","ปลากระสูบ","ปลานิล","ปลาตะเพียน","ปลาดุก","ปลากด","ปลากะพงขาว","ปลากะมงพร้าว","ปลาบึก","ปลาทูน่า"],
+                styles: ["freshwater","lure","bottom","sea"],
+                variants: [
+                    { label: "UL | 1–4 lb", price: "฿690–฿830", link: "https://shopee.co.th/product/66934709/8812393043" },
+                    { label: "L | 2–8 lb", price: "฿690–฿830", link: "https://shopee.co.th/product/66934709/8812393043" },
+                    { label: "ML | 4–10 lb", price: "฿690–฿830", link: "https://shopee.co.th/product/66934709/8812393043" },
+                    { label: "M | 6–12 lb", price: "฿690–฿830", link: "https://shopee.co.th/product/66934709/8812393043" },
+                    { label: "M | 8–17 lb", price: "฿690–฿830", link: "https://shopee.co.th/product/66934709/8812393043" },
+                    { label: "MH | 10–20 lb", price: "฿690–฿830", link: "https://shopee.co.th/product/66934709/8812393043" },
+                    { label: "H | 15–30 lb", price: "฿690–฿830", link: "https://shopee.co.th/product/66934709/8812393043" }
+                ],
+                tag: "เลือกเวท"
+            },
 
-                    {
-                        id: "pe",
-                        name: "สาย PE",
-                        icon: "pe",
-                        category: "สาย",
-                        desc: "เลือกขนาด PE ให้เหมาะกับแรงดึงและสภาพหมาย",
-                        fish: ["ปลาช่อน", "ปลาชะโด", "ปลากระสูบ", "ปลากะพงขาว", "ปลากะมงพร้าว", "ปลาทูน่า", "ปลาบึก", "ปลาดุก", "ปลากด"],
-                        styles: ["freshwater", "lure", "bottom", "sea"],
-                        variants: [
-                            { label: "PE 0.4", price: "฿ —", link: "#" },
-                            { label: "PE 0.6", price: "฿ —", link: "#" },
-                            { label: "PE 0.8", price: "฿ —", link: "#" },
-                            { label: "PE 1.0", price: "฿ —", link: "#" },
-                            { label: "PE 1.2", price: "฿ —", link: "#" },
-                            { label: "PE 1.5", price: "฿ —", link: "#" },
-                            { label: "PE 2.0", price: "฿ —", link: "#" },
-                            { label: "PE 2.5", price: "฿ —", link: "#" },
-                            { label: "PE 3.0", price: "฿ —", link: "#" },
-                            { label: "PE 4.0", price: "฿ —", link: "#" }
-                        ],
-                        tag: "PE 0.4–4.0"
-                    },
+            {
+                id: "spinning",
+                name: "รอก Spinning",
+                icon: "reel",
+                category: "รอก",
+                desc: "เลือกขนาดรอกให้เหมาะกับชุดคันและสาย",
+                fish: ["ปลาช่อน","ปลาชะโด","ปลากระสูบ","ปลานิล","ปลาตะเพียน","ปลาดุก","ปลากด","ปลากะพงขาว","ปลากะมงพร้าว","ปลาบึก","ปลาทูน่า"],
+                styles: ["freshwater","lure","bottom","sea"],
+                variants: [
+                    { label: "500", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" },
+                    { label: "1000", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" },
+                    { label: "2000", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" },
+                    { label: "2500", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" },
+                    { label: "3000", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" },
+                    { label: "4000", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" },
+                    { label: "5000", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" },
+                    { label: "6000", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" },
+                    { label: "8000", price: "฿389", link: "https://shopee.co.th/product/267880921/4136795626" }
+                ],
+                tag: "เลือกขนาดรอก"
+            },
 
-                    {
-                        id: "nylon",
-                        name: "สายเอ็น",
-                        icon: "nylon",
-                        category: "สาย",
-                        desc: "เลือกแรงดึงสายเอ็นสำหรับงานน้ำจืดและหน้าดิน",
-                        fish: ["ปลานิล", "ปลาตะเพียน", "ปลากระสูบ", "ปลาช่อน", "ปลาดุก", "ปลากด"],
-                        styles: ["freshwater", "bottom"],
-                        variants: [
-                            { label: "2 lb", price: "฿ —", link: "#" },
-                            { label: "4 lb", price: "฿ —", link: "#" },
-                            { label: "6 lb", price: "฿ —", link: "#" },
-                            { label: "8 lb", price: "฿ —", link: "#" },
-                            { label: "10 lb", price: "฿ —", link: "#" },
-                            { label: "12 lb", price: "฿ —", link: "#" },
-                            { label: "15 lb", price: "฿ —", link: "#" },
-                            { label: "20 lb", price: "฿ —", link: "#" },
-                            { label: "25 lb", price: "฿ —", link: "#" },
-                            { label: "30 lb", price: "฿ —", link: "#" }
-                        ],
-                        tag: "2–30 lb"
-                    },
+            {
+                id: "baitcasting",
+                name: "รอก Baitcasting",
+                icon: "reel",
+                category: "รอก",
+                desc: "รอกเบทสำหรับงานตีเหยื่อปลอม",
+                fish: ["ปลาช่อน","ปลาชะโด","ปลากระสูบ"],
+                styles: ["lure"],
+                variants: [
+                    { label: "70", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/267880921/21728034448" },
+                    { label: "100", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/267880921/21728034448" },
+                    { label: "150", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/267880921/21728034448" },
+                    { label: "200", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/267880921/21728034448" }
+                ],
+                tag: "Baitcasting"
+            },
 
-                    {
-                        id: "leader",
-                        name: "Fluorocarbon Leader",
-                        icon: "nylon",
-                        category: "สายหน้า",
-                        desc: "เลือกแรงดึงของสายหน้าให้เหมาะกับปลาและหมาย",
-                        fish: ["ปลากระสูบ", "ปลาช่อน", "ปลาชะโด", "ปลากะพงขาว", "ปลากะมงพร้าว", "ปลาทูน่า"],
-                        styles: ["freshwater", "lure", "sea", "bottom"],
-                        variants: [
-                            { label: "8 lb", price: "฿ —", link: "#" },
-                            { label: "12 lb", price: "฿ —", link: "#" },
-                            { label: "16 lb", price: "฿ —", link: "#" },
-                            { label: "20 lb", price: "฿ —", link: "#" },
-                            { label: "25 lb", price: "฿ —", link: "#" },
-                            { label: "30 lb", price: "฿ —", link: "#" },
-                            { label: "40 lb", price: "฿ —", link: "#" },
-                            { label: "50 lb", price: "฿ —", link: "#" },
-                            { label: "60 lb", price: "฿ —", link: "#" }
-                        ],
-                        tag: "8–60 lb"
-                    },
+            {
+                id: "pe",
+                name: "สาย PE",
+                icon: "pe",
+                category: "สาย",
+                desc: "เลือกขนาด PE ให้เหมาะกับแรงดึงและสภาพหมาย",
+                fish: ["ปลาช่อน","ปลาชะโด","ปลากระสูบ","ปลากะพงขาว","ปลากะมงพร้าว","ปลาทูน่า","ปลาบึก","ปลาดุก","ปลากด"],
+                styles: ["freshwater","lure","bottom","sea"],
+                variants: [
+                    { label: "PE 0.4", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 0.6", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 0.8", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 1.0", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 1.2", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 1.5", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 2.0", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 2.5", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 3.0", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" },
+                    { label: "PE 4.0", price: "฿396", link: "https://shopee.co.th/product/1378685935/29363836832" }
+                ],
+                tag: "PE 0.4–4.0"
+            },
 
-                    {
-                        id: "hook",
-                        name: "เบ็ดตกปลา",
-                        icon: "hook",
-                        category: "เบ็ด",
-                        desc: "เลือกขนาดเบ็ดตามเหยื่อและปลาเป้าหมาย",
-                        fish: ["ปลานิล", "ปลาตะเพียน", "ปลากระสูบ", "ปลาช่อน", "ปลาชะโด", "ปลาดุก", "ปลากด", "ปลากะพงขาว"],
-                        styles: ["freshwater", "lure", "bottom", "sea"],
-                        variants: [
-                            { label: "#12", price: "฿ —", link: "#" },
-                            { label: "#10", price: "฿ —", link: "#" },
-                            { label: "#8", price: "฿ —", link: "#" },
-                            { label: "#6", price: "฿ —", link: "#" },
-                            { label: "#4", price: "฿ —", link: "#" },
-                            { label: "#2", price: "฿ —", link: "#" },
-                            { label: "#1", price: "฿ —", link: "#" },
-                            { label: "1/0", price: "฿ —", link: "#" },
-                            { label: "2/0", price: "฿ —", link: "#" },
-                            { label: "3/0", price: "฿ —", link: "#" }
-                        ],
-                        tag: "#12–3/0"
-                    },
+            {
+                id: "nylon",
+                name: "สายเอ็น",
+                icon: "nylon",
+                category: "สาย",
+                desc: "เลือกแรงดึงสายเอ็นสำหรับงานน้ำจืดและหน้าดิน",
+                fish: ["ปลานิล","ปลาตะเพียน","ปลากระสูบ","ปลาช่อน","ปลาดุก","ปลากด"],
+                styles: ["freshwater","bottom"],
+                variants: [
+                    { label: "2 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "4 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "6 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "8 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "10 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "12 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "15 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "20 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "25 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" },
+                    { label: "30 lb", price: "฿95", link: "https://shopee.co.th/product/75084745/25519502961" }
+                ],
+                tag: "2–30 lb"
+            },
 
-                    {
-                        id: "minnow",
-                        name: "Minnow",
-                        icon: "lure",
-                        category: "เหยื่อ",
-                        desc: "เหยื่อทรงปลาหลายขนาดสำหรับปลานักล่า",
-                        fish: ["ปลากระสูบ", "ปลาช่อน", "ปลาชะโด", "ปลากะพงขาว"],
-                        styles: ["lure", "sea"],
-                        variants: [
-                            { label: "5 cm | 3–5 g", price: "฿ —", link: "#" },
-                            { label: "7 cm | 5–10 g", price: "฿ —", link: "#" },
-                            { label: "9 cm | 8–15 g", price: "฿ —", link: "#" },
-                            { label: "11 cm | 12–20 g", price: "฿ —", link: "#" }
-                        ],
-                        tag: "5–11 cm"
-                    },
+            {
+                id: "leader",
+                name: "Fluorocarbon Leader",
+                icon: "nylon",
+                category: "สายหน้า",
+                desc: "เลือกแรงดึงของสายหน้าให้เหมาะกับปลาและหมาย",
+                fish: ["ปลากระสูบ","ปลาช่อน","ปลาชะโด","ปลากะพงขาว","ปลากะมงพร้าว","ปลาทูน่า"],
+                styles: ["freshwater","lure","sea","bottom"],
+                variants: [
+                    { label: "8 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" },
+                    { label: "12 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" },
+                    { label: "16 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" },
+                    { label: "20 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" },
+                    { label: "25 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" },
+                    { label: "30 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" },
+                    { label: "40 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" },
+                    { label: "50 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" },
+                    { label: "60 lb", price: "฿75", link: "https://shopee.co.th/product/150569518/2522094917" }
+                ],
+                tag: "8–60 lb"
+            },
 
-                    {
-                        id: "crankbait",
-                        name: "Crankbait",
-                        icon: "lure",
-                        category: "เหยื่อ",
-                        desc: "เหยื่อสำหรับค้นหาปลาในพื้นที่กว้าง",
-                        fish: ["ปลากระสูบ", "ปลาช่อน", "ปลาชะโด"],
-                        styles: ["lure"],
-                        variants: [
-                            { label: "Small | 4–7 g", price: "฿ —", link: "#" },
-                            { label: "Medium | 7–14 g", price: "฿ —", link: "#" },
-                            { label: "Large | 14–25 g", price: "฿ —", link: "#" }
-                        ],
-                        tag: "Small–Large"
-                    },
+            {
+                id: "hook",
+                name: "เบ็ดตกปลา",
+                icon: "hook",
+                category: "เบ็ด",
+                desc: "เลือกขนาดเบ็ดตามเหยื่อและปลาเป้าหมาย",
+                fish: ["ปลานิล","ปลาตะเพียน","ปลากระสูบ","ปลาช่อน","ปลาชะโด","ปลาดุก","ปลากด","ปลากะพงขาว"],
+                styles: ["freshwater","lure","bottom","sea"],
+                variants: [
+                    { label: "#12", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "#10", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "#8", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "#6", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "#4", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "#2", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "#1", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "1/0", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "2/0", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" },
+                    { label: "3/0", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/50842796/9883173826" }
+                ],
+                tag: "#12–3/0"
+            },
 
-                    {
-                        id: "spoon",
-                        name: "Spoon",
-                        icon: "lure",
-                        category: "เหยื่อ",
-                        desc: "เหยื่อช้อนสำหรับงานตีเหยื่อหลายรูปแบบ",
-                        fish: ["ปลากระสูบ", "ปลาช่อน", "ปลากะพงขาว"],
-                        styles: ["lure", "sea"],
-                        variants: [
-                            { label: "3 g", price: "฿ —", link: "#" },
-                            { label: "5 g", price: "฿ —", link: "#" },
-                            { label: "7 g", price: "฿ —", link: "#" },
-                            { label: "10 g", price: "฿ —", link: "#" },
-                            { label: "15 g", price: "฿ —", link: "#" },
-                            { label: "20 g", price: "฿ —", link: "#" }
-                        ],
-                        tag: "3–20 g"
-                    },
+            {
+                id: "minnow",
+                name: "Minnow",
+                icon: "lure",
+                category: "เหยื่อ",
+                desc: "เหยื่อทรงปลาหลายขนาดสำหรับปลานักล่า",
+                fish: ["ปลากระสูบ","ปลาช่อน","ปลาชะโด","ปลากะพงขาว"],
+                styles: ["lure","sea"],
+                variants: [
+                    { label: "5 cm | 3–5 g", price: "฿33–฿37", link: "https://shopee.co.th/product/1381660425/27865144468" },
+                    { label: "7 cm | 5–10 g", price: "฿33–฿37", link: "https://shopee.co.th/product/1381660425/27865144468" },
+                    { label: "9 cm | 8–15 g", price: "฿33–฿37", link: "https://shopee.co.th/product/1381660425/27865144468" },
+                    { label: "11 cm | 12–20 g", price: "฿33–฿37", link: "https://shopee.co.th/product/1381660425/27865144468" }
+                ],
+                tag: "5–11 cm"
+            },
 
-                    {
-                        id: "jig",
-                        name: "Jig",
-                        icon: "lure",
-                        category: "เหยื่อ",
-                        desc: "Jig หลายขนาดสำหรับงานทะเลและปลาที่แรง",
-                        fish: ["ปลากะพงขาว", "ปลากะมงพร้าว", "ปลาทูน่า"],
-                        styles: ["sea", "lure"],
-                        variants: [
-                            { label: "10 g", price: "฿ —", link: "#" },
-                            { label: "15 g", price: "฿ —", link: "#" },
-                            { label: "20 g", price: "฿ —", link: "#" },
-                            { label: "30 g", price: "฿ —", link: "#" },
-                            { label: "40 g", price: "฿ —", link: "#" },
-                            { label: "60 g", price: "฿ —", link: "#" }
-                        ],
-                        tag: "10–60 g"
-                    },
+            {
+                id: "crankbait",
+                name: "Crankbait",
+                icon: "lure",
+                category: "เหยื่อ",
+                desc: "เหยื่อสำหรับค้นหาปลาในพื้นที่กว้าง",
+                fish: ["ปลากระสูบ","ปลาช่อน","ปลาชะโด"],
+                styles: ["lure"],
+                variants: [
+                    { label: "Small | 4–7 g", price: "฿113–฿117", link: "https://shopee.co.th/product/1815046246/50310673894" },
+                    { label: "Medium | 7–14 g", price: "฿113–฿117", link: "https://shopee.co.th/product/1815046246/50310673894" },
+                    { label: "Large | 14–25 g", price: "฿113–฿117", link: "https://shopee.co.th/product/1815046246/50310673894" }
+                ],
+                tag: "Small–Large"
+            },
 
-                    {
-                        id: "frog",
-                        name: "กบยาง",
-                        icon: "bait",
-                        category: "เหยื่อ",
-                        desc: "เหยื่อผิวน้ำหลายขนาดสำหรับช่อนและชะโด",
-                        fish: ["ปลาช่อน", "ปลาชะโด"],
-                        styles: ["freshwater", "lure"],
-                        variants: [
-                            { label: "5 cm", price: "฿ —", link: "#" },
-                            { label: "6 cm", price: "฿ —", link: "#" },
-                            { label: "7 cm", price: "฿ —", link: "#" },
-                            { label: "8 cm", price: "฿ —", link: "#" },
-                            { label: "10 cm", price: "฿ —", link: "#" }
-                        ],
-                        tag: "5–10 cm"
-                    },
+            {
+                id: "spoon",
+                name: "Spoon",
+                icon: "lure",
+                category: "เหยื่อ",
+                desc: "เหยื่อช้อนสำหรับงานตีเหยื่อหลายรูปแบบ",
+                fish: ["ปลากระสูบ","ปลาช่อน","ปลากะพงขาว"],
+                styles: ["lure","sea"],
+                variants: [
+                    { label: "3 g", price: "฿138–฿143", link: "https://shopee.co.th/product/1437843810/27940436485" },
+                    { label: "5 g", price: "฿138–฿143", link: "https://shopee.co.th/product/1437843810/27940436485" },
+                    { label: "7 g", price: "฿138–฿143", link: "https://shopee.co.th/product/1437843810/27940436485" },
+                    { label: "10 g", price: "฿138–฿143", link: "https://shopee.co.th/product/1437843810/27940436485" },
+                    { label: "15 g", price: "฿138–฿143", link: "https://shopee.co.th/product/1437843810/27940436485" },
+                    { label: "20 g", price: "฿138–฿143", link: "https://shopee.co.th/product/1437843810/27940436485" }
+                ],
+                tag: "3–20 g"
+            },
 
-                    {
-                        id: "softbait",
-                        name: "Soft Bait",
-                        icon: "bait",
-                        category: "เหยื่อ",
-                        desc: "เหยื่อยางนิ่มสำหรับหัวจิ๊กและงานตีเหยื่อ",
-                        fish: ["ปลากระสูบ", "ปลาช่อน", "ปลาชะโด", "ปลากะพงขาว"],
-                        styles: ["lure"],
-                        variants: [
-                            { label: "2 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "3 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "4 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "5 นิ้ว", price: "฿ —", link: "#" }
-                        ],
-                        tag: "2–5 นิ้ว"
-                    },
+            {
+                id: "jig",
+                name: "Jig",
+                icon: "lure",
+                category: "เหยื่อ",
+                desc: "Jig หลายขนาดสำหรับงานทะเลและปลาที่แรง",
+                fish: ["ปลากะพงขาว","ปลากะมงพร้าว","ปลาทูน่า"],
+                styles: ["sea","lure"],
+                variants: [
+                    { label: "10 g", price: "฿18", link: "https://shopee.co.th/product/1748329731/46206102961" },
+                    { label: "15 g", price: "฿18", link: "https://shopee.co.th/product/1748329731/46206102961" },
+                    { label: "20 g", price: "฿18", link: "https://shopee.co.th/product/1748329731/46206102961" },
+                    { label: "30 g", price: "฿18", link: "https://shopee.co.th/product/1748329731/46206102961" },
+                    { label: "40 g", price: "฿18", link: "https://shopee.co.th/product/1748329731/46206102961" },
+                    { label: "60 g", price: "฿18", link: "https://shopee.co.th/product/1748329731/46206102961" }
+                ],
+                tag: "10–60 g"
+            },
 
-                    {
-                        id: "naturalbait",
-                        name: "เหยื่อสด / ธรรมชาติ",
-                        icon: "bait",
-                        category: "เหยื่อ",
-                        desc: "เลือกชนิดเหยื่อให้เหมาะกับปลาเป้าหมาย",
-                        fish: ["ปลาดุก", "ปลานิล", "ปลาตะเพียน", "ปลากด", "ปลากะพงขาว", "ปลาชะโด"],
-                        styles: ["freshwater", "bottom", "sea"],
-                        variants: [
-                            { label: "ไส้เดือน", price: "฿ —", link: "#" },
-                            { label: "กุ้งเล็ก", price: "฿ —", link: "#" },
-                            { label: "กุ้งกลาง", price: "฿ —", link: "#" },
-                            { label: "ปลาเหยื่อเล็ก", price: "฿ —", link: "#" },
-                            { label: "ปลาเหยื่อกลาง", price: "฿ —", link: "#" },
-                            { label: "ขนมปัง", price: "฿ —", link: "#" },
-                            { label: "รำ", price: "฿ —", link: "#" }
-                        ],
-                        tag: "หลายชนิด"
-                    },
+            {
+                id: "frog",
+                name: "กบยาง",
+                icon: "bait",
+                category: "เหยื่อ",
+                desc: "เหยื่อผิวน้ำหลายขนาดสำหรับช่อนและชะโด",
+                fish: ["ปลาช่อน","ปลาชะโด"],
+                styles: ["freshwater","lure"],
+                variants: [
+                    { label: "5 cm", price: "฿35", link: "https://shopee.co.th/product/886607362/48056254951" },
+                    { label: "6 cm", price: "฿35", link: "https://shopee.co.th/product/886607362/48056254951" },
+                    { label: "7 cm", price: "฿35", link: "https://shopee.co.th/product/886607362/48056254951" },
+                    { label: "8 cm", price: "฿35", link: "https://shopee.co.th/product/886607362/48056254951" },
+                    { label: "10 cm", price: "฿35", link: "https://shopee.co.th/product/886607362/48056254951" }
+                ],
+                tag: "5–10 cm"
+            },
 
-                    {
-                        id: "net",
-                        name: "สวิงช้อนปลา",
-                        icon: "net",
-                        category: "อุปกรณ์เสริม",
-                        desc: "เลือกขนาดสวิงตามขนาดปลาและพื้นที่ใช้งาน",
-                        fish: [],
-                        styles: ["freshwater", "sea", "lure", "bottom"],
-                        variants: [
-                            { label: "18 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "24 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "30 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "36 นิ้ว", price: "฿ —", link: "#" }
-                        ],
-                        tag: "18–36 นิ้ว"
-                    },
+            {
+                id: "softbait",
+                name: "Soft Bait",
+                icon: "bait",
+                category: "เหยื่อ",
+                desc: "เหยื่อยางนิ่มสำหรับหัวจิ๊กและงานตีเหยื่อ",
+                fish: ["ปลากระสูบ","ปลาช่อน","ปลาชะโด","ปลากะพงขาว"],
+                styles: ["lure"],
+                variants: [
+                    { label: "2 นิ้ว", price: "฿60–฿100", link: "https://shopee.co.th/product/252925413/45356262425" },
+                    { label: "3 นิ้ว", price: "฿60–฿100", link: "https://shopee.co.th/product/252925413/45356262425" },
+                    { label: "4 นิ้ว", price: "฿60–฿100", link: "https://shopee.co.th/product/252925413/45356262425" },
+                    { label: "5 นิ้ว", price: "฿60–฿100", link: "https://shopee.co.th/product/252925413/45356262425" }
+                ],
+                tag: "2–5 นิ้ว"
+            },
 
-                    {
-                        id: "box",
-                        name: "กล่องอุปกรณ์",
-                        icon: "box",
-                        category: "อุปกรณ์เสริม",
-                        desc: "กล่องหลายขนาดสำหรับจัดเก็บอุปกรณ์และเหยื่อ",
-                        fish: [],
-                        styles: ["freshwater", "sea", "lure", "bottom"],
-                        variants: [
-                            { label: "Compact", price: "฿ —", link: "#" },
-                            { label: "1 ชั้น", price: "฿ —", link: "#" },
-                            { label: "2 ชั้น", price: "฿ —", link: "#" },
-                            { label: "Large", price: "฿ —", link: "#" },
-                            { label: "XL", price: "฿ —", link: "#" }
-                        ],
-                        tag: "หลายขนาด"
-                    },
+            {
+                id: "naturalbait",
+                name: "เหยื่อสด / ธรรมชาติ",
+                icon: "bait",
+                category: "เหยื่อ",
+                desc: "เลือกชนิดเหยื่อให้เหมาะกับปลาเป้าหมาย",
+                fish: ["ปลาดุก","ปลานิล","ปลาตะเพียน","ปลากด","ปลากะพงขาว","ปลาชะโด"],
+                styles: ["freshwater","bottom","sea"],
+                variants: [
+                    { label: "ไส้เดือน", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/998890335/44805373773" },
+                    { label: "กุ้งเล็ก", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/998890335/44805373773" },
+                    { label: "กุ้งกลาง", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/998890335/44805373773" },
+                    { label: "ปลาเหยื่อเล็ก", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/998890335/44805373773" },
+                    { label: "ปลาเหยื่อกลาง", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/998890335/44805373773" },
+                    { label: "ขนมปัง", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/998890335/44805373773" },
+                    { label: "รำ", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/998890335/44805373773" }
+                ],
+                tag: "หลายชนิด"
+            },
 
-                    {
-                        id: "pliers",
-                        name: "คีมตกปลา",
-                        icon: "pliers",
-                        category: "อุปกรณ์เสริม",
-                        desc: "คีมหลายขนาดสำหรับจัดการสายและอุปกรณ์",
-                        fish: [],
-                        styles: ["freshwater", "sea", "lure", "bottom"],
-                        variants: [
-                            { label: "5 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "7 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "9 นิ้ว", price: "฿ —", link: "#" },
-                            { label: "11 นิ้ว", price: "฿ —", link: "#" }
-                        ],
-                        tag: "5–11 นิ้ว"
-                    },
+            {
+                id: "net",
+                name: "สวิงช้อนปลา",
+                icon: "net",
+                category: "อุปกรณ์เสริม",
+                desc: "เลือกขนาดสวิงตามขนาดปลาและพื้นที่ใช้งาน",
+                fish: [],
+                styles: ["freshwater","sea","lure","bottom"],
+                variants: [
+                    { label: "18 นิ้ว", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/1309082139/28456764064" },
+                    { label: "24 นิ้ว", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/1309082139/28456764064" },
+                    { label: "30 นิ้ว", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/1309082139/28456764064" },
+                    { label: "36 นิ้ว", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/1309082139/28456764064" }
+                ],
+                tag: "18–36 นิ้ว"
+            },
 
-                    {
-                        id: "float",
-                        name: "ทุ่นตกปลา",
-                        icon: "float",
-                        category: "อุปกรณ์เสริม",
-                        desc: "เลือกขนาดทุ่นตามน้ำหนักเหยื่อและชุดสาย",
-                        fish: ["ปลานิล", "ปลาตะเพียน", "ปลาดุก", "ปลากด"],
-                        styles: ["freshwater", "bottom"],
-                        variants: [
-                            { label: "S", price: "฿ —", link: "#" },
-                            { label: "M", price: "฿ —", link: "#" },
-                            { label: "L", price: "฿ —", link: "#" },
-                            { label: "XL", price: "฿ —", link: "#" }
-                        ],
-                        tag: "S–XL"
-                    }
+            {
+                id: "box",
+                name: "กล่องอุปกรณ์",
+                icon: "box",
+                category: "อุปกรณ์เสริม",
+                desc: "กล่องหลายขนาดสำหรับจัดเก็บอุปกรณ์และเหยื่อ",
+                fish: [],
+                styles: ["freshwater","sea","lure","bottom"],
+                variants: [
+                    { label: "Compact", price: "฿45–฿63", link: "https://shopee.co.th/product/1408722535/26988046480" },
+                    { label: "1 ชั้น", price: "฿45–฿63", link: "https://shopee.co.th/product/1408722535/26988046480" },
+                    { label: "2 ชั้น", price: "฿45–฿63", link: "https://shopee.co.th/product/1408722535/26988046480" },
+                    { label: "Large", price: "฿45–฿63", link: "https://shopee.co.th/product/1408722535/26988046480" },
+                    { label: "XL", price: "฿45–฿63", link: "https://shopee.co.th/product/1408722535/26988046480" }
+                ],
+                tag: "หลายขนาด"
+            },
 
-                ];
+            {
+                id: "pliers",
+                name: "คีมตกปลา",
+                icon: "pliers",
+                category: "อุปกรณ์เสริม",
+                desc: "คีมหลายขนาดสำหรับจัดการสายและอุปกรณ์",
+                fish: [],
+                styles: ["freshwater","sea","lure","bottom"],
+                variants: [
+                    { label: "5 นิ้ว", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/1309082139/49967499387" },
+                    { label: "7 นิ้ว", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/1309082139/49967499387" },
+                    { label: "9 นิ้ว", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/1309082139/49967499387" },
+                    { label: "11 นิ้ว", price: "ดูราคาในร้านค้า", link: "https://shopee.co.th/product/1309082139/49967499387" }
+                ],
+                tag: "5–11 นิ้ว"
+            },
 
-                let currentProductCategory = "all";
-                let currentProductKeyword = "";
+            {
+                id: "float",
+                name: "ทุ่นตกปลา",
+                icon: "float",
+                category: "อุปกรณ์เสริม",
+                desc: "เลือกขนาดทุ่นตามน้ำหนักเหยื่อและชุดสาย",
+                fish: ["ปลานิล","ปลาตะเพียน","ปลาดุก","ปลากด"],
+                styles: ["freshwater","bottom"],
+                variants: [
+                    { label: "S", price: "฿35–฿75", link: "https://shopee.co.th/product/1590062583/41523405152" },
+                    { label: "M", price: "฿35–฿75", link: "https://shopee.co.th/product/1590062583/41523405152" },
+                    { label: "L", price: "฿35–฿75", link: "https://shopee.co.th/product/1590062583/41523405152" },
+                    { label: "XL", price: "฿35–฿75", link: "https://shopee.co.th/product/1590062583/41523405152" }
+                ],
+                tag: "S–XL"
+            }
 
-                const productSearchInput =
-                    document.getElementById("productSearch");
+        ];
 
-                const productSearchCount =
-                    document.getElementById("productSearchCount");
+        let currentProductCategory = "all";
+        let currentProductKeyword = "";
 
-                const productCategoryButtons =
-                    Array.from(
-                        document.querySelectorAll(
-                            ".product-category-button"
-                        )
-                    );
+        const productSearchInput =
+            document.getElementById("productSearch");
 
-                function productMatchesSearch(product) {
+        const productSearchCount =
+            document.getElementById("productSearchCount");
 
-                    const variantText =
-                        (product.variants || [])
-                            .map(
-                                function (variant) {
-                                    return variant.label;
-                                }
-                            )
-                            .join(" ");
+        const productCategoryButtons =
+            Array.from(
+                document.querySelectorAll(
+                    ".product-category-button"
+                )
+            );
 
-                    const haystack =
-                        [
-                            product.name,
-                            product.category,
-                            product.desc,
-                            product.tag,
-                            variantText
-                        ]
-                            .join(" ")
-                            .toLowerCase();
+        function productMatchesSearch(product) {
+
+            const variantText =
+                (product.variants || [])
+                    .map(
+                        function (variant) {
+                            return variant.label;
+                        }
+                    )
+                    .join(" ");
+
+            const haystack =
+                [
+                    product.name,
+                    product.category,
+                    product.desc,
+                    product.tag,
+                    variantText
+                ]
+                    .join(" ")
+                    .toLowerCase();
+
+            return (
+                !currentProductKeyword ||
+                haystack.includes(
+                    currentProductKeyword
+                )
+            );
+        }
+
+        function getFilteredProducts(products) {
+
+            return products.filter(
+                function (product) {
+
+                    const categoryMatch =
+                        currentProductCategory === "all" ||
+                        product.category ===
+                            currentProductCategory;
 
                     return (
-                        !currentProductKeyword ||
-                        haystack.includes(
-                            currentProductKeyword
-                        )
+                        categoryMatch &&
+                        productMatchesSearch(product)
                     );
                 }
+            );
+        }
 
-                function getFilteredProducts(products) {
+        function updateProductSearchCount(count) {
 
-                    return products.filter(
-                        function (product) {
+            if (!productSearchCount) {
+                return;
+            }
 
-                            const categoryMatch =
-                                currentProductCategory === "all" ||
-                                product.category ===
-                                currentProductCategory;
+            productSearchCount.textContent =
+                `พบ ${count} รายการสินค้า`;
+        }
 
-                            return (
-                                categoryMatch &&
-                                productMatchesSearch(product)
-                            );
-                        }
-                    );
-                }
+        function refreshProductCatalog() {
 
-                function updateProductSearchCount(count) {
+            const products =
+                getFilteredProducts(productData);
 
-                    if (!productSearchCount) {
-                        return;
-                    }
-
-                    productSearchCount.textContent =
-                        `พบ ${count} รายการสินค้า`;
-                }
-
-                function refreshProductCatalog() {
-
-                    const products =
-                        getFilteredProducts(productData);
-
-                    productGrid.innerHTML =
-                        products.length
-                            ? renderProductCards(products)
-                            : `
+            productGrid.innerHTML =
+                products.length
+                    ? renderProductCards(products)
+                    : `
                         <div class="product-placeholder">
                             <div class="product-placeholder-icon">
                                 🔍
@@ -2308,146 +2306,151 @@
                         </div>
                     `;
 
-                    updateProductSearchCount(
-                        products.length
-                    );
+            updateProductSearchCount(
+                products.length
+            );
 
-                    bindProductVariantSelectors();
-                }
+            bindProductVariantSelectors();
+        }
 
 
-                function bindProductSearch() {
+        function bindProductSearch() {
 
-                    if (productSearchInput) {
+            if (productSearchInput) {
 
-                        productSearchInput.addEventListener(
-                            "input",
-                            function () {
+                productSearchInput.addEventListener(
+                    "input",
+                    function () {
 
-                                currentProductKeyword =
-                                    productSearchInput.value
-                                        .trim()
-                                        .toLowerCase();
+                        currentProductKeyword =
+                            productSearchInput.value
+                                .trim()
+                                .toLowerCase();
 
-                                refreshProductCatalog();
-
-                            }
-                        );
+                        refreshProductCatalog();
 
                     }
+                );
 
-                    productCategoryButtons.forEach(
-                        function (button) {
+            }
 
-                            button.addEventListener(
-                                "click",
-                                function () {
+            productCategoryButtons.forEach(
+                function (button) {
 
-                                    currentProductCategory =
-                                        button.dataset.productCategory;
+                    button.addEventListener(
+                        "click",
+                        function () {
 
-                                    productCategoryButtons.forEach(
-                                        function (item) {
-                                            item.classList.toggle(
-                                                "active",
-                                                item === button
-                                            );
-                                        }
+                            currentProductCategory =
+                                button.dataset.productCategory;
+
+                            productCategoryButtons.forEach(
+                                function (item) {
+                                    item.classList.toggle(
+                                        "active",
+                                        item === button
                                     );
-
-                                    refreshProductCatalog();
-
                                 }
                             );
+
+                            refreshProductCatalog();
 
                         }
                     );
+
                 }
+            );
+        }
 
 
-                function renderProductCards(products, fish = null, style = null, rec = null) {
+        function renderProductCards(products, fish = null, style = null, rec = null) {
 
-                    const scoredProducts =
-                        products
-                            .map(
-                                function (product) {
-                                    return {
+            const scoredProducts =
+                products
+                    .map(
+                        function (product) {
+                            return {
+                                product,
+                                score:
+                                    getProductMatchScore(
                                         product,
-                                        score:
-                                            getProductMatchScore(
-                                                product,
-                                                fish,
-                                                style,
-                                                rec
-                                            )
-                                    };
-                                }
-                            )
-                            .sort(
-                                function (a, b) {
-                                    return b.score - a.score;
-                                }
-                            );
+                                        fish,
+                                        style,
+                                        rec
+                                    )
+                            };
+                        }
+                    )
+                    .sort(
+                        function (a, b) {
+                            return b.score - a.score;
+                        }
+                    );
 
-                    return scoredProducts.map(
-                        function (item, productIndex) {
+            return scoredProducts.map(
+                function (item, productIndex) {
 
-                            const product = item.product;
-                            const score = item.score;
+                    const product = item.product;
+                    const score = item.score;
 
-                            const firstVariant =
-                                product.variants &&
-                                    product.variants[0]
-                                    ? product.variants[0]
-                                    : {
-                                        label: "มาตรฐาน",
-                                        price: "฿ —",
-                                        link: "#"
-                                    };
-
-                            const variants =
-                                product.variants &&
-                                    product.variants.length
-                                    ? product.variants
-                                    : [firstVariant];
-
-                            // เรียงตัวเลือกโดยให้เวท/ขนาดที่เหมาะที่สุดขึ้นก่อน
-                            const scoredVariants = variants.map(function (variant, index) {
-                                return {
-                                    variant,
-                                    originalIndex: index,
-                                    score: rec ? getVariantSuitabilityScore(product, variant, fish, style, rec) : 20
-                                };
-                            }).sort(function (a, b) {
-                                return b.score - a.score;
-                            });
-
-                            const bestVariantEntry = scoredVariants[0] || {
-                                variant: firstVariant,
-                                originalIndex: 0,
-                                score: 20
+                    const firstVariant =
+                        product.variants &&
+                        product.variants[0]
+                            ? product.variants[0]
+                            : {
+                                label: "มาตรฐาน",
+                                price: "฿ —",
+                                link: "#"
                             };
 
-                            const bestVariant = bestVariantEntry.variant;
-                            const bestVariantIndex = bestVariantEntry.originalIndex;
+                    const variants =
+                        product.variants &&
+                        product.variants.length
+                            ? product.variants
+                            : [firstVariant];
 
-                            const options =
-                                scoredVariants
-                                    .map(
-                                        function (item) {
-                                            return `
+                    // เรียงตัวเลือกโดยให้เวท/ขนาดที่เหมาะที่สุดขึ้นก่อน
+                    const scoredVariants = variants.map(function (variant, index) {
+                        return {
+                            variant,
+                            originalIndex: index,
+                            score: rec ? getVariantSuitabilityScore(product, variant, fish, style, rec) : 20
+                        };
+                    }).sort(function (a, b) {
+                        return b.score - a.score;
+                    });
+
+                    const bestVariantEntry = scoredVariants[0] || {
+                        variant: firstVariant,
+                        originalIndex: 0,
+                        score: 20
+                    };
+
+                    const bestVariant = bestVariantEntry.variant;
+                    const bestVariantIndex = bestVariantEntry.originalIndex;
+                    const hasBestVariantLink =
+                        Boolean(
+                            bestVariant.link &&
+                            bestVariant.link !== "#"
+                        );
+
+                    const options =
+                        scoredVariants
+                            .map(
+                                function (item) {
+                                    return `
                                         <option value="${item.originalIndex}" ${item.originalIndex === bestVariantIndex ? "selected" : ""}>
                                             ${item.variant.label} — ${item.score}% ${scoreLabel(item.score)}
                                         </option>
                                     `;
-                                        }
-                                    )
-                                    .join("");
+                                }
+                            )
+                            .join("");
 
-                            const selectId =
-                                `product-size-${product.id}-${productIndex}`;
+                    const selectId =
+                        `product-size-${product.id}-${productIndex}`;
 
-                            return `
+                    return `
                         <article
                             class="recommended-product-card"
                             data-product-id="${product.id}"
@@ -2510,491 +2513,491 @@
                             </select>
 
                             <div class="recommended-product-price">
-                                ${firstVariant.price || "฿ —"}
+                                ${bestVariant.price || "ดูราคาในร้านค้า"}
                             </div>
 
                             <a
-                                class="recommended-product-button disabled"
-                                href="#"
+                                class="recommended-product-button${hasBestVariantLink ? "" : " disabled"}"
+                                href="${hasBestVariantLink ? bestVariant.link : "#"}"
                                 target="_blank"
                                 rel="noopener noreferrer">
 
-                                🛒 ใส่ลิงก์ร้านค้าภายหลัง
+                                ${hasBestVariantLink ? "🛒 ดูสินค้า" : "🛒 ใส่ลิงก์ร้านค้าภายหลัง"}
 
                             </a>
 
                         </article>
                     `;
+                }
+            ).join("");
+        }
+
+        function updateProductVariant(card, product, index) {
+
+            const variant =
+                product.variants[index];
+
+            if (!variant) {
+                return;
+            }
+
+            const select =
+                card.querySelector(".recommended-product-size");
+
+            const price =
+                card.querySelector(".recommended-product-price");
+
+            const link =
+                card.querySelector(".recommended-product-button");
+
+            const suitability =
+                card.querySelector("[data-variant-suitability]");
+
+            if (suitability) {
+                const currentFish = window.__fishFinderCurrentFish || null;
+                const currentStyle = window.__fishFinderCurrentStyle || null;
+                const currentRec = window.__fishFinderCurrentRec || null;
+                const variantScore = getVariantSuitabilityScore(
+                    product,
+                    variant,
+                    currentFish,
+                    currentStyle,
+                    currentRec
+                );
+                suitability.innerHTML =
+                    `ขนาดที่เลือก: <strong>${variant.label}</strong> • ${variantScore}% ${scoreLabel(variantScore)}`;
+            }
+
+            if (price) {
+                price.textContent =
+                    variant.price || "฿ —";
+            }
+
+            if (link) {
+
+                const hasLink =
+                    Boolean(
+                        variant.link &&
+                        variant.link !== "#"
+                    );
+
+                link.href =
+                    hasLink
+                        ? variant.link
+                        : "#";
+
+                link.classList.toggle(
+                    "disabled",
+                    !hasLink
+                );
+
+                link.textContent =
+                    hasLink
+                        ? "🛒 ดูสินค้า"
+                        : "🛒 ใส่ลิงก์ร้านค้าภายหลัง";
+
+            }
+
+            if (select) {
+                select.dataset.selectedVariant =
+                    String(index);
+            }
+        }
+
+
+        function bindProductVariantSelectors() {
+
+            document
+                .querySelectorAll(
+                    ".recommended-product-size"
+                )
+                .forEach(
+                    function (select) {
+
+                        // ป้องกันการ bind ซ้ำเมื่อมีการ render ใหม่
+                        if (select.dataset.bound === "true") {
+                            return;
                         }
-                    ).join("");
-                }
 
-                function updateProductVariant(card, product, index) {
+                        select.dataset.bound = "true";
 
-                    const variant =
-                        product.variants[index];
+                        select.addEventListener(
+                            "change",
+                            function () {
 
-                    if (!variant) {
-                        return;
-                    }
+                                const card =
+                                    select.closest(
+                                        ".recommended-product-card"
+                                    );
 
-                    const select =
-                        card.querySelector(".recommended-product-size");
-
-                    const price =
-                        card.querySelector(".recommended-product-price");
-
-                    const link =
-                        card.querySelector(".recommended-product-button");
-
-                    const suitability =
-                        card.querySelector("[data-variant-suitability]");
-
-                    if (suitability) {
-                        const currentFish = window.__fishFinderCurrentFish || null;
-                        const currentStyle = window.__fishFinderCurrentStyle || null;
-                        const currentRec = window.__fishFinderCurrentRec || null;
-                        const variantScore = getVariantSuitabilityScore(
-                            product,
-                            variant,
-                            currentFish,
-                            currentStyle,
-                            currentRec
-                        );
-                        suitability.innerHTML =
-                            `ขนาดที่เลือก: <strong>${variant.label}</strong> • ${variantScore}% ${scoreLabel(variantScore)}`;
-                    }
-
-                    if (price) {
-                        price.textContent =
-                            variant.price || "฿ —";
-                    }
-
-                    if (link) {
-
-                        const hasLink =
-                            Boolean(
-                                variant.link &&
-                                variant.link !== "#"
-                            );
-
-                        link.href =
-                            hasLink
-                                ? variant.link
-                                : "#";
-
-                        link.classList.toggle(
-                            "disabled",
-                            !hasLink
-                        );
-
-                        link.textContent =
-                            hasLink
-                                ? "🛒 ดูสินค้า"
-                                : "🛒 ใส่ลิงก์ร้านค้าภายหลัง";
-
-                    }
-
-                    if (select) {
-                        select.dataset.selectedVariant =
-                            String(index);
-                    }
-                }
-
-
-                function bindProductVariantSelectors() {
-
-                    document
-                        .querySelectorAll(
-                            ".recommended-product-size"
-                        )
-                        .forEach(
-                            function (select) {
-
-                                // ป้องกันการ bind ซ้ำเมื่อมีการ render ใหม่
-                                if (select.dataset.bound === "true") {
+                                if (!card) {
                                     return;
                                 }
 
-                                select.dataset.bound = "true";
+                                const productId =
+                                    card.dataset.productId;
 
-                                select.addEventListener(
-                                    "change",
-                                    function () {
-
-                                        const card =
-                                            select.closest(
-                                                ".recommended-product-card"
-                                            );
-
-                                        if (!card) {
-                                            return;
+                                const product =
+                                    productData.find(
+                                        function (item) {
+                                            return item.id === productId;
                                         }
+                                    );
 
-                                        const productId =
-                                            card.dataset.productId;
-
-                                        const product =
-                                            productData.find(
-                                                function (item) {
-                                                    return item.id === productId;
-                                                }
-                                            );
-
-                                        if (!product) {
-                                            return;
-                                        }
-
-                                        updateProductVariant(
-                                            card,
-                                            product,
-                                            Number(select.value)
-                                        );
-                                    }
-                                );
-
-                            }
-                        );
-                }
-
-                function parseNumberRange(text, unitPattern) {
-                    if (!text) return null;
-                    const re = new RegExp("(\\d+(?:\\.\\d+)?)\\s*[–-]\\s*(\\d+(?:\\.\\d+)?)\\s*" + unitPattern, "i");
-                    const match = String(text).match(re);
-                    if (match) {
-                        return {
-                            min: Number(match[1]),
-                            max: Number(match[2])
-                        };
-                    }
-                    return null;
-                }
-
-                function parseSingleNumber(text, pattern) {
-                    if (!text) return null;
-                    const re = new RegExp(pattern, "i");
-                    const match = String(text).match(re);
-                    return match ? Number(match[1]) : null;
-                }
-
-                function scoreRangeFit(valueMin, valueMax, targetMin, targetMax, maxPoints = 40) {
-                    if (
-                        [valueMin, valueMax, targetMin, targetMax]
-                            .some(Number.isNaN) ||
-                        valueMin == null || valueMax == null ||
-                        targetMin == null || targetMax == null
-                    ) {
-                        return Math.round(maxPoints * 0.5);
-                    }
-
-                    const overlapMin = Math.max(valueMin, targetMin);
-                    const overlapMax = Math.min(valueMax, targetMax);
-                    const overlap = Math.max(0, overlapMax - overlapMin);
-                    const valueWidth = Math.max(0.01, valueMax - valueMin);
-                    const targetWidth = Math.max(0.01, targetMax - targetMin);
-
-                    if (overlap > 0 || (valueMin >= targetMin && valueMax <= targetMax)) {
-                        const overlapRatio = Math.min(1, overlap / Math.max(0.01, Math.min(valueWidth, targetWidth)));
-                        const centerDistance = Math.abs(
-                            ((valueMin + valueMax) / 2) - ((targetMin + targetMax) / 2)
-                        );
-                        const centerScale = Math.max(1, targetWidth);
-                        const centerFit = Math.max(0, 1 - centerDistance / (centerScale * 1.5));
-                        return Math.round(maxPoints * Math.min(1, 0.65 + overlapRatio * 0.2 + centerFit * 0.15));
-                    }
-
-                    const distance = valueMax < targetMin
-                        ? targetMin - valueMax
-                        : valueMin - targetMax;
-                    const scale = Math.max(1, targetMax - targetMin);
-                    const fit = Math.max(0, 1 - distance / (scale * 1.5));
-                    return Math.round(maxPoints * fit);
-                }
-
-                function getVariantSuitabilityScore(product, variant, fish, style, rec) {
-                    if (!variant || !rec) return 50;
-
-                    const label = String(variant.label || "").toLowerCase();
-                    const category = product.category || "";
-
-                    // คันเบ็ด: ใช้ช่วง lb ของเวทเป็นหลัก
-                    if (category === "คันเบ็ด") {
-                        const target = parseNumberRange(rec.rod, "lb");
-                        const value = parseNumberRange(label, "lb");
-                        return scoreRangeFit(
-                            value?.min, value?.max,
-                            target?.min, target?.max,
-                            100
-                        );
-                    }
-
-                    // รอกเบท: ขนาด 70/100/150/200 เน้นความเหมาะกับงานตีเหยื่อ
-                    if (product.id === "baitcasting") {
-                        const size = parseSingleNumber(label, "(\d{2,3})");
-                        if (size) {
-                            const ideal = 100;
-                            const distance = Math.abs(size - ideal);
-                            return Math.round(100 * Math.max(0, 1 - distance / 150));
-                        }
-                        return 50;
-                    }
-
-                    // รอก Spinning: เทียบขนาดรอกกับช่วงที่ระบบแนะนำ
-                    if (category === "รอก") {
-                        const size = parseSingleNumber(label, "(\d{3,4})");
-                        const targetSizes = String(rec.reel || "").match(/\d{3,4}/g) || [];
-                        if (size && targetSizes.length) {
-                            const distances = targetSizes.map(Number).map(v => Math.abs(v - size));
-                            const distance = Math.min(...distances);
-                            return Math.round(100 * Math.max(0, 1 - distance / 2000));
-                        }
-                        return 20;
-                    }
-
-                    // PE: เทียบเบอร์ PE กับช่วงแนะนำ
-                    if (product.id === "pe") {
-                        const value = parseSingleNumber(label, "pe\s*([0-9]+(?:\.[0-9]+)?)");
-                        const target = parseNumberRange(rec.line, "") || null;
-                        const targetPEMatch = String(rec.line || "").match(/pe\s*([0-9]+(?:\.[0-9]+)?)\s*[–-]\s*([0-9]+(?:\.[0-9]+)?)/i);
-                        if (value && targetPEMatch) {
-                            return scoreRangeFit(
-                                value, value,
-                                Number(targetPEMatch[1]), Number(targetPEMatch[2]),
-                                100
-                            );
-                        }
-                        return 20;
-                    }
-
-                    // สายเอ็น / Leader / สายเดี่ยว: เทียบ lb
-                    if (category === "สาย" || product.id === "leader") {
-                        const value = parseSingleNumber(label, "([0-9]+(?:\.[0-9]+)?)\s*lb");
-                        const target = parseNumberRange(
-                            product.id === "fluorocarbon" ? rec.leader : rec.line,
-                            "lb"
-                        );
-                        if (value && target) {
-                            return scoreRangeFit(value, value, target.min, target.max, 100);
-                        }
-                        return 20;
-                    }
-
-                    // เหยื่อ: เทียบน้ำหนัก g ที่ระบุในตัวเลือก
-                    if (category === "เหยื่อ") {
-                        const value = parseNumberRange(label, "g");
-                        const target = parseNumberRange(rec.lureWeight, "g");
-                        if (value && target) {
-                            return scoreRangeFit(value.min, value.max, target.min, target.max, 100);
-                        }
-                        const single = parseSingleNumber(label, "([0-9]+(?:\.[0-9]+)?)\s*g");
-                        if (single && target) {
-                            return scoreRangeFit(single, single, target.min, target.max, 100);
-                        }
-                        return 20;
-                    }
-
-                    // เบ็ด: ประเมินจากขนาดเบ็ดที่แนะนำใน rec.hook แบบคร่าว ๆ
-                    if (product.id === "hook") {
-                        const labelNum = label.match(/(?:#)?(\d+\/\d+|\d+)/);
-                        const targetNums = String(rec.hook || "").match(/#?(\d+\/?\d*)/g) || [];
-                        if (labelNum && targetNums.length) {
-                            function hookRank(raw) {
-                                const x = raw.replace("#", "");
-                                if (x.includes("/0")) return 12 + Number(x.split("/")[0]);
-                                return 10 - Number(x);
-                            }
-                            const valueRank = hookRank(labelNum[1]);
-                            const targetRanks = targetNums.map(hookRank);
-                            const dist = Math.min(...targetRanks.map(v => Math.abs(v - valueRank)));
-                            return Math.round(100 * Math.max(0, 1 - dist / 8));
-                        }
-                        return 20;
-                    }
-
-                    return category === "อุปกรณ์เสริม" ? 50 : 50;
-                }
-
-                function getProductMatchScore(product, fish, style, rec = null) {
-
-                    /*
-                     * คะแนนเต็ม 100
-                     * - ความตรงกับปลา: สูงสุด 30
-                     * - ความตรงกับวิธีตกปลา: สูงสุด 15
-                     * - เหยื่อ/อุปกรณ์เสริม: สูงสุด 5
-                     *
-                     * ไม่บวกคะแนนซ้ำจากชื่อปลาที่ตรง/คล้ายกัน
-                     * เพื่อป้องกันทุกชิ้นกลายเป็น 100%
-                     */
-
-                    let score = 0;
-
-                    if (!fish) {
-                        return 50;
-                    }
-
-                    const productFish =
-                        product.fish || [];
-
-                    const fishName =
-                        fish.name || "";
-
-                    const productDescription =
-                        (
-                            product.desc ||
-                            ""
-                        ).toLowerCase();
-
-                    const fishBait =
-                        (
-                            fish.bait ||
-                            ""
-                        ).toLowerCase();
-
-                    /* ---------- ปลา: สูงสุด 40 ---------- */
-
-                    const exactFish =
-                        productFish.includes(
-                            fishName
-                        );
-
-                    const relatedFish =
-                        productFish.some(
-                            function (name) {
-                                return (
-                                    name !== fishName &&
-                                    (
-                                        fishName.includes(name) ||
-                                        name.includes(fishName)
-                                    )
-                                );
-                            }
-                        );
-
-                    if (exactFish) {
-                        score += 30;
-                    } else if (relatedFish) {
-                        score += 18;
-                    }
-
-                    /* ---------- วิธีตกปลา: สูงสุด 20 ---------- */
-
-                    if (
-                        product.styles &&
-                        product.styles.includes(style)
-                    ) {
-                        score += 15;
-                    }
-
-                    /* ---------- เหยื่อ: สูงสุด 10 ---------- */
-
-                    if (
-                        product.category === "เหยื่อ" &&
-                        fishBait
-                    ) {
-
-                        const baitWords =
-                            fishBait
-                                .replace(
-                                    /[(),/]/g,
-                                    " "
-                                )
-                                .split(
-                                    /\s+/
-                                )
-                                .filter(
-                                    word =>
-                                        word.length >= 3
-                                );
-
-                        const baitMatch =
-                            baitWords.some(
-                                function (word) {
-                                    return productDescription
-                                        .includes(word);
+                                if (!product) {
+                                    return;
                                 }
-                            );
 
-                        if (baitMatch) {
-                            score += 5;
-                        }
+                                updateProductVariant(
+                                    card,
+                                    product,
+                                    Number(select.value)
+                                );
+                            }
+                        );
+
                     }
+                );
+        }
 
-                    /* ---------- อุปกรณ์เสริม: 5 ---------- */
+        function parseNumberRange(text, unitPattern) {
+            if (!text) return null;
+            const re = new RegExp("(\\d+(?:\\.\\d+)?)\\s*[–-]\\s*(\\d+(?:\\.\\d+)?)\\s*" + unitPattern, "i");
+            const match = String(text).match(re);
+            if (match) {
+                return {
+                    min: Number(match[1]),
+                    max: Number(match[2])
+                };
+            }
+            return null;
+        }
 
-                    if (
-                        product.category === "อุปกรณ์เสริม"
-                    ) {
-                        score += 5;
-                    }
+        function parseSingleNumber(text, pattern) {
+            if (!text) return null;
+            const re = new RegExp(pattern, "i");
+            const match = String(text).match(re);
+            return match ? Number(match[1]) : null;
+        }
 
-                    /*
-                     * 45 คะแนนที่เหลือสงวนไว้ให้ "ขนาด/เวท" ของตัวเลือก
-                     * แต่คะแนนรวมของการ์ดจะไม่เกิน 100
-                     */
-                    if (rec) {
-                        const variants = product.variants || [];
-                        const variantScores = variants.map(function (variant) {
-                            return getVariantSuitabilityScore(product, variant, fish, style, rec);
-                        });
-                        const bestVariant = variantScores.length
-                            ? Math.max(...variantScores)
-                            : 20;
-                        score += Math.round(bestVariant * 0.45);
-                    }
+        function scoreRangeFit(valueMin, valueMax, targetMin, targetMax, maxPoints = 40) {
+            if (
+                [valueMin, valueMax, targetMin, targetMax]
+                    .some(Number.isNaN) ||
+                valueMin == null || valueMax == null ||
+                targetMin == null || targetMax == null
+            ) {
+                return Math.round(maxPoints * 0.5);
+            }
 
-                    return Math.min(
-                        100,
-                        score
+            const overlapMin = Math.max(valueMin, targetMin);
+            const overlapMax = Math.min(valueMax, targetMax);
+            const overlap = Math.max(0, overlapMax - overlapMin);
+            const valueWidth = Math.max(0.01, valueMax - valueMin);
+            const targetWidth = Math.max(0.01, targetMax - targetMin);
+
+            if (overlap > 0 || (valueMin >= targetMin && valueMax <= targetMax)) {
+                const overlapRatio = Math.min(1, overlap / Math.max(0.01, Math.min(valueWidth, targetWidth)));
+                const centerDistance = Math.abs(
+                    ((valueMin + valueMax) / 2) - ((targetMin + targetMax) / 2)
+                );
+                const centerScale = Math.max(1, targetWidth);
+                const centerFit = Math.max(0, 1 - centerDistance / (centerScale * 1.5));
+                return Math.round(maxPoints * Math.min(1, 0.65 + overlapRatio * 0.2 + centerFit * 0.15));
+            }
+
+            const distance = valueMax < targetMin
+                ? targetMin - valueMax
+                : valueMin - targetMax;
+            const scale = Math.max(1, targetMax - targetMin);
+            const fit = Math.max(0, 1 - distance / (scale * 1.5));
+            return Math.round(maxPoints * fit);
+        }
+
+        function getVariantSuitabilityScore(product, variant, fish, style, rec) {
+            if (!variant || !rec) return 50;
+
+            const label = String(variant.label || "").toLowerCase();
+            const category = product.category || "";
+
+            // คันเบ็ด: ใช้ช่วง lb ของเวทเป็นหลัก
+            if (category === "คันเบ็ด") {
+                const target = parseNumberRange(rec.rod, "lb");
+                const value = parseNumberRange(label, "lb");
+                return scoreRangeFit(
+                    value?.min, value?.max,
+                    target?.min, target?.max,
+                    100
+                );
+            }
+
+            // รอกเบท: ขนาด 70/100/150/200 เน้นความเหมาะกับงานตีเหยื่อ
+            if (product.id === "baitcasting") {
+                const size = parseSingleNumber(label, "(\d{2,3})");
+                if (size) {
+                    const ideal = 100;
+                    const distance = Math.abs(size - ideal);
+                    return Math.round(100 * Math.max(0, 1 - distance / 150));
+                }
+                return 50;
+            }
+
+            // รอก Spinning: เทียบขนาดรอกกับช่วงที่ระบบแนะนำ
+            if (category === "รอก") {
+                const size = parseSingleNumber(label, "(\d{3,4})");
+                const targetSizes = String(rec.reel || "").match(/\d{3,4}/g) || [];
+                if (size && targetSizes.length) {
+                    const distances = targetSizes.map(Number).map(v => Math.abs(v - size));
+                    const distance = Math.min(...distances);
+                    return Math.round(100 * Math.max(0, 1 - distance / 2000));
+                }
+                return 20;
+            }
+
+            // PE: เทียบเบอร์ PE กับช่วงแนะนำ
+            if (product.id === "pe") {
+                const value = parseSingleNumber(label, "pe\s*([0-9]+(?:\.[0-9]+)?)");
+                const target = parseNumberRange(rec.line, "") || null;
+                const targetPEMatch = String(rec.line || "").match(/pe\s*([0-9]+(?:\.[0-9]+)?)\s*[–-]\s*([0-9]+(?:\.[0-9]+)?)/i);
+                if (value && targetPEMatch) {
+                    return scoreRangeFit(
+                        value, value,
+                        Number(targetPEMatch[1]), Number(targetPEMatch[2]),
+                        100
                     );
                 }
+                return 20;
+            }
 
-                function scoreLabel(score) {
-
-                    if (score >= 90) {
-                        return "เหมาะมาก";
-                    }
-
-                    if (score >= 75) {
-                        return "เหมาะ";
-                    }
-
-                    if (score >= 50) {
-                        return "พอเหมาะ";
-                    }
-
-                    return "ความเกี่ยวข้องต่ำ";
+            // สายเอ็น / Leader / สายเดี่ยว: เทียบ lb
+            if (category === "สาย" || product.id === "leader") {
+                const value = parseSingleNumber(label, "([0-9]+(?:\.[0-9]+)?)\s*lb");
+                const target = parseNumberRange(
+                    product.id === "fluorocarbon" ? rec.leader : rec.line,
+                    "lb"
+                );
+                if (value && target) {
+                    return scoreRangeFit(value, value, target.min, target.max, 100);
                 }
+                return 20;
+            }
 
+            // เหยื่อ: เทียบน้ำหนัก g ที่ระบุในตัวเลือก
+            if (category === "เหยื่อ") {
+                const value = parseNumberRange(label, "g");
+                const target = parseNumberRange(rec.lureWeight, "g");
+                if (value && target) {
+                    return scoreRangeFit(value.min, value.max, target.min, target.max, 100);
+                }
+                const single = parseSingleNumber(label, "([0-9]+(?:\.[0-9]+)?)\s*g");
+                if (single && target) {
+                    return scoreRangeFit(single, single, target.min, target.max, 100);
+                }
+                return 20;
+            }
 
-                function renderProducts(
-                    fish,
-                    style,
-                    rec = null
-                ) {
-
-                    // เปิดหน้าเว็บครั้งแรก: แสดงสินค้าทุกชนิด
-                    if (!fish || !style) {
-
-                        refreshProductCatalog();
-
-                        return;
+            // เบ็ด: ประเมินจากขนาดเบ็ดที่แนะนำใน rec.hook แบบคร่าว ๆ
+            if (product.id === "hook") {
+                const labelNum = label.match(/(?:#)?(\d+\/\d+|\d+)/);
+                const targetNums = String(rec.hook || "").match(/#?(\d+\/?\d*)/g) || [];
+                if (labelNum && targetNums.length) {
+                    function hookRank(raw) {
+                        const x = raw.replace("#", "");
+                        if (x.includes("/0")) return 12 + Number(x.split("/")[0]);
+                        return 10 - Number(x);
                     }
+                    const valueRank = hookRank(labelNum[1]);
+                    const targetRanks = targetNums.map(hookRank);
+                    const dist = Math.min(...targetRanks.map(v => Math.abs(v - valueRank)));
+                    return Math.round(100 * Math.max(0, 1 - dist / 8));
+                }
+                return 20;
+            }
 
-                    let matches =
-                        productData.filter(
-                            function (product) {
+            return category === "อุปกรณ์เสริม" ? 50 : 50;
+        }
 
-                                return (
-                                    product.fish.includes(fish.name) ||
-                                    product.styles.includes(style)
-                                );
+        function getProductMatchScore(product, fish, style, rec = null) {
 
-                            }
+            /*
+             * คะแนนเต็ม 100
+             * - ความตรงกับปลา: สูงสุด 30
+             * - ความตรงกับวิธีตกปลา: สูงสุด 15
+             * - เหยื่อ/อุปกรณ์เสริม: สูงสุด 5
+             *
+             * ไม่บวกคะแนนซ้ำจากชื่อปลาที่ตรง/คล้ายกัน
+             * เพื่อป้องกันทุกชิ้นกลายเป็น 100%
+             */
+
+            let score = 0;
+
+            if (!fish) {
+                return 50;
+            }
+
+            const productFish =
+                product.fish || [];
+
+            const fishName =
+                fish.name || "";
+
+            const productDescription =
+                (
+                    product.desc ||
+                    ""
+                ).toLowerCase();
+
+            const fishBait =
+                (
+                    fish.bait ||
+                    ""
+                ).toLowerCase();
+
+            /* ---------- ปลา: สูงสุด 40 ---------- */
+
+            const exactFish =
+                productFish.includes(
+                    fishName
+                );
+
+            const relatedFish =
+                productFish.some(
+                    function (name) {
+                        return (
+                            name !== fishName &&
+                            (
+                                fishName.includes(name) ||
+                                name.includes(fishName)
+                            )
+                        );
+                    }
+                );
+
+            if (exactFish) {
+                score += 30;
+            } else if (relatedFish) {
+                score += 18;
+            }
+
+            /* ---------- วิธีตกปลา: สูงสุด 20 ---------- */
+
+            if (
+                product.styles &&
+                product.styles.includes(style)
+            ) {
+                score += 15;
+            }
+
+            /* ---------- เหยื่อ: สูงสุด 10 ---------- */
+
+            if (
+                product.category === "เหยื่อ" &&
+                fishBait
+            ) {
+
+                const baitWords =
+                    fishBait
+                        .replace(
+                            /[(),/]/g,
+                            " "
+                        )
+                        .split(
+                            /\s+/
+                        )
+                        .filter(
+                            word =>
+                                word.length >= 3
                         );
 
-                    if (matches.length === 0) {
+                const baitMatch =
+                    baitWords.some(
+                        function (word) {
+                            return productDescription
+                                .includes(word);
+                        }
+                    );
 
-                        productGrid.innerHTML = `
+                if (baitMatch) {
+                    score += 5;
+                }
+            }
+
+            /* ---------- อุปกรณ์เสริม: 5 ---------- */
+
+            if (
+                product.category === "อุปกรณ์เสริม"
+            ) {
+                score += 5;
+            }
+
+            /*
+             * 45 คะแนนที่เหลือสงวนไว้ให้ "ขนาด/เวท" ของตัวเลือก
+             * แต่คะแนนรวมของการ์ดจะไม่เกิน 100
+             */
+            if (rec) {
+                const variants = product.variants || [];
+                const variantScores = variants.map(function (variant) {
+                    return getVariantSuitabilityScore(product, variant, fish, style, rec);
+                });
+                const bestVariant = variantScores.length
+                    ? Math.max(...variantScores)
+                    : 20;
+                score += Math.round(bestVariant * 0.45);
+            }
+
+            return Math.min(
+                100,
+                score
+            );
+        }
+
+        function scoreLabel(score) {
+
+            if (score >= 90) {
+                return "เหมาะมาก";
+            }
+
+            if (score >= 75) {
+                return "เหมาะ";
+            }
+
+            if (score >= 50) {
+                return "พอเหมาะ";
+            }
+
+            return "ความเกี่ยวข้องต่ำ";
+        }
+
+
+        function renderProducts(
+            fish,
+            style,
+            rec = null
+        ) {
+
+            // เปิดหน้าเว็บครั้งแรก: แสดงสินค้าทุกชนิด
+            if (!fish || !style) {
+
+                refreshProductCatalog();
+
+                return;
+            }
+
+            let matches =
+                productData.filter(
+                    function (product) {
+
+                        return (
+                            product.fish.includes(fish.name) ||
+                            product.styles.includes(style)
+                        );
+
+                    }
+                );
+
+            if (matches.length === 0) {
+
+                productGrid.innerHTML = `
                     <div class="product-placeholder">
 
                         <div class="product-placeholder-icon">
@@ -3012,21 +3015,21 @@
                     </div>
                 `;
 
-                        return;
-                    }
+                return;
+            }
 
-                    const visibleMatches =
-                        getFilteredProducts(matches);
+            const visibleMatches =
+                getFilteredProducts(matches);
 
-                    productGrid.innerHTML =
-                        visibleMatches.length
-                            ? renderProductCards(
-                                visibleMatches,
-                                fish,
-                                style,
-                                rec
-                            )
-                            : `
+            productGrid.innerHTML =
+                visibleMatches.length
+                    ? renderProductCards(
+                        visibleMatches,
+                        fish,
+                        style,
+                        rec
+                    )
+                    : `
                         <div class="product-placeholder">
                             <div class="product-placeholder-icon">
                                 🔍
@@ -3040,133 +3043,133 @@
                         </div>
                     `;
 
-                    updateProductSearchCount(
-                        visibleMatches.length
-                    );
+            updateProductSearchCount(
+                visibleMatches.length
+            );
 
-                    bindProductVariantSelectors();
+            bindProductVariantSelectors();
 
-                }
+        }
 
-                function styleLabel(style) {
-                    const labels = {
+        function styleLabel(style) {
+            const labels = {
+                freshwater: "น้ำจืด",
+                sea: "ทะเล",
+                lure: "ตีเหยื่อปลอม",
+                bottom: "ตกหน้าดิน"
+            };
+            return labels[style] || "ทั่วไป";
+        }
+
+
+        function levelLabel(level) {
+            const labels = {
+                beginner: "มือใหม่",
+                normal: "ทั่วไป",
+                advanced: "มีประสบการณ์"
+            };
+            return labels[level] || "ทั่วไป";
+        }
+
+
+        /* =====================================
+           Recommend Button
+        ===================================== */
+
+        $("recommendEquipmentButton")
+            .addEventListener(
+                "click",
+                function () {
+
+                    const fishIndex =
+                        targetFish.value;
+
+
+                    const style =
+                        $("fishingStyle")
+                            .value;
+
+
+                    const level =
+                        $("fishingLevel")
+                            .value;
+
+
+                    if (
+                        fishIndex ===
+                        ""
+                    ) {
+
+                        alert(
+                            "กรุณาเลือกปลาเป้าหมายก่อน"
+                        );
+
+                        return;
+
+                    }
+
+
+                    const fish =
+                        fishGuideData[
+                            Number(
+                                fishIndex
+                            )
+                        ];
+
+
+                    if (!fish) {
+
+                        return;
+
+                    }
+
+
+                    const rec =
+                        makeRecommendation(
+                            style,
+                            level,
+                            fish
+                        );
+
+
+                    const styleTextMap = {
                         freshwater: "น้ำจืด",
                         sea: "ทะเล",
                         lure: "ตีเหยื่อปลอม",
                         bottom: "ตกหน้าดิน"
                     };
-                    return labels[style] || "ทั่วไป";
-                }
+
+                    const styleText =
+                        styleTextMap[style] || "ตกปลาทั่วไป";
+
+                    let levelText =
+                        "เหมาะสำหรับผู้ตกปลาทั่วไป";
 
 
-                function levelLabel(level) {
-                    const labels = {
-                        beginner: "มือใหม่",
-                        normal: "ทั่วไป",
-                        advanced: "มีประสบการณ์"
-                    };
-                    return labels[level] || "ทั่วไป";
-                }
+                    if (
+                        level ===
+                        "beginner"
+                    ) {
+
+                        levelText =
+                            "เน้นอุปกรณ์ใช้งานง่าย เหมาะสำหรับมือใหม่";
+
+                    }
 
 
-                /* =====================================
-                   Recommend Button
-                ===================================== */
+                    if (
+                        level ===
+                        "advanced"
+                    ) {
 
-                $("recommendEquipmentButton")
-                    .addEventListener(
-                        "click",
-                        function () {
+                        levelText =
+                            "เหมาะสำหรับผู้ที่มีประสบการณ์";
 
-                            const fishIndex =
-                                targetFish.value;
+                    }
 
 
-                            const style =
-                                $("fishingStyle")
-                                    .value;
-
-
-                            const level =
-                                $("fishingLevel")
-                                    .value;
-
-
-                            if (
-                                fishIndex ===
-                                ""
-                            ) {
-
-                                alert(
-                                    "กรุณาเลือกปลาเป้าหมายก่อน"
-                                );
-
-                                return;
-
-                            }
-
-
-                            const fish =
-                                fishGuideData[
-                                Number(
-                                    fishIndex
-                                )
-                                ];
-
-
-                            if (!fish) {
-
-                                return;
-
-                            }
-
-
-                            const rec =
-                                makeRecommendation(
-                                    style,
-                                    level,
-                                    fish
-                                );
-
-
-                            const styleTextMap = {
-                                freshwater: "น้ำจืด",
-                                sea: "ทะเล",
-                                lure: "ตีเหยื่อปลอม",
-                                bottom: "ตกหน้าดิน"
-                            };
-
-                            const styleText =
-                                styleTextMap[style] || "ตกปลาทั่วไป";
-
-                            let levelText =
-                                "เหมาะสำหรับผู้ตกปลาทั่วไป";
-
-
-                            if (
-                                level ===
-                                "beginner"
-                            ) {
-
-                                levelText =
-                                    "เน้นอุปกรณ์ใช้งานง่าย เหมาะสำหรับมือใหม่";
-
-                            }
-
-
-                            if (
-                                level ===
-                                "advanced"
-                            ) {
-
-                                levelText =
-                                    "เหมาะสำหรับผู้ที่มีประสบการณ์";
-
-                            }
-
-
-                            recommendedItems
-                                .innerHTML = `
+                    recommendedItems
+                        .innerHTML = `
 
                         <div class="recommended-fish">
                             🐟 ปลาเป้าหมาย:
@@ -3230,118 +3233,117 @@
                     `;
 
 
-                            result.style.display =
-                                "block";
+                    result.style.display =
+                        "block";
 
 
-                            window.__fishFinderCurrentFish = fish;
-                            window.__fishFinderCurrentStyle = style;
-                            window.__fishFinderCurrentRec = rec;
+                    window.__fishFinderCurrentFish = fish;
+                    window.__fishFinderCurrentStyle = style;
+                    window.__fishFinderCurrentRec = rec;
 
-                            renderProducts(
-                                fish,
-                                style,
-                                rec
-                            );
-
-
-                            result.scrollIntoView({
-                                behavior:
-                                    "smooth",
-                                block:
-                                    "start"
-                            });
-
-                        }
+                    renderProducts(
+                        fish,
+                        style,
+                        rec
                     );
 
 
-                /* =====================================
-                   Dark Mode
-                ===================================== */
-
-                const themeToggle =
-                    $("themeToggle");
-
-
-                function updateThemeButton() {
-
-                    themeToggle.textContent =
-                        document.body
-                            .classList
-                            .contains(
-                                "dark-mode"
-                            )
-                            ? "☀️"
-                            : "🌙";
+                    result.scrollIntoView({
+                        behavior:
+                            "smooth",
+                        block:
+                            "start"
+                    });
 
                 }
+            );
 
 
-                themeToggle.addEventListener(
-                    "click",
-                    function () {
+        /* =====================================
+           Dark Mode
+        ===================================== */
 
-                        document.body
-                            .classList
-                            .toggle(
-                                "dark-mode"
-                            );
+        const themeToggle =
+            $("themeToggle");
 
 
-                        localStorage.setItem(
-                            "fishFinderTheme",
-                            document.body
-                                .classList
-                                .contains(
-                                    "dark-mode"
-                                )
-                                ? "dark"
-                                : "light"
-                        );
+        function updateThemeButton() {
+
+            themeToggle.textContent =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    )
+                    ? "☀️"
+                    : "🌙";
+
+        }
 
 
-                        updateThemeButton();
+        themeToggle.addEventListener(
+            "click",
+            function () {
 
-                    }
-                );
+                document.body
+                    .classList
+                    .toggle(
+                        "dark-mode"
+                    );
 
 
-                if (
-                    localStorage.getItem(
-                        "fishFinderTheme"
-                    ) ===
-                    "dark"
-                ) {
-
+                localStorage.setItem(
+                    "fishFinderTheme",
                     document.body
                         .classList
-                        .add(
+                        .contains(
                             "dark-mode"
-                        );
-
-                }
+                        )
+                        ? "dark"
+                        : "light"
+                );
 
 
                 updateThemeButton();
 
-
-                /* =====================================
-                   Start
-                ===================================== */
-
-                // แสดงสินค้าทั่วไปทันทีเมื่อเปิดหน้า
-                renderProducts();
-
-                bindProductSearch();
-
-                loadFishGuide();
-
             }
         );
 
-    </script>
+
+        if (
+            localStorage.getItem(
+                "fishFinderTheme"
+            ) ===
+            "dark"
+        ) {
+
+            document.body
+                .classList
+                .add(
+                    "dark-mode"
+                );
+
+        }
+
+
+        updateThemeButton();
+
+
+        /* =====================================
+           Start
+        ===================================== */
+
+        // แสดงสินค้าทั่วไปทันทีเมื่อเปิดหน้า
+        renderProducts();
+
+        bindProductSearch();
+
+        loadFishGuide();
+
+    }
+);
+
+</script>
 
 </body>
-
 </html>
