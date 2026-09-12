@@ -238,8 +238,12 @@
             }
 
             message.textContent =
-                "สมัครสมาชิกสำเร็จ กรุณาตรวจสอบอีเมลเพื่อยืนยันบัญชี";
+                "สมัครสมาชิกสำเร็จ กำลังเข้าสู่หน้า FishFinder...";
             message.style.color = "#147a2c";
+
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 800);
         });
     </script>
 </body>
