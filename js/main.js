@@ -121,7 +121,6 @@ function filterFish() {
         return;
     }
 
-
     const keyword =
         fishSearchInput
             ? fishSearchInput.value
@@ -129,113 +128,108 @@ function filterFish() {
                 .toLowerCase()
             : "";
 
-
     const selectedType =
         fishTypeFilter
             ? fishTypeFilter.value
             : "all";
 
-
     const fishCards =
-        fishList.querySelectorAll(
-            ".fish-card"
-        );
-
+        fishList.querySelectorAll(".fish-card");
 
     let visibleCount = 0;
 
 
-    fishCards.forEach(
-        function (card) {
+    fishCards.forEach(function (card) {
 
-            const name =
-                (
-                    card.dataset.name ||
-                    ""
-                ).toLowerCase();
+        const name =
+            (
+                card.dataset.name ||
+                ""
+            ).toLowerCase();
 
+        const type =
+            (
+                card.dataset.type ||
+                ""
+            ).toLowerCase();
 
-            const type =
-                (
-                    card.dataset.type ||
-                    ""
-                ).toLowerCase();
+        const bait =
+            (
+                card.dataset.bait ||
+                ""
+            ).toLowerCase();
 
+        const time =
+            (
+                card.dataset.time ||
+                ""
+            ).toLowerCase();
 
-            const bait =
-                (
-                    card.dataset.bait ||
-                    ""
-                ).toLowerCase();
+        const scientificName =
+            (
+                card.dataset.photoSearch ||
+                ""
+            ).toLowerCase();
 
+        const wikiTitle =
+            (
+                card.dataset.wikiTitle ||
+                ""
+            ).toLowerCase();
 
-            const time =
-                (
-                    card.dataset.time ||
-                    ""
-                ).toLowerCase();
-
-
-            const scientificName =
-                (
-                    card.dataset.photoSearch ||
-                    ""
-                ).toLowerCase();
-
-
-            const wikiTitle =
-                (
-                    card.dataset.wikiTitle ||
-                    ""
-                ).toLowerCase();
-
-
-            const cardText =
-                (
-                    card.textContent ||
-                    ""
-                ).toLowerCase();
+        const cardText =
+            (
+                card.textContent ||
+                ""
+            ).toLowerCase();
 
 
-            const matchesSearch =
-                keyword === "" ||
-                name.includes(keyword) ||
-                type.includes(keyword) ||
-                bait.includes(keyword) ||
-                time.includes(keyword) ||
-                scientificName.includes(keyword) ||
-                wikiTitle.includes(keyword) ||
-                cardText.includes(keyword);
+        const matchesSearch =
+            keyword === "" ||
+            name.includes(keyword) ||
+            type.includes(keyword) ||
+            bait.includes(keyword) ||
+            time.includes(keyword) ||
+            scientificName.includes(keyword) ||
+            wikiTitle.includes(keyword) ||
+            cardText.includes(keyword);
 
 
-            const matchesType =
-                selectedType === "all" ||
-                (
-                    card.dataset.type ||
-                    ""
-                ) === selectedType;
+        const matchesType =
+            selectedType === "all" ||
+            (
+                card.dataset.type ||
+                ""
+            ) === selectedType;
 
 
-            if (
-                matchesSearch &&
-                matchesType
-            ) {
+        if (
+            matchesSearch &&
+            matchesType
+        ) {
 
-                card.hidden = false;
+            // แสดงการ์ด
+            card.style.removeProperty("display");
+            card.removeAttribute("hidden");
 
-                visibleCount++;
+            visibleCount++;
 
-            } else {
+        } else {
 
-                card.hidden = true;
-
-            }
+            // บังคับซ่อนการ์ด
+            card.setAttribute("hidden", "");
+            card.style.setProperty(
+                "display",
+                "none",
+                "important"
+            );
 
         }
-    );
+
+    });
 
 
-    // จำนวนปลาที่พบ
+    // จำนวนผลลัพธ์
     if (fishCountElement) {
 
         fishCountElement.textContent =
