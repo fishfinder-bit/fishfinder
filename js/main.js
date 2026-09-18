@@ -91,6 +91,27 @@ const noResult =
 
 
 // ========================================
+// FORCE HIDE FILTERED FISH
+// ========================================
+
+if (!document.getElementById("fishHiddenStyle")) {
+
+    const fishHiddenStyle =
+        document.createElement("style");
+
+    fishHiddenStyle.id =
+        "fishHiddenStyle";
+
+    fishHiddenStyle.textContent =
+        ".fish-card[hidden] { display: none !important; }";
+
+    document.head.appendChild(
+        fishHiddenStyle
+    );
+}
+
+
+// ========================================
 // FILTER FISH
 // ========================================
 
@@ -100,6 +121,7 @@ function filterFish() {
         return;
     }
 
+
     const keyword =
         fishSearchInput
             ? fishSearchInput.value
@@ -107,104 +129,113 @@ function filterFish() {
                 .toLowerCase()
             : "";
 
+
     const selectedType =
         fishTypeFilter
             ? fishTypeFilter.value
             : "all";
 
+
     const fishCards =
-        fishList.querySelectorAll(".fish-card");
+        fishList.querySelectorAll(
+            ".fish-card"
+        );
+
 
     let visibleCount = 0;
 
 
-    fishCards.forEach(function (card) {
+    fishCards.forEach(
+        function (card) {
 
-        // อ่านข้อมูลจาก data-*
-        const name =
-            (
-                card.dataset.name ||
-                ""
-            ).toLowerCase();
-
-        const type =
-            (
-                card.dataset.type ||
-                ""
-            ).toLowerCase();
-
-        const bait =
-            (
-                card.dataset.bait ||
-                ""
-            ).toLowerCase();
-
-        const time =
-            (
-                card.dataset.time ||
-                ""
-            ).toLowerCase();
-
-        const scientificName =
-            (
-                card.dataset.photoSearch ||
-                ""
-            ).toLowerCase();
-
-        const wikiTitle =
-            (
-                card.dataset.wikiTitle ||
-                ""
-            ).toLowerCase();
+            const name =
+                (
+                    card.dataset.name ||
+                    ""
+                ).toLowerCase();
 
 
-        // อ่านข้อความทั้งหมดบนการ์ดด้วย
-        const cardText =
-            card.textContent
-                .toLowerCase();
+            const type =
+                (
+                    card.dataset.type ||
+                    ""
+                ).toLowerCase();
 
 
-        // ค้นหา
-        const matchesSearch =
-            keyword === "" ||
-            name.includes(keyword) ||
-            type.includes(keyword) ||
-            bait.includes(keyword) ||
-            time.includes(keyword) ||
-            scientificName.includes(keyword) ||
-            wikiTitle.includes(keyword) ||
-            cardText.includes(keyword);
+            const bait =
+                (
+                    card.dataset.bait ||
+                    ""
+                ).toLowerCase();
 
 
-        // กรองประเภทปลา
-        const matchesType =
-            selectedType === "all" ||
-            (
-                card.dataset.type ||
-                ""
-            ) === selectedType;
+            const time =
+                (
+                    card.dataset.time ||
+                    ""
+                ).toLowerCase();
 
 
-        // แสดง / ซ่อน
-        if (
-            matchesSearch &&
-            matchesType
-        ) {
+            const scientificName =
+                (
+                    card.dataset.photoSearch ||
+                    ""
+                ).toLowerCase();
 
-            card.style.display = "";
 
-            visibleCount++;
+            const wikiTitle =
+                (
+                    card.dataset.wikiTitle ||
+                    ""
+                ).toLowerCase();
 
-        } else {
 
-            card.style.display = "none";
+            const cardText =
+                (
+                    card.textContent ||
+                    ""
+                ).toLowerCase();
+
+
+            const matchesSearch =
+                keyword === "" ||
+                name.includes(keyword) ||
+                type.includes(keyword) ||
+                bait.includes(keyword) ||
+                time.includes(keyword) ||
+                scientificName.includes(keyword) ||
+                wikiTitle.includes(keyword) ||
+                cardText.includes(keyword);
+
+
+            const matchesType =
+                selectedType === "all" ||
+                (
+                    card.dataset.type ||
+                    ""
+                ) === selectedType;
+
+
+            if (
+                matchesSearch &&
+                matchesType
+            ) {
+
+                card.hidden = false;
+
+                visibleCount++;
+
+            } else {
+
+                card.hidden = true;
+
+            }
 
         }
+    );
 
-    });
 
-
-    // จำนวนปลา
+    // จำนวนปลาที่พบ
     if (fishCountElement) {
 
         fishCountElement.textContent =
@@ -244,7 +275,6 @@ if (fishSearchInput) {
     );
 
 
-    // กด Enter แล้วค้นหา
     fishSearchInput.addEventListener(
         "keydown",
         function (event) {
@@ -266,7 +296,7 @@ if (fishSearchInput) {
 
 
 // ========================================
-// FILTER TYPE
+// TYPE FILTER
 // ========================================
 
 if (fishTypeFilter) {
