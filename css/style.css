@@ -4831,3 +4831,6 @@ body.dark-mode .modal-info-box {
     }
 
 }
+.fish-card[hidden] {
+    display: none !important;
+}

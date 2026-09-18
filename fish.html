@@ -1738,8 +1738,13 @@
     <script src="js/menu-analytics.js"></script>
 
     <script src="js/fish-data.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/main.js"></script>
+    <style>
+.fish-list > .fish-card.search-hidden,
+.fish-list > .fish-card[hidden] {
+    display: none !important;
+}
+</style>
+    <script src="js/main.js?v=3"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

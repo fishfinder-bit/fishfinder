@@ -138,50 +138,35 @@ function filterFish() {
 
     let visibleCount = 0;
 
-
     fishCards.forEach(function (card) {
 
         const name =
-            (
-                card.dataset.name ||
-                ""
-            ).toLowerCase();
+            (card.dataset.name || "")
+                .toLowerCase();
 
         const type =
-            (
-                card.dataset.type ||
-                ""
-            ).toLowerCase();
+            (card.dataset.type || "")
+                .toLowerCase();
 
         const bait =
-            (
-                card.dataset.bait ||
-                ""
-            ).toLowerCase();
+            (card.dataset.bait || "")
+                .toLowerCase();
 
         const time =
-            (
-                card.dataset.time ||
-                ""
-            ).toLowerCase();
+            (card.dataset.time || "")
+                .toLowerCase();
 
         const scientificName =
-            (
-                card.dataset.photoSearch ||
-                ""
-            ).toLowerCase();
+            (card.dataset.photoSearch || "")
+                .toLowerCase();
 
         const wikiTitle =
-            (
-                card.dataset.wikiTitle ||
-                ""
-            ).toLowerCase();
+            (card.dataset.wikiTitle || "")
+                .toLowerCase();
 
         const cardText =
-            (
-                card.textContent ||
-                ""
-            ).toLowerCase();
+            (card.textContent || "")
+                .toLowerCase();
 
 
         const matchesSearch =
@@ -198,8 +183,7 @@ function filterFish() {
         const matchesType =
             selectedType === "all" ||
             (
-                card.dataset.type ||
-                ""
+                card.dataset.type || ""
             ) === selectedType;
 
 
@@ -208,20 +192,23 @@ function filterFish() {
             matchesType
         ) {
 
-            // แสดงการ์ด
-            card.style.removeProperty("display");
+            card.classList.remove(
+                "search-hidden"
+            );
+
             card.removeAttribute("hidden");
 
             visibleCount++;
 
         } else {
 
-            // บังคับซ่อนการ์ด
-            card.setAttribute("hidden", "");
-            card.style.setProperty(
-                "display",
-                "none",
-                "important"
+            card.classList.add(
+                "search-hidden"
+            );
+
+            card.setAttribute(
+                "hidden",
+                ""
             );
 
         }
@@ -229,7 +216,6 @@ function filterFish() {
     });
 
 
-    // จำนวนผลลัพธ์
     if (fishCountElement) {
 
         fishCountElement.textContent =
@@ -240,7 +226,6 @@ function filterFish() {
     }
 
 
-    // ไม่พบข้อมูล
     if (noResult) {
 
         noResult.style.display =
